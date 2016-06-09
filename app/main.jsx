@@ -1,8 +1,10 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
 
+var SampleGrid = require("./components/SampleGrid.jsx");
+
 function render() {
-    ReactDOM.render(<span>This is react, kinda.</span>, document.getElementById("container"));
+    ReactDOM.render(<SampleGrid />, document.getElementById("container"));
 }
 
 render();
