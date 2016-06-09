@@ -2,10 +2,17 @@
   "name": "cdtemplatr.js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
+    "start": "gulp && node ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
 }
