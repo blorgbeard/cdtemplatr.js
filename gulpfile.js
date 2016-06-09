@@ -16,7 +16,6 @@ gulp.task("bundle", function () {
 
 gulp.task("copy", ["bundle"], function () {
     return gulp.src([
-      "app/index.html",
       "app/lib/bootstrap-css/css/bootstrap.min.css",
       "node_modules/react-datagrid/index.css"
     ])

@@ -1,7 +1,8 @@
 {
   "name": "cdtemplatr.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "A cool website",
+  "repostitory": "https://github.com/blorgbeard/cdtemplatr.js",
   "main": "server/server.js",
   "scripts": {
     "start": "bower update && gulp && node ./server/server.js",
@@ -13,6 +14,7 @@
     "browserify": "^13.0.1",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
+    "hbs": "^4.0.0",
     "react": "^15.1.0",
     "react-datagrid": "^2.0.4",
     "react-dom": "^15.1.0",
