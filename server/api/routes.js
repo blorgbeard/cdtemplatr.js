@@ -1,7 +1,6 @@
 var router = require("express").Router();
 var buildController = require('./buildController.js');
-
-router.route('/builds').get(getBuilds);
+var shareController = require('./shareController.js');
 
 function getBuilds(req, res) {
   buildController.getList(function (err, builds) {
@@ -18,7 +17,15 @@ function getBuilds(req, res) {
       res.json(simpleList);
     }
   });
-
 }
+
+function getShares(req, res) {
+  shareController.getList(function (shares) {
+    res.json(shares);
+  });
+}
+
+router.route('/builds').get(getBuilds);
+router.route('/shares').get(getShares);
 
 module.exports = router;
