@@ -19,7 +19,7 @@ var RemovedArtefactsTable = React.createClass({
 })
 
 function render() {
-  ReactDOM.render(<SimpleList url="/api/builds" pollInterval={5000}/>, document.getElementById("container"));
+  ReactDOM.render(<SimpleList url="/api/builds"/>, document.getElementById("container"));
   ReactDOM.render(<NewArtefactsTable url="/api/newArtefacts" pollInterval={5000}/>, document.getElementById("newArtefactsContainer"));
   ReactDOM.render(<RemovedArtefactsTable url="/api/builds" pollInterval={5000}/>, document.getElementById("removedArtefactsContainer"));
 }
