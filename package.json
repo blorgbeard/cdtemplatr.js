@@ -16,6 +16,7 @@
     "express-ntlm": "^2.1.4",
     "gulp": "^3.9.1",
     "hbs": "^4.0.0",
+    "httpntlm": "^1.6.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "reactify": "^1.1.1",

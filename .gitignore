@@ -41,3 +41,6 @@ app/dist/
 
 # bower cache
 app/lib/
+
+# sooper seecrit passwords
+windowslogin.json

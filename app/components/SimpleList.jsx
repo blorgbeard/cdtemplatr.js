@@ -40,6 +40,8 @@ module.exports = React.createClass({
   },
   componentDidMount: function() {
     this.loadFromServer();
-    setInterval(this.loadFromServer, this.props.pollInterval);
+    if (this.props.pollInterval) {
+      setInterval(this.loadFromServer, this.props.pollInterval);
+    }
   }
 });
