@@ -5,7 +5,7 @@
   "repository": "https://github.com/blorgbeard/cdtemplatr.js",
   "main": "server/server.js",
   "scripts": {
-    "start": "bower update && gulp && node ./server/server.js",
+    "start": "gulp && node ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -15,9 +15,9 @@ module.exports = React.createClass({
         );
     });
     return (
-      <table>
+      <table className="table table-striped table-hover">
         <thead><tr>
-          <th>Number</th>
+          <th>#</th>
           <th>Name</th>
           <th>Tag</th>
         </tr></thead>

@@ -22,7 +22,6 @@ gulp.task("copy", ["bundle"], function () {
       "app/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "app/lib/jquery/dist/jquery.min.js",
       "app/lib/jquery/dist/jquery.min.js.map",
-      "node_modules/react-datagrid/index.css"
     ])
     .pipe(gulp.dest("app/dist"));
 });
