@@ -2,7 +2,7 @@
   "name": "cdtemplatr.js",
   "version": "1.0.0",
   "description": "A cool website",
-  "repostitory": "https://github.com/blorgbeard/cdtemplatr.js",
+  "repository": "https://github.com/blorgbeard/cdtemplatr.js",
   "main": "server/server.js",
   "scripts": {
     "start": "bower update && gulp && node ./server/server.js",
@@ -13,6 +13,7 @@
   "dependencies": {
     "browserify": "^13.0.1",
     "express": "^4.13.4",
+    "express-ntlm": "^2.1.4",
     "gulp": "^3.9.1",
     "hbs": "^4.0.0",
     "react": "^15.1.0",

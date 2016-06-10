@@ -16,7 +16,12 @@ gulp.task("bundle", function () {
 
 gulp.task("copy", ["bundle"], function () {
     return gulp.src([
-      "app/lib/bootstrap-css/css/bootstrap.min.css",
+      "app/lib/bootstrap/dist/css/bootstrap.min.css",
+      "app/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "app/lib/bootstrap/dist/js/bootstrap.min.js",
+      "app/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "app/lib/jquery/dist/jquery.min.js",
+      "app/lib/jquery/dist/jquery.min.js.map",
       "node_modules/react-datagrid/index.css"
     ])
     .pipe(gulp.dest("app/dist"));
