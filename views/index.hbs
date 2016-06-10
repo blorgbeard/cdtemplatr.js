@@ -9,7 +9,7 @@
 
   <title>{{title}}</title>
   <link href="bootstrap.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
+  <link href="app.css" rel="stylesheet" />
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -27,11 +27,15 @@
             <p class="navbar-text navbar-right">{{ntlm.DomainName}}\\{{ntlm.UserName}}</span>
         </div>
     </div>
-    <div id="container" class="container"></div>
-
-    <div id="newArtefactsContainer" class="container"></div>
-    <div id="removedArtefactsContainer" class="container"></div>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div id="buildListContainer" class="col-md-4"></div>
+        <div class="col-md-8">
+          <div id="newArtefactsContainer"></div>
+          <div id="removedArtefactsContainer"></div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

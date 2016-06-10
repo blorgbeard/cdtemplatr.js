@@ -1,7 +1,7 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
 
-var SimpleList = require("./components/SimpleList.jsx");
+var BuildList = require("./components/BuildList.jsx");
 
 var NewArtefactsTable = require("./components/NewArtefactsTable.jsx")
 
@@ -19,7 +19,7 @@ var RemovedArtefactsTable = React.createClass({
 })
 
 function render() {
-  ReactDOM.render(<SimpleList url="/api/builds"/>, document.getElementById("container"));
+  ReactDOM.render(<BuildList url="/api/builds"/>, document.getElementById("buildListContainer"));
   ReactDOM.render(<NewArtefactsTable url="/api/newArtefacts" pollInterval={5000}/>, document.getElementById("newArtefactsContainer"));
   ReactDOM.render(<RemovedArtefactsTable url="/api/builds" pollInterval={5000}/>, document.getElementById("removedArtefactsContainer"));
 }

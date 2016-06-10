@@ -8,18 +8,14 @@ module.exports = React.createClass({
     var rows = this.state.builds.map(function (build) {
         return (
           <tr key={build.key}>
-            <td>{build.key}</td>
             <td>{build.name}</td>
-            <td>{build.tag}</td>
           </tr>
         );
     });
     return (
       <table className="table table-striped table-hover">
         <thead><tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Tag</th>
+          <th>Build</th>
         </tr></thead>
         <tbody>{rows}</tbody>
       </table>

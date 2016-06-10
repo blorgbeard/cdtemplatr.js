@@ -22,6 +22,7 @@ gulp.task("copy", ["bundle"], function () {
       "app/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "app/lib/jquery/dist/jquery.min.js",
       "app/lib/jquery/dist/jquery.min.js.map",
+      "app/app.css",
     ])
     .pipe(gulp.dest("app/dist"));
 });

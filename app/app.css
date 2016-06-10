@@ -1,0 +1,4 @@
+div#buildListContainer td {
+  word-wrap: break-word;
+  word-break: break-word;
+}
