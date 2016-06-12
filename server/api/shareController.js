@@ -45,24 +45,25 @@ function getFolder(smb, folderName) {
   });
 }
 
-function folderContainsValidBuild(folder) {
-  // todo
-  var isValid = (folder.content.length > 0);
-  if (!isValid) {
-    console.log(folder.name + " does not appear to contain a build.");
-  }
-  return isValid;
-}
+var matchBuildFile = /(.+)_([0-9.]+)_(\d{8})\.(\d+)(_cdtemplate)?\.(\w+)/;
 
 function filterOnlyValidBuildFolders(folders) {
-  return folders.filter(folderContainsValidBuild);
+  return folders.filter(t=>t);
 }
 
 function getBuildFromFolder(folder) {
-  return {
-    name: folder.name,
-    version: 'todo'
+  var buildFiles = folder.content.map(t=>t.match(matchBuildFile)).filter(t=>t);
+  if (buildFiles.length == 0) return null;
+  buildFiles.sort();
+  var latestBuild = buildFiles.slice(-1).pop();
+  var fields = {
+    name: latestBuild[1],
+    version: latestBuild[2],
+    date: latestBuild[3],
+    number: latestBuild[4],
+    cdtemplate: !!latestBuild[5]
   };
+  return fields;
 }
 
 function mapBuildFoldersToBuilds(folders) {
@@ -73,8 +74,8 @@ function createBuildsForFolders(smb, folders) {
   console.log("build folder count: " + folders.length);
   return (
     Promise.all(folders.map((folder) => getFolder(smb, folder)))
-      .then(filterOnlyValidBuildFolders)
       .then(mapBuildFoldersToBuilds)
+      .then(filterOnlyValidBuildFolders)
   );
 }
 
