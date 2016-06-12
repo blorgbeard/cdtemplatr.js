@@ -1,6 +1,6 @@
 var router = require("express").Router();
 var buildController = require('./buildController.js');
-var shareController = require('./shareController.js');
+var ShareController = require('./shareController.js');
 
 function getBuilds(req, res) {
   buildController.getList(function (err, builds) {
@@ -8,20 +8,16 @@ function getBuilds(req, res) {
       console.error(err);
       res.json(err);
     } else {
-      var simpleList = builds.value.map(function(b){
-        return {
-          key: b.id,
-          name: b.name
-        };
-      });
-      res.json(simpleList);
+      //console.log(JSON.stringify(builds.value[1]));
+      res.json(builds);
     }
   });
 }
 
 function getShares(req, res) {
-  var promise = shareController.getList();
-  promise.then(
+  var shares = new ShareController();
+  var promise = shares.getList();
+  return promise.then(
     function(result) {
       res.json(result);
     },

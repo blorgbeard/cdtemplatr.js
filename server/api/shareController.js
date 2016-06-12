@@ -1,4 +1,10 @@
+'use strict';
+
 var Promise = require('bluebird');
+Promise.config({
+    longStackTraces: true
+});
+
 var Smb = require('smb2');
 
 var winauth = require('../conf/windowslogin.json');
@@ -6,21 +12,10 @@ var winauth = require('../conf/windowslogin.json');
 var SHARE = "\\\\vistafp\\Data"; // "\\\\concorde\\temp";
 var ROOT = "V4CDs\\InTesting";  // "root"
 
-var SMB = new Smb({
-  share: SHARE,
-  domain: winauth.domain,
-  username: winauth.username,
-  password: winauth.password
-});
-
-Promise.config({
-    longStackTraces: true
-});
-
 //var _smbReaddir = Promise.denodeify(SMB.readdir);
-var _smbReaddir = function(path) {
+function smbReaddir(smb, path) {
   return new Promise(function(fulfill, reject) {
-    SMB.readdir(path, function(err, files) {
+    smb.readdir(path, function(err, files) {
       // todo: I am not handling errors properly here, I think.
       // I should reject the promise and catch the error further down.
       if (err) {
@@ -36,16 +31,16 @@ var _smbReaddir = function(path) {
   });
 }
 
-function smbGetFolderList() {
-  return _smbReaddir(ROOT);
+function smbGetFolderList(smb) {
+  return smbReaddir(smb, ROOT);
 }
 
-function smbReadFolder(folder) {
-  return _smbReaddir(ROOT + "\\" + folder);
+function smbReadFolder(smb, folder) {
+  return smbReaddir(smb, ROOT + "\\" + folder);
 }
 
-function getFolder(folderName) {
-  return smbReadFolder(folderName).then(function(content){
+function getFolder(smb, folderName) {
+  return smbReadFolder(smb, folderName).then(function(content){
     return {name: folderName, content: content};
   });
 }
@@ -74,19 +69,29 @@ function mapBuildFoldersToBuilds(folders) {
   return folders.map(getBuildFromFolder);
 }
 
-function createBuildsForFolders(folders) {
+function createBuildsForFolders(smb, folders) {
   console.log("build folder count: " + folders.length);
   return (
-    Promise.all(folders.map(getFolder))
+    Promise.all(folders.map((folder) => getFolder(smb, folder)))
       .then(filterOnlyValidBuildFolders)
       .then(mapBuildFoldersToBuilds)
   );
 }
 
-function getBuilds() {
-  return smbGetFolderList().then(createBuildsForFolders);
-}
+module.exports = class ShareController {
+  constructor() {
+    this._smb = new Smb({
+      share: SHARE,
+      domain: winauth.domain,
+      username: winauth.username,
+      password: winauth.password
+    });
+  }
 
-module.exports = {
-  getList: getBuilds
+  getList() {
+    return (
+      smbGetFolderList(this._smb)
+      .then((folders)=>createBuildsForFolders(this._smb, folders))
+    );
+  }
 };
