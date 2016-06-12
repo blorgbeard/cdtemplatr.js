@@ -1,34 +1,32 @@
 var router = require("express").Router();
-var buildController = require('./BuildController.js');
+var buildController = require('./buildController.js');
 var BuildOutputController = require('./BuildOutputController.js');
 
 function getBuilds(req, res) {
-  buildController.getList(function (err, builds) {
-    if (err) {
-      console.error(err);
-      res.json(err);
-    } else {
-      //console.log(JSON.stringify(builds.value[1]));
-      res.json(builds);
-    }
-  });
+  buildController.getList().then(
+    builds => res.json(builds),
+    error => res.json(error)
+  );
+}
+
+function getBuildDetails(req, res) {
+  buildController.getDetails(req.params.id).then(
+    details => res.json(details),
+    error => res.json(error)
+  );
 }
 
 function getOutputs(req, res) {
   var outputs = new BuildOutputController();
   var promise = outputs.getList();
   return promise.then(
-    function(result) {
-      res.json(result);
-    },
-    function(error){
-      console.error(error.toString());
-      res.json({error: error.toString()});
-    }
+    result => res.json(result),
+    error => res.json(error)
   );
 }
 
 router.route('/builds').get(getBuilds);
+router.route('/builds/:id').get(getBuildDetails);
 
 // todo: remove this later, not required for actual site - just used by build controller
 router.route('/outputs').get(getOutputs);

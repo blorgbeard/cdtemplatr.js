@@ -23,6 +23,8 @@ app.get('/', function (req, res) {
 
 app.use('/api', require('./api/routes.js'));
 
+app.use('/debug', require('./api/debugRoutes.js'));
+
 app.listen(7777, function () {
     console.log("Started listening on port", 7777);
 });

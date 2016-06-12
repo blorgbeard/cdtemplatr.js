@@ -8,34 +8,18 @@ Promise.config({
 var httpntlm = require('httpntlm');
 var winauth = require('../conf/windowslogin.json');
 
+var tfs = require('./tfsController.js');
 var BuildOutputController = require('./BuildOutputController.js');
 var arrayJoin = require('../utils/arrayJoin.js');
 var compare = require('../utils/compare.js');
 
-var TFS = "http://tfs:8080/tfs/Vista";
-var PROJECT = "c1114d4d-f88a-4702-a3c0-4e06b8b0a5d4"; // Vista
-
-function getApiUrl(resource) {
-  var url = `${TFS}/${PROJECT}/_apis/${resource}?api-version=2.0`;
-  return url;
-}
-
-function requestTfs(resource) {
-  return new Promise(function(fulfill, reject) {
-    var url = getApiUrl(resource);
-    console.log(`requesting ${url}`);
-    httpntlm.get({
-      url: url,
-      workstation: "cdtemplatr",
-      username: winauth.username,
-      password: winauth.password,
-      domain: winauth.domain
-    }, function (err, res) {
-      if (err) {
-        return reject(err);
-      }
-      return fulfill(JSON.parse(res.body));
-    });
+function getBuildDetails(buildId) {
+  return tfs.get(`/build/Definitions/${buildId}`).then(result => {
+      // this field is double-encoded for some reason
+      var mapping = result.repository.properties.tfvcMapping;
+      var parsed = JSON.parse(mapping);
+      result.repository.properties.tfvcMapping = parsed;
+      return result;
   });
 }
 
@@ -72,7 +56,7 @@ function parseTfsBuildList(tfsBuilds){
 function getBuildsWithFolders() {
   var outputs = new BuildOutputController();
   return Promise.all([
-    requestTfs("build/definitions").then(parseTfsBuildList),
+    tfs.get("build/definitions").then(parseTfsBuildList),
     outputs.getList()
   ]).spread(function (builds, outputs) {
       // following code relies on sort order of builds and outputs -
@@ -105,7 +89,6 @@ function getBuildsWithFolders() {
 }
 
 module.exports = {
-  getList: function(callback) {
-    return getBuildsWithFolders().asCallback(callback);
-  }
+  getList: getBuildsWithFolders,
+  getDetails: getBuildDetails
 }

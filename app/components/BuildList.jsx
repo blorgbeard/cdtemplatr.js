@@ -9,7 +9,7 @@ module.exports = BuildList = React.createClass({
         return (
           <tr key={build.key}>
             <td><span>{build.name}</span> <span className="text-muted">{build.branch}</span></td>
-            <td><span className={build.cdtemplate ? "glyphicon glyphicon-alert text-danger" : ""}></span></td>
+            <td>{build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
           </tr>
         );
     });
