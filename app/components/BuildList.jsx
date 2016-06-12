@@ -9,6 +9,7 @@ module.exports = BuildList = React.createClass({
         return (
           <tr key={build.key}>
             <td><span>{build.name}</span> <span className="text-muted">{build.branch}</span></td>
+            <td><span className="text-muted">{build.cdtemplateLocation}</span></td>
             <td>{build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
           </tr>
         );
@@ -17,6 +18,7 @@ module.exports = BuildList = React.createClass({
       <table className="table table-striped table-hover">
         <thead><tr>
           <th>Build</th>
+          <th/>
           <th/>
         </tr></thead>
         <tbody>{rows}</tbody>
