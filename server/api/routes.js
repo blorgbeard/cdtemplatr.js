@@ -1,6 +1,6 @@
 var router = require("express").Router();
-var buildController = require('./buildController.js');
-var ShareController = require('./shareController.js');
+var buildController = require('./BuildController.js');
+var BuildOutputController = require('./BuildOutputController.js');
 
 function getBuilds(req, res) {
   buildController.getList(function (err, builds) {
@@ -14,9 +14,9 @@ function getBuilds(req, res) {
   });
 }
 
-function getShares(req, res) {
-  var shares = new ShareController();
-  var promise = shares.getList();
+function getOutputs(req, res) {
+  var outputs = new BuildOutputController();
+  var promise = outputs.getList();
   return promise.then(
     function(result) {
       res.json(result);
@@ -29,7 +29,9 @@ function getShares(req, res) {
 }
 
 router.route('/builds').get(getBuilds);
-router.route('/shares').get(getShares);
+
+// todo: remove this later, not required for actual site - just used by build controller
+router.route('/outputs').get(getOutputs);
 
 // New Artefacts
 router.route('/newArtefacts').get(GetNewArtefacts);

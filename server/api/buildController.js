@@ -8,7 +8,7 @@ Promise.config({
 var httpntlm = require('httpntlm');
 var winauth = require('../conf/windowslogin.json');
 
-var ShareController = require('./shareController.js');
+var BuildOutputController = require('./BuildOutputController.js');
 var arrayJoin = require('../utils/arrayJoin.js');
 var compare = require('../utils/compare.js');
 
@@ -70,10 +70,10 @@ function parseTfsBuildList(tfsBuilds){
 }
 
 function getBuildsWithFolders() {
-  var shares = new ShareController();
+  var outputs = new BuildOutputController();
   return Promise.all([
     requestTfs("build/definitions").then(parseTfsBuildList),
-    shares.getList()
+    outputs.getList()
   ]).spread(function (builds, outputs) {
       // following code relies on sort order of builds and outputs -
       // as defined in the code that returns them!

@@ -18,6 +18,10 @@ function asVersion(value1, value2) {
 }
 
 function asVersionPrefix(value1, value2) {
+  if (value1 == "" || value2 == "") {
+    // an empty string is a prefix of everything (because I say so)
+    return 0;
+  }
   var split1 = value1.split('.').map(Number);
   var split2 = value2.split('.').map(Number);
   for (var i=0; i<split1.length && i<split2.length; i++) {

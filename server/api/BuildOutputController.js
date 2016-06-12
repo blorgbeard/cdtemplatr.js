@@ -49,9 +49,9 @@ function getFolder(smb, folderName) {
 
 var matchBuildFile = /(.+)_([0-9.]+)_(\d{8})\.(\d+)(_cdtemplate)?\.exe/;
 
-function getBuildsFromFolder(folder) {
+function getOutputsFromFolder(folder) {
   // find every .exe file that looks like a build
-  var buildFiles = (
+  var outputFiles = (
     folder.content
     .map(t => t.match(matchBuildFile))
     .filter(t => t)
@@ -67,7 +67,7 @@ function getBuildsFromFolder(folder) {
   );
 
   // order by name, version, date desc, number desc
-  buildFiles.sort((b1, b2) => {
+  outputFiles.sort((b1, b2) => {
     var compareName = compare.asDefault(b1.name, b2.name);
     if (compareName != 0) return compareName;
     var compareVersion = compare.asVersion(b1.version, b2.version);
@@ -82,7 +82,7 @@ function getBuildsFromFolder(folder) {
   // get the first build for each name/version
   //console.log(buildFiles[0].name);
   //console.log(JSON.stringify(buildFiles.map(t=>t.version)));
-  var output = buildFiles.reduce(
+  var output = outputFiles.reduce(
     (previousValue, currentValue, currentIndex, array ) => {
       //console.log(JSON.stringify(previousValue.map(t=>t.version)) + " + " + currentValue.version);
       if (previousValue.length == 0) return [currentValue];
@@ -97,21 +97,21 @@ function getBuildsFromFolder(folder) {
   return output;
 }
 
-function mapBuildFoldersToBuilds(folders) {
-  var listOfListOfBuilds = folders.map(getBuildsFromFolder);
-  var listOfBuilds = [].concat.apply([], listOfListOfBuilds); // flatten
-  return listOfBuilds;
+function mapBuildFoldersToOutputs(folders) {
+  var listOfListOfOutputs = folders.map(getOutputsFromFolder);
+  var listOfOutputs = [].concat.apply([], listOfListOfOutputs); // flatten
+  return listOfOutputs;
 }
 
-function createBuildsForFolders(smb, folders) {
-  console.log("build folder count: " + folders.length);
+function createOutputsForFolders(smb, folders) {
+  console.log("build output folder count: " + folders.length);
   return (
     Promise.all(folders.map((folder) => getFolder(smb, folder)))
-    .then(mapBuildFoldersToBuilds)
+    .then(mapBuildFoldersToOutputs)
   );
 }
 
-module.exports = class ShareController {
+module.exports = class BuildOutputController {
   constructor() {
     this._smb = new Smb({
       share: SHARE,
@@ -124,7 +124,7 @@ module.exports = class ShareController {
   getList() {
     return (
       smbGetFolderList(this._smb)
-      .then((folders)=>createBuildsForFolders(this._smb, folders))
+      .then((folders)=>createOutputsForFolders(this._smb, folders))
     );
   }
 };
