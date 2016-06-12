@@ -1,6 +1,6 @@
 var React = require("react");
 
-module.exports = NewArtefactsTable = React.createClass({
+module.exports = ArtefactsTable = React.createClass({
   getInitialState: function() {
     return {newArtefacts: [{name: "Select a Product above"}]};
   },
@@ -12,10 +12,11 @@ module.exports = NewArtefactsTable = React.createClass({
           </tr>
         );
     });
+    var tableHeading = this.props.tableHeading
     return (
       <table className="table table-hover">
         <thead><tr>
-            <th>New artefacts in CD</th>
+            <th>{tableHeading}</th>
         </tr></thead>
         <tbody>{rows}</tbody>
       </table>

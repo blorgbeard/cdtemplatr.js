@@ -33,7 +33,6 @@ router.route('/outputs').get(getOutputs);
 
 // New Artefacts
 router.route('/newArtefacts').get(GetNewArtefacts);
-
 function GetNewArtefacts(req, res){
   var data = [
     {key: 1, name: "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Circuit.Domain.Brazil\\bin\\Vista.Brazil.TaxNumber.Common.dll"},
@@ -42,6 +41,20 @@ function GetNewArtefacts(req, res){
     {key: 4, name: "\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.AccountantMaint\\bin\\Vista.Brazil.TaxNumber.Common.dll"},
     {key: 5, name: "\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.AccountantMaint\\bin\\Vista.Environment.OnPremise.FileUtilities.dll"},
     {key: 6, name: "\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.AccountantMaint\\bin\\Vista.KeyValueStore.Extended.dll"}
+  ];
+  res.json(data);
+}
+
+// Removed Artefacts
+router.route('/removedArtefacts').get(GetRemovedArtefacts);
+function GetRemovedArtefacts(req, res){
+  var data = [
+    {key: 10, name: "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Cinema.Domain.Brazil.SystemTests"},
+    {key: 11, name: "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Circuit.Domain.Brazil\\bin\\AutoMapper.dll"},
+    {key: 12, name: "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Circuit.Domain.Brazil\\bin\\AutoMapper.Net4.dll"},
+    {key: 13, name: "\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.ZReportMaint\\bin\\Ninject.Extensions.NamedScope.dll"},
+    {key: 14, name: "\\CMDSERVICE\\Services\\CinemaMasterData\\bin\\Vista.CinemaMasterDataService.dll"},
+    {key: 15, name: "\\CMDSERVICE\\Services\\CinemaMasterData\\bin\\Vista.CinemaMasterDataService.SecurityCommon.dll"}
   ];
   res.json(data);
 }
