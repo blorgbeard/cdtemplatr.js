@@ -20,9 +20,16 @@ function getBuilds(req, res) {
 }
 
 function getShares(req, res) {
-  shareController.getList(function (shares) {
-    res.json(shares);
-  });
+  var promise = shareController.getList();
+  promise.then(
+    function(result) {
+      res.json(result);
+    },
+    function(error){
+      console.error(error.toString());
+      res.json({error: error.toString()});
+    }
+  );
 }
 
 router.route('/builds').get(getBuilds);

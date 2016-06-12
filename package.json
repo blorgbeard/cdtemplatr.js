@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.0",
     "browserify": "^13.0.1",
     "express": "^4.13.4",
     "express-ntlm": "^2.1.4",
