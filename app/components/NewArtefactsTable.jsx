@@ -1,6 +1,6 @@
 var React = require("react");
 
-module.exports = React.createClass({
+module.exports = NewArtefactsTable = React.createClass({
   getInitialState: function() {
     return {newArtefacts: [{name: "Select a Product above"}]};
   },

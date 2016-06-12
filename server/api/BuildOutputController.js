@@ -1,14 +1,12 @@
 'use strict';
 
+var Smb = require('smb2');
 var Promise = require('bluebird');
 Promise.config({
     longStackTraces: true
 });
 
-var Smb = require('smb2');
-
 var compare = require('../utils/compare.js');
-
 var winauth = require('../conf/windowslogin.json');
 
 var SHARE = "\\\\vistafp\\Data"; // "\\\\concorde\\temp";
