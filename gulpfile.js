@@ -16,19 +16,23 @@ gulp.task("bundle", function () {
 
 gulp.task("copy", ["bundle"], function () {
     return gulp.src([
-      "app/lib/bootstrap/dist/css/bootstrap.min.css",
-      "app/lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "app/lib/bootstrap/dist/js/bootstrap.min.js",
-      "app/lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "app/lib/jquery/dist/jquery.min.js",
-      "app/lib/jquery/dist/jquery.min.js.map",
+      "app/lib/bootstrap/dist/css/bootstrap.min.*",
+      "app/lib/bootstrap/dist/js/bootstrap.min.*",
+      "app/lib/jquery/dist/jquery.min.*",
       "app/app.css",
     ])
     .pipe(gulp.dest("app/dist"));
 });
 
+gulp.task("copyFonts", function () {
+    return gulp.src([
+      "app/lib/bootstrap/dist/fonts/*",
+    ])
+    .pipe(gulp.dest("app/dist/fonts"));
+});
+
 gulp.task("default",
-  ["copy"],
+  ["copy", "copyFonts"],
   function() {
     console.log("Gulp completed...");
   }

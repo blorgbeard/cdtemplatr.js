@@ -1,0 +1,35 @@
+
+function asDefault(value1, value2) {
+  if (value1 < value2) return -1;
+  if (value1 > value2) return 1;
+  return 0;
+}
+
+function asVersion(value1, value2) {
+  var split1 = value1.split('.').map(Number);
+  var split2 = value2.split('.').map(Number);
+  for (var i=0; i<split1.length && i<split2.length; i++) {
+    var compared = asDefault(split1[i], split2[i]);
+    if (compared != 0) return compared;
+  }
+  if (split1.length < split2.length) return -1;
+  if (split1.length > split2.length) return 1;
+  return 0;
+}
+
+function asVersionPrefix(value1, value2) {
+  var split1 = value1.split('.').map(Number);
+  var split2 = value2.split('.').map(Number);
+  for (var i=0; i<split1.length && i<split2.length; i++) {
+    var compared = asDefault(split1[i], split2[i]);
+    if (compared != 0) return compared;
+  }
+  // if they were the same while they both had numbers, they're the same.
+  return 0;
+}
+
+module.exports = {
+  asDefault: asDefault,
+  asVersion: asVersion,
+  asVersionPrefix: asVersionPrefix
+};

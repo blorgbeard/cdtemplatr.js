@@ -8,7 +8,8 @@ module.exports = React.createClass({
     var rows = this.state.builds.map(function (build) {
         return (
           <tr key={build.key}>
-            <td>{build.name}</td>
+            <td><span>{build.name}</span> <span className="text-muted">{build.branch}</span></td>
+            <td><span className={build.cdtemplate ? "glyphicon glyphicon-alert text-danger" : ""}></span></td>
           </tr>
         );
     });
@@ -16,6 +17,7 @@ module.exports = React.createClass({
       <table className="table table-striped table-hover">
         <thead><tr>
           <th>Build</th>
+          <th/>
         </tr></thead>
         <tbody>{rows}</tbody>
       </table>

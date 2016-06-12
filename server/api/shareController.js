@@ -7,6 +7,8 @@ Promise.config({
 
 var Smb = require('smb2');
 
+var compare = require('../utils/compare.js');
+
 var winauth = require('../conf/windowslogin.json');
 
 var SHARE = "\\\\vistafp\\Data"; // "\\\\concorde\\temp";
@@ -45,37 +47,67 @@ function getFolder(smb, folderName) {
   });
 }
 
-var matchBuildFile = /(.+)_([0-9.]+)_(\d{8})\.(\d+)(_cdtemplate)?\.(\w+)/;
+var matchBuildFile = /(.+)_([0-9.]+)_(\d{8})\.(\d+)(_cdtemplate)?\.exe/;
 
-function filterOnlyValidBuildFolders(folders) {
-  return folders.filter(t=>t);
-}
+function getBuildsFromFolder(folder) {
+  // find every .exe file that looks like a build
+  var buildFiles = (
+    folder.content
+    .map(t => t.match(matchBuildFile))
+    .filter(t => t)
+    .map(t => {
+      return {
+        name: t[1],
+        version: t[2],
+        date: t[3],
+        number: t[4],
+        cdtemplate: !!t[5]
+      };
+    })
+  );
 
-function getBuildFromFolder(folder) {
-  var buildFiles = folder.content.map(t=>t.match(matchBuildFile)).filter(t=>t);
-  if (buildFiles.length == 0) return null;
-  buildFiles.sort();
-  var latestBuild = buildFiles.slice(-1).pop();
-  var fields = {
-    name: latestBuild[1],
-    version: latestBuild[2],
-    date: latestBuild[3],
-    number: latestBuild[4],
-    cdtemplate: !!latestBuild[5]
-  };
-  return fields;
+  // order by name, version, date desc, number desc
+  buildFiles.sort((b1, b2) => {
+    var compareName = compare.asDefault(b1.name, b2.name);
+    if (compareName != 0) return compareName;
+    var compareVersion = compare.asVersion(b1.version, b2.version);
+    if (compareVersion != 0) return compareVersion;
+    var compareDate = compare.asDefault(b1.date, b2.date);
+    if (compareDate != 0) return compareDate * -1;
+    var compareNumber = compare.asDefault(b1.number, b2.number);
+    if (compareNumber != 0) return compareNumber * -1;
+    return 0;
+  });
+
+  // get the first build for each name/version
+  //console.log(buildFiles[0].name);
+  //console.log(JSON.stringify(buildFiles.map(t=>t.version)));
+  var output = buildFiles.reduce(
+    (previousValue, currentValue, currentIndex, array ) => {
+      //console.log(JSON.stringify(previousValue.map(t=>t.version)) + " + " + currentValue.version);
+      if (previousValue.length == 0) return [currentValue];
+      var previous = previousValue.slice(-1).pop();
+      if ((previous.name !== currentValue.name) || (previous.version !== currentValue.version)) {
+        return previousValue.concat(currentValue);
+      }
+      return previousValue;
+    }, []
+  );
+
+  return output;
 }
 
 function mapBuildFoldersToBuilds(folders) {
-  return folders.map(getBuildFromFolder);
+  var listOfListOfBuilds = folders.map(getBuildsFromFolder);
+  var listOfBuilds = [].concat.apply([], listOfListOfBuilds); // flatten
+  return listOfBuilds;
 }
 
 function createBuildsForFolders(smb, folders) {
   console.log("build folder count: " + folders.length);
   return (
     Promise.all(folders.map((folder) => getFolder(smb, folder)))
-      .then(mapBuildFoldersToBuilds)
-      .then(filterOnlyValidBuildFolders)
+    .then(mapBuildFoldersToBuilds)
   );
 }
 
