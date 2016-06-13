@@ -7,11 +7,14 @@ div#buildListContainer td {
   border-radius:0;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #55eb14;
+tbody tr:hover td {
+  background-color: #E6F2FA;
 }
 
-.selectedRow {
-  background-color: #4acc11;
-  color: #FFF;
+tbody tr.selectedRow td {
+  background-color: #CDE6F7;
+}
+
+tbody tr:hover.selectedRow td {
+  background-color: #BDDEF4;
 }
