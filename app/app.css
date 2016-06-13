@@ -2,3 +2,23 @@ div#buildListContainer td {
   word-wrap: break-word;
   word-break: break-word;
 }
+
+p.userName {
+  padding: 0 25px 0 0;
+}
+
+.btn {
+  border-radius:0;
+}
+
+tbody tr:hover td {
+  background-color: #E6F2FA;
+}
+
+tbody tr.selectedRow td {
+  background-color: #CDE6F7;
+}
+
+tbody tr:hover.selectedRow td {
+  background-color: #BDDEF4;
+}
