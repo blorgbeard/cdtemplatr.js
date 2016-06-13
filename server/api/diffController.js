@@ -8,15 +8,10 @@ var fs = require('fs');
 var buildDefinitionController = require('./buildDefinitionController.js');
 var tfs = require('./tfsController.js');
 var compare = require('../utils/compare.js');
+var cache = require('../utils/cache.js');
 
-var cdTemplateLocationCache = {};
-try {
-  cdTemplateLocationCache = JSON.parse(
-    fs.readFileSync(__dirname + '/../cache/cdTemplateLocationCache.json')
-  );
-} catch (error) {
-  console.log("failed to load cdTemplateLocationCache: " + error.toString());
-}
+var cdTemplateLocationCache = cache.get('cdTemplateLocationCache', {});
+var cdTemplateLocationByBuildId = cache.get('cdTemplateLocationByBuildId', {});
 
 function loadFromTfs(path, recursionLevel) {
   return tfs.get('tfvc/items', {
@@ -104,7 +99,7 @@ function getCdTemplatePath(folder, projectName) {
     if (contents.length == 0) {
       return [];
     } else {
-      console.log(`candidates: ${contents}`);
+      //console.log(`candidates: ${contents}`);
       var candidates = contents.map(t => {
         return {
           value: t,
@@ -117,10 +112,16 @@ function getCdTemplatePath(folder, projectName) {
 }
 
 function getDiffForBuild(buildId) {
+  // check the cache!
+  var cache = cdTemplateLocationByBuildId[buildId];
+  if (cache) {
+    return Promise.resolve(cache);
+  }
+
   return buildDefinitionController.getDetails(buildId).then(details => {
     var buildName = details.name;
 
-    console.log(`searching for cdtemplate for project ${buildName}`);
+    //console.log(`searching for cdtemplate for project ${buildName}`);
 
     var paths = details.repository.properties.tfvcMapping.mappings.map(t=>t.serverPath);
 
@@ -151,7 +152,8 @@ function getDiffForBuild(buildId) {
     return Promise.all(paths.map(t => getCdTemplatePath(t, buildName))).then(paths => {
         var flat = [].concat.apply([], paths);
         var best = compare.max(flat, t=>t.fitness, compare.asDefault);
-        console.log(`decided on ${best.value}`);
+        //console.log(`decided on ${best.value}`);
+        cdTemplateLocationByBuildId[buildId] = best.value;
         return best.value;
     });
 
@@ -161,17 +163,5 @@ function getDiffForBuild(buildId) {
 }
 
 module.exports = {
-  getList: getDiffForBuild,
-
-  saveCache: () => {
-    fs.writeFileSync(
-      __dirname + '/../cache/cdTemplateLocationCache.json',
-      JSON.stringify(cdTemplateLocationCache),
-      {flag: 'w'}
-    );
-  },
-
-  clearCache: () => {
-    cdTemplateLocationCache = {};
-  }
+  getList: getDiffForBuild
 };

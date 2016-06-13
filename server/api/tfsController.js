@@ -37,7 +37,12 @@ function requestTfs(resource, args) {
       if (err) {
         return reject(err);
       }
-      return fulfill(JSON.parse(res.body));
+      try {
+        var json = JSON.parse(res.body)
+        return fulfill(json);
+      } catch (error) {
+        return reject(error);
+      }
     });
   });
 }

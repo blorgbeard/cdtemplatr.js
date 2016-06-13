@@ -2,9 +2,8 @@
 
 var Smb = require('smb2');
 var Promise = require('bluebird');
-Promise.config({
-    longStackTraces: true
-});
+Promise.config({longStackTraces: true});
+var fs = require('fs');
 
 var compare = require('../utils/compare.js');
 var winauth = require('../conf/windowslogin.json');
@@ -15,11 +14,19 @@ var ROOT = "V4CDs\\InTesting";  // "root"
 //var _smbReaddir = Promise.denodeify(SMB.readdir);
 function smbReaddir(smb, path) {
   return new Promise(function(fulfill, reject) {
+
+    smb = new Smb({
+      share: SHARE,
+      domain: winauth.domain,
+      username: winauth.username,
+      password: winauth.password
+    });
+
     smb.readdir(path, function(err, files) {
       // todo: I am not handling errors properly here, I think.
       // I should reject the promise and catch the error further down.
       if (err) {
-        console.log(path + ": " + err.toString());
+        console.log(path + ": " + err.toString() + " " + err.stack);
         return fulfill([]);
       }
       if (!files) {
@@ -31,8 +38,14 @@ function smbReaddir(smb, path) {
   });
 }
 
+var smbGetFolderList_Cache = null;
+
 function smbGetFolderList(smb) {
-  return smbReaddir(smb, ROOT);
+  if (smbGetFolderList_Cache) return Promise.resolve(smbGetFolderList_Cache);
+  return smbReaddir(smb, ROOT).then(result => {
+    smbGetFolderList_Cache = result;
+    return result;
+  });
 }
 
 function smbReadFolder(smb, folder) {
