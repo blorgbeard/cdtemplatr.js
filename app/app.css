@@ -3,6 +3,10 @@ div#buildListContainer td {
   word-break: break-word;
 }
 
+p.userName {
+  padding: 0 25px 0 0;
+}
+
 .btn {
   border-radius:0;
 }
