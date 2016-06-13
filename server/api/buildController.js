@@ -11,6 +11,9 @@ var diffController = require('./diffController.js');
 
 var arrayJoin = require('../utils/arrayJoin.js');
 var compare = require('../utils/compare.js');
+var cache = require('../utils/cache.js');
+
+var buildsCache = cache.get('buildsCache', {value: null});
 
 function humanizeProjectName(input) {
   var camelCaseToSpace = /([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g
@@ -30,6 +33,7 @@ function joinBuildAndOutput(build, output, diff) {
     date: output.date,
     number: output.number,
     cdtemplate: output.cdtemplate,
+    buildFolder: output.path,
     cdtemplateLocation: diff
   };
 }
@@ -81,7 +85,24 @@ function getBuildsWithFolders(buildListPromise) {
   ]).spread(joinBuildsAndOutputsAndGetCdTemplate);
 }
 
+function getList() {
+  if (buildsCache.value) {
+    return Promise.resolve(buildsCache.value);
+  }
+  return getBuildsWithFolders(buildDefinitionController.getList()).then(result => {
+    buildsCache.value = result;
+    return result;
+  });
+}
+
+function getDetails(id) {
+  if (buildsCache.value && buildsCache.value[id]) {
+    return Promise.resolve([buildsCache.value[id]]);
+  }
+  return getBuildsWithFolders(buildDefinitionController.getList().then(t => t.filter(b => b.id == id)));
+}
+
 module.exports = {
-  getList: () => getBuildsWithFolders(buildDefinitionController.getList()),
-  getDetails: (id) => getBuildsWithFolders(buildDefinitionController.getList().then(t => t.filter(b => b.id == id)))
+  getList: getList,
+  getDetails: getDetails
 }

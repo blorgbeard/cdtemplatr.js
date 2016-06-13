@@ -1087,5 +1087,56 @@
     "$/Vista/Main/Cinema/Database": [],
     "$/Vista/Main/Cinema/database": [],
     "$/Vista/Branches/4.5.5/Cinema/Database": [],
-    "$/Vista/Branches/4.5.2/Cinema/Database": []
+    "$/Vista/Branches/4.5.2/Cinema/Database": [],
+    "$/Vista/Branches/4.5.5/Cinema/Help": [],
+    "$/Vista/Branches/4.5.5/Loyalty/LoyaltyAddIns/visLoyalVista": [],
+    "$/Vista/Branches/4.5.5/Loyalty/visLoyaltyClient": [],
+    "$/Vista/Branches/4.5.5/Common/visInstallCommonWebServices": [],
+    "$/Vista/Branches/4.5.2/HeadOffice/Alerts": [],
+    "$/Vista/Branches/4.5.5/VoucherManagement/CinemaVoucherManagement/visVoucherCommon": [],
+    "$/Vista/Branches/4.5.5/Circuit/Domain/Vista.Circuit.Domain.Infrastructure": [],
+    "$/Vista/Branches/4.5.5/Kiosk": [
+        "$/Vista/Branches/4.5.5/Kiosk/KioskCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.5/VoucherManagement/Cinema/_Install_Customisation/Customers/IronThrone": [],
+    "$/Vista/Branches/4.5.5/CommonPackages": [],
+    "$/Vista/Branches/4.5.3/CinemaHeadOffice/visUserMaint": [],
+    "$/Vista/Branches/4.5.3/Alerts/Common/visAlerts": [],
+    "$/Vista/Branches/4.5.3/HeadOffice/Alerts": [],
+    "$/Vista/Branches/4.5.3/CinemaHeadOffice/visEmailMaint": [],
+    "$/Vista/Branches/4.5.3/Cinema/PointOfSale/visFiscalReportSaver": [],
+    "$/Vista/Branches/4.5.3/Cinema/PointOfSale/MemberProviders": [],
+    "$/Vista/Branches/4.5.3/CinemaHeadOffice/visUserGroupMaint": [],
+    "$/Vista/Branches/4.5.4/HeadOffice/HeadOffice/visCinemaTypeMaint": [],
+    "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema/SupervisionInterface/WSVistaSARFTSupervisionInterface": [],
+    "$/Vista/Branches/4.5.3/Alerts/Common/visAlertsClient": [],
+    "$/Vista/Branches/4.5.5/VoucherManagement/CinemaVoucherManagement/visWSVistaVoucherProxy": [],
+    "$/Vista/Branches/4.5.5/Cinema/database": [],
+    "$/Vista/Branches/4.5.4/Cinema/PointOfSale/visFiscalReportSaver": [],
+    "$/Vista/Branches/4.5.4/HeadOffice/Transfer/Vista.Transfer.Contracts": [],
+    "$/Vista/Branches/4.5.3/CinemaHeadOffice/visConfigurationMaint": [],
+    "$/Vista/Branches/4.5.3/Loyalty/visLoyaltyInterpreter.UnitTests": [],
+    "$/Vista/Branches/4.5.3/CinemaHeadOffice/visWebServiceConnect": [],
+    "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema": [
+        "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.4/VoucherManagement": [
+        "$/Vista/Branches/4.5.4/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema/SupervisionInterface/WSVistaSARFTSupervisionInterfaceMessage": [],
+    "$/Vista/Branches/4.5.3/HeadOffice/HeadOffice": [
+        "$/Vista/Branches/4.5.3/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.3/iPhoneTicketing/Database": [],
+    "$/Vista/Branches/4.5.3/Alerts/Common/visInTouchNotifier": [],
+    "$/Vista/Branches/4.5.2/HeadOffice/HeadOffice": [
+        "$/Vista/Branches/4.5.2/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.4/Cinema/PointOfSale/MemberProviders": [],
+    "$/Vista/Branches/4.5.3/InTouch/Service/visInTouchProviderInterfaces": [],
+    "$/Vista/Branches/4.5.3/InternetTicketing/InternetTicketing.Infrastructure": [],
+    "$/Vista/Branches/4.5.5/Notifier": [
+        "$/Vista/Branches/4.5.5/Notifier/NotifierCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.3/InTouch/Service/visInTouchModels": []
 }

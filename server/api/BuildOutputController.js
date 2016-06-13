@@ -72,7 +72,8 @@ function getOutputsFromFolder(folder) {
         version: t[2],
         date: t[3],
         number: t[4],
-        cdtemplate: !!t[5]
+        cdtemplate: !!t[5],
+        path: `${SHARE}\\${ROOT}\\${folder.name}`
       };
     })
   );

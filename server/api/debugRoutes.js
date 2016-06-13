@@ -23,22 +23,22 @@ router.route("/cdTemplateLocationCache/clear").get((req, res) => {
 
 router.route("/cache/get/:key").get((req, res) => {
   cache.get(req.params.key).then(
-    results => req.json(results),
-    failure => req.json({error: failure.toString()})
+    results => res.json(results),
+    failure => res.json({error: failure.toString()})
   );
 });
 
 router.route("/cache/delete/:key").get((req, res) => {
   cache.delete(req.params.key).then(
-    success => req.json({success: true}),
-    failure => req.json({error: failure.toString()})
+    success => res.json({success: true}),
+    failure => res.json({error: failure.toString()})
   );
 });
 
-router.route("/cache/persist").get((req, res) => {
-  cache.persist().then(
-    success => req.json({success: true}),
-    failure => req.json({error: failure.toString()})
+router.route("/cache/save").get((req, res) => {
+  cache.save().then(
+    success => res.json({success: true}),
+    failure => res.json({error: failure.toString()})
   );
 });
 

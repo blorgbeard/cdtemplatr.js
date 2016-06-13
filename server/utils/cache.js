@@ -8,7 +8,7 @@ var readFile = Promise.promisify(fs.readFile);
 var readdir =  Promise.promisify(fs.readdir);
 
 var path = __dirname + '/../cache/';
-var cachedValues = new Map()
+var cachedValues = null;
 
 try {
   var result = restoreSync();
@@ -46,11 +46,11 @@ function setValue(key) {
   return Promise.resolve(cachedValues.set(key, value));
 }
 
-function persist() {
+function save() {
   var promises = [];
-  cachedValues.forEach(kvp => {
-    var filename = `${path}${kvp[0]}.json`;
-    var json = JSON.stringify(kvp[1], null, 4);
+  cachedValues.forEach((value, key) => {
+    var filename = `${path}${key}.json`;
+    var json = JSON.stringify(value, null, 4);
     promises.push(writeFile(filename, json, {flag: 'w'}));
   });
   return Promise.all(promises);
@@ -63,6 +63,6 @@ function clear(key) {
 module.exports = {
   get: getValue,
   set: setValue,
-  persist: persist,
+  save: save,
   clear: clear
 }

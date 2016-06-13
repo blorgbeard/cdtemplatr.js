@@ -111,7 +111,7 @@ function getCdTemplatePath(folder, projectName) {
   });
 }
 
-function getDiffForBuild(buildId) {
+function getTfsLocationOfCdTemplate(buildId) {
   // check the cache!
   var cache = cdTemplateLocationByBuildId[buildId];
   if (cache) {
@@ -163,5 +163,5 @@ function getDiffForBuild(buildId) {
 }
 
 module.exports = {
-  getList: getDiffForBuild
+  getList: getTfsLocationOfCdTemplate
 };
