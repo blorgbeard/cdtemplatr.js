@@ -32,8 +32,25 @@ function asVersionPrefix(value1, value2) {
   return 0;
 }
 
+function max(input, propertyFunction, compareFunction) {
+  if (!input || input.length == 0) {
+    return null;
+  }
+  var value = propertyFunction(input[0]);
+  var result = input[0];
+  for (var i=1; i<input.length; i++) {
+    var newValue = propertyFunction(input[i]);
+    if (compareFunction(newValue, value) > 0) {
+      value = newValue;
+      result = input[i];
+    }
+  }
+  return result;
+}
+
 module.exports = {
   asDefault: asDefault,
   asVersion: asVersion,
-  asVersionPrefix: asVersionPrefix
+  asVersionPrefix: asVersionPrefix,
+  max: max
 };

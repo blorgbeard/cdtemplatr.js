@@ -12,7 +12,7 @@ var compare = require('../utils/compare.js');
 var winauth = require('../conf/windowslogin.json');
 
 function getBuildDetails(buildId) {
-  return tfs.get(`/build/Definitions/${buildId}`).then(result => {
+  return tfs.get(`build/Definitions/${buildId}`).then(result => {
       // this field is double-encoded for some reason
       var mapping = result.repository.properties.tfvcMapping;
       var parsed = JSON.parse(mapping);
@@ -27,6 +27,7 @@ function parseTfsBuildList(tfsBuilds){
   var result = list.map(t=>{
     var version = t.name.match(extractVersion);
     return {
+      id: t.id,
       name: version && t.name.slice(0, version.index - 1) || t.name,
       version: version && version[1] || "",
       details: t

@@ -26,7 +26,7 @@ function getApiUrl(resource, args) {
 function requestTfs(resource, args) {
   return new Promise(function(fulfill, reject) {
     var url = getApiUrl(resource, args);
-    console.log(`requesting ${url}`);
+    //console.log(`requesting ${url}`);
     httpntlm.get({
       url: url,
       workstation: "cdtemplatr",

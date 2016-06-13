@@ -5,14 +5,14 @@ var BuildOutputController = require('./BuildOutputController.js');
 function getBuilds(req, res) {
   buildController.getList().then(
     builds => res.json(builds),
-    error => res.json(error)
+    error => res.json({error: error.toString(), stack: error.stack})
   );
 }
 
 function getBuildDetails(req, res) {
   buildController.getDetails(req.params.id).then(
     details => res.json(details),
-    error => res.json(error)
+    error => res.json({error: error.toString(), stack: error.stack})
   );
 }
 
@@ -21,7 +21,7 @@ function getOutputs(req, res) {
   var promise = outputs.getList();
   return promise.then(
     result => res.json(result),
-    error => res.json(error)
+    error => res.json({error: error.toString(), stack: error.stack})
   );
 }
 
