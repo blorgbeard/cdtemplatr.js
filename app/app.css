@@ -6,3 +6,12 @@ div#buildListContainer td {
 .btn {
   border-radius:0;
 }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #55eb14;
+}
+
+.selectedRow {
+  background-color: #4acc11;
+  color: #FFF;
+}

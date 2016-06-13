@@ -4,17 +4,27 @@ module.exports = ArtefactsTable = React.createClass({
   getInitialState: function() {
     return {newArtefacts: [{name: "Select a Product above"}]};
   },
+  rowClicked: function(e){
+    var row = e.target.parentNode;
+    if (row.selected){
+      row.selected = false;
+      row.className = '';
+    } else {
+      row.selected = true;
+      row.className = 'selectedRow';
+    }
+  },
   render: function() {
     var rows = this.state.newArtefacts.map(function (newArtefact) {
-        return (
-          <tr key={newArtefact.key}>
-            <td>{newArtefact.name}</td>
-          </tr>
-        );
-    });
+      return (
+        <tr key={newArtefact.key} id={newArtefact.key} onClick={this.rowClicked}>
+          <td>{newArtefact.name}</td>
+        </tr>
+      )}.bind(this)
+    );
     var tableHeading = this.props.tableHeading
     return (
-      <table className="table table-hover">
+      <table className="table table-hover ArtefactsTable">
         <thead><tr>
             <th>{tableHeading}</th>
         </tr></thead>
