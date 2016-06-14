@@ -1,4 +1,5 @@
 var React = require("react");
+var events = require("../events.js");
 
 module.exports = ArtefactsTable = React.createClass({
   getInitialState: function() {
@@ -47,6 +48,9 @@ module.exports = ArtefactsTable = React.createClass({
   },
   componentDidMount: function() {
     this.loadFromServer();
+    events.subscribe('buildSelected', function(id) {
+      alert("event fired ! " + id);
+    });
     setInterval(this.loadFromServer, 10000000);
   }
 });

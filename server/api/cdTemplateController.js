@@ -41,7 +41,11 @@ function getCurrentDiff(id) {
     var additions = readChunks(diff.filter(t => t.added));
     var deletions = readChunks(diff.filter(t => t.removed));
 
+    // todo: probably should return more metadata:
+    // * path to tfs xml file
+    // * path to shared folder xml file
     return {
+      buildId: id,
       version: tfsVersion,
       additions: additions,
       deletions: deletions
