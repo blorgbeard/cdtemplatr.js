@@ -1138,5 +1138,18 @@
     "$/Vista/Branches/4.5.5/Notifier": [
         "$/Vista/Branches/4.5.5/Notifier/NotifierCDTemplate.xml"
     ],
-    "$/Vista/Branches/4.5.3/InTouch/Service/visInTouchModels": []
+    "$/Vista/Branches/4.5.3/InTouch/Service/visInTouchModels": [],
+    "$/Vista/Branches/4.5.1/AutomationTesting": [],
+    "$/Vista/Branches/4.5.1/GroupSales/GroupSalesCinema": [],
+    "$/Vista/Branches/4.5.1/CircuitMessaging": [
+        "$/Vista/Branches/4.5.1/CircuitMessaging/CircuitMessagingCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.1/HeadOffice/Alerts": [],
+    "$/Vista/Branches/4.5.1/ApplicationPortal": [],
+    "$/Vista/Branches/4.5.1/Cinema/BackOffice": [
+        "$/Vista/Branches/4.5.1/Cinema/BackOffice/BackOfficeCDTemplate.xml"
+    ],
+    "$/Vista/Branches/4.5.1/HeadOffice/HeadOffice": [
+        "$/Vista/Branches/4.5.1/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml"
+    ]
 }

@@ -38,6 +38,29 @@ function smbReaddir(smb, path) {
   });
 }
 
+function smbReadFile(smb, path) {
+  return new Promise(function (fulfill, reject) {
+    smb = new Smb({
+      share: SHARE,
+      domain: winauth.domain,
+      username: winauth.username,
+      password: winauth.password
+    });
+    console.log(path);
+    var relativePath = path.slice(SHARE.length + 1);
+    console.log(relativePath);
+    smb.readFile(relativePath/* hack, todo fix properly */, function(err, data) {
+      // todo: I am not handling errors properly here, I think.
+      // I should reject the promise and catch the error further down.
+      if (err) {
+        console.log(path + ": " + err.toString() + " " + err.stack);
+        return reject(err);
+      }
+      return fulfill(data);
+    });
+  });
+}
+
 var smbGetFolderList_Cache = null;
 
 function smbGetFolderList(smb) {
@@ -46,6 +69,11 @@ function smbGetFolderList(smb) {
     smbGetFolderList_Cache = result;
     return result;
   });
+}
+
+function getCdTemplate(smb, cdtemplatePath) {
+  console.log(cdtemplatePath);
+  return smbReadFile(smb, cdtemplatePath);
 }
 
 function smbReadFolder(smb, folder) {
@@ -67,13 +95,18 @@ function getOutputsFromFolder(folder) {
     .map(t => t.match(matchBuildFile))
     .filter(t => t)
     .map(t => {
+      var exePath = `${SHARE}\\${ROOT}\\${folder.name}\\${t[0]}`;
+      var cdTemplatePath = exePath.slice(0, exePath.lastIndexOf('.')) + ".xml";
       return {
         name: t[1],
         version: t[2],
         date: t[3],
         number: t[4],
         cdtemplate: !!t[5],
-        path: `${SHARE}\\${ROOT}\\${folder.name}`
+        path: `${SHARE}\\${ROOT}\\${folder.name}`,
+        exe: exePath,
+        cdtemplatePath: cdTemplatePath
+
       };
     })
   );
@@ -138,5 +171,10 @@ module.exports = class BuildOutputController {
       smbGetFolderList(this._smb)
       .then((folders)=>createOutputsForFolders(this._smb, folders))
     );
+  }
+
+  getCdTemplate(path) {
+    console.log(path);
+    return getCdTemplate(this._smb, path);
   }
 };

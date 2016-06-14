@@ -7,7 +7,8 @@ Promise.config({
 
 var buildDefinitionController = require('./buildDefinitionController.js');
 var BuildOutputController = require('./BuildOutputController.js');
-var diffController = require('./diffController.js');
+var tfsCdTemplateLocator = require('./tfsCdTemplateLocator.js');
+var tfs = require('./tfsController.js');
 
 var arrayJoin = require('../utils/arrayJoin.js');
 var compare = require('../utils/compare.js');
@@ -24,7 +25,7 @@ function humanizeProjectName(input) {
   );
 }
 
-function joinBuildAndOutput(build, output, diff) {
+function joinBuildAndOutput(build, output, tfsCdTemplateLocation) {
   return {
     key: build.details.id,
     name: humanizeProjectName(output.name),
@@ -32,9 +33,11 @@ function joinBuildAndOutput(build, output, diff) {
     version: output.version,
     date: output.date,
     number: output.number,
-    cdtemplate: output.cdtemplate,
     buildFolder: output.path,
-    cdtemplateLocation: diff
+    exePath: output.exe,
+    cdtemplate: output.cdtemplate,
+    outputCdTemplateLocation: output.cdtemplatePath,
+    tfsCdTemplateLocation: tfsCdTemplateLocation
   };
 }
 
@@ -61,9 +64,9 @@ function joinBuildsAndOutputsAndGetCdTemplate(builds, outputs) {
   var result = joinBuildsAndOutputs(builds, outputs);
 
   var promises = result.map(t => {
-    return diffController.getList(t.build.details.id).then(
-      diffs => {
-        return {build:t.build, output: t.output, cdtemplateLocation: diffs};
+    return tfsCdTemplateLocator.getLocation(t.build.details.id).then(
+      location => {
+        return {build:t.build, output: t.output, cdtemplateLocation: location};
       },
       error => {
         if (error) console.log(error.toString());
@@ -99,10 +102,33 @@ function getDetails(id) {
   if (buildsCache.value && buildsCache.value[id]) {
     return Promise.resolve([buildsCache.value[id]]);
   }
-  return getBuildsWithFolders(buildDefinitionController.getList().then(t => t.filter(b => b.id == id)));
+  return getBuildsWithFolders(buildDefinitionController.getList().then(t => {
+    return t.filter(b => b.id == id);
+  }));
+}
+
+function getTfsCdTemplate(id) {
+  console.log(`get template for ${id}`);
+  var details = getDetails(id);
+  return details.then(build => {
+    console.log(JSON.stringify(build));
+    return tfs.getFile(build.tfsCdTemplateLocation);
+  })
+}
+
+function getOutputCdTemplate(id) {
+  var outputs = new BuildOutputController();
+  console.log(`get template for ${id}`);
+  var details = getDetails(id);
+  return details.then(build => {
+    console.log(JSON.stringify(build));
+    return outputs.getCdTemplate(build[0].outputCdTemplateLocation);
+  });
 }
 
 module.exports = {
   getList: getList,
-  getDetails: getDetails
+  getDetails: getDetails,
+  getTfsCdTemplate: getTfsCdTemplate,
+  getOutputCdTemplate: getOutputCdTemplate
 }

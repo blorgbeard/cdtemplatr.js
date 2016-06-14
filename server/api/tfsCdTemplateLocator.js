@@ -163,5 +163,5 @@ function getTfsLocationOfCdTemplate(buildId) {
 }
 
 module.exports = {
-  getList: getTfsLocationOfCdTemplate
+  getLocation: getTfsLocationOfCdTemplate,
 };

@@ -26,7 +26,7 @@ function getApiUrl(resource, args) {
 function requestTfs(resource, args) {
   return new Promise(function(fulfill, reject) {
     var url = getApiUrl(resource, args);
-    //console.log(`requesting ${url}`);
+    console.log(`requesting ${url}`);
     httpntlm.get({
       url: url,
       workstation: "cdtemplatr",
@@ -38,8 +38,7 @@ function requestTfs(resource, args) {
         return reject(err);
       }
       try {
-        var json = JSON.parse(res.body)
-        return fulfill(json);
+        return fulfill(res.body);
       } catch (error) {
         return reject(error);
       }
@@ -47,6 +46,20 @@ function requestTfs(resource, args) {
   });
 }
 
+function getJson(resource, args) {
+  return requestTfs(resource, args).then(result => {
+    var json = JSON.parse(result);
+    return json;
+  });
+}
+
+function getFile(path) {
+  return requestTfs('tfvc/items', {
+    path: path
+  })
+}
+
 module.exports = {
-  get: requestTfs
+  get: getJson,
+  getFile: getFile,
 }
