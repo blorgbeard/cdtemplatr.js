@@ -4,7 +4,10 @@ var cache = require("../utils/cache.js");
 
 router.route("/cdtemplate/tfs/:buildId").get((req, res) => {
   builds.getTfsCdTemplate(req.params.buildId).then(
-    result => res.send(result),
+    result => {
+      //console.log(JSON.stringify(result));
+      res.send(result);
+    },
     error => res.json({error: error.toString(), stack: error.stack})
   );
 });
