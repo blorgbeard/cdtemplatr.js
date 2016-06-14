@@ -13,6 +13,7 @@
   "dependencies": {
     "bluebird": "^3.4.0",
     "browserify": "^13.0.1",
+    "diff": "^2.2.3",
     "express": "^4.13.4",
     "express-ntlm": "^2.1.4",
     "gulp": "^3.9.1",

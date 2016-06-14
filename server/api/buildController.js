@@ -112,7 +112,7 @@ function getTfsCdTemplate(id) {
   var details = getDetails(id);
   return details.then(build => {
     console.log(JSON.stringify(build));
-    return tfs.getFile(build[0].tfsCdTemplateLocation);
+    return tfs.getFileWithMetadata(build[0].tfsCdTemplateLocation);
   })
 }
 

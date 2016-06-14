@@ -1,12 +1,13 @@
 var router = require("express").Router();
 var builds = require('./buildController.js');
+var cdtemplate = require('./cdTemplateController.js');
 var cache = require("../utils/cache.js");
 
 router.route("/cdtemplate/tfs/:buildId").get((req, res) => {
   builds.getTfsCdTemplate(req.params.buildId).then(
     result => {
       //console.log(JSON.stringify(result));
-      res.send(result);
+      res.json(result);
     },
     error => res.json({error: error.toString(), stack: error.stack})
   );
@@ -15,6 +16,13 @@ router.route("/cdtemplate/tfs/:buildId").get((req, res) => {
 router.route("/cdtemplate/output/:buildId").get((req, res) => {
   builds.getOutputCdTemplate(req.params.buildId).then(
     result => res.send(result),
+    error => res.json({error: error.toString(), stack: error.stack})
+  );
+});
+
+router.route("/cdtemplate/diff/:buildId").get((req, res) => {
+  cdtemplate.getCurrentDiff(req.params.buildId).then(
+    result => res.json(result),
     error => res.json({error: error.toString(), stack: error.stack})
   );
 });

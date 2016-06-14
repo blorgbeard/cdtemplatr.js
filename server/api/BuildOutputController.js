@@ -56,7 +56,7 @@ function smbReadFile(smb, path) {
         console.log(path + ": " + err.toString() + " " + err.stack);
         return reject(err);
       }
-      return fulfill(data);
+      return fulfill(data.toString('ucs2').slice(1));
     });
   });
 }
