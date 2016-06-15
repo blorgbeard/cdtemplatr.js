@@ -8,8 +8,8 @@ Promise.config({
 var httpntlm = require('httpntlm');
 
 var tfs = require('./tfsController.js');
-var compare = require('../utils/compare.js');
-var winauth = require('../conf/windowslogin.json');
+var compare = require('../../utils/compare.js');
+var winauth = require('../../conf/windowslogin.json');
 
 function getBuildDetails(buildId) {
   return tfs.get(`build/Definitions/${buildId}`).then(result => {

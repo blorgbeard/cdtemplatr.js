@@ -12,6 +12,7 @@ p.userName {
 
 td {
   word-wrap: break-word;
+  cursor: default;
 }
 
 tr:hover td {
@@ -24,4 +25,13 @@ tr.selectedRow td {
 
 tr:hover.selectedRow td {
   background-color: #BDDEF4;
+}
+
+span.fuzzy-date {
+  border-color: grey;
+  border-bottom: 1px dotted;
+}
+
+.message {
+  padding: 15px;
 }

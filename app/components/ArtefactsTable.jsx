@@ -18,7 +18,7 @@ module.exports = ArtefactsTable = React.createClass({
   render: function() {
     var rows = this.props.rows.map(function (newArtefact) {
       return (
-        <tr key={newArtefact.key} id={newArtefact.key} onClick={this.rowClicked}>
+        <tr key={newArtefact} id={newArtefact} onClick={this.rowClicked}>
           <td>{newArtefact}</td>
         </tr>
       )}.bind(this)

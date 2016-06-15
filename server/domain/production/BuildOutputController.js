@@ -5,8 +5,8 @@ var Promise = require('bluebird');
 Promise.config({longStackTraces: true});
 var fs = require('fs');
 
-var compare = require('../utils/compare.js');
-var winauth = require('../conf/windowslogin.json');
+var compare = require('../../utils/compare.js');
+var winauth = require('../../conf/windowslogin.json');
 
 var SHARE = "\\\\vistafp\\Data"; // "\\\\concorde\\temp";
 var ROOT = "V4CDs\\InTesting";  // "root"

@@ -7,8 +7,8 @@ Promise.config({
 var fs = require('fs');
 var buildDefinitionController = require('./buildDefinitionController.js');
 var tfs = require('./tfsController.js');
-var compare = require('../utils/compare.js');
-var cache = require('../utils/cache.js');
+var compare = require('../../utils/compare.js');
+var cache = require('../../utils/cache.js');
 
 var cdTemplateLocationCache = cache.get('cdTemplateLocationCache', {});
 var cdTemplateLocationByBuildId = cache.get('cdTemplateLocationByBuildId', {});

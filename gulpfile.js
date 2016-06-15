@@ -18,6 +18,8 @@ gulp.task("copy", ["bundle"], function () {
     return gulp.src([
       "app/lib/bootstrap/dist/css/bootstrap.min.*",
       "app/lib/bootstrap/dist/js/bootstrap.min.*",
+      "app/lib/bootstrap-toggle/css/bootstrap-toggle.min.*",
+      "app/lib/bootstrap-toggle/js/bootstrap-toggle.min.*",
       "app/lib/jquery/dist/jquery.min.*",
       "app/app.css",
     ])

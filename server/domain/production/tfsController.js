@@ -6,7 +6,7 @@ Promise.config({
 });
 
 var httpntlm = require('httpntlm');
-var winauth = require('../conf/windowslogin.json');
+var winauth = require('../../conf/windowslogin.json');
 
 var TFS = "http://tfs:8080/tfs/Vista";
 var PROJECT = "c1114d4d-f88a-4702-a3c0-4e06b8b0a5d4"; // Vista

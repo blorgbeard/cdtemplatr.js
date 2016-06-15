@@ -1,0 +1,3175 @@
+[
+    {
+        "id": 1191,
+        "name": "Air Conditioning",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\AirConditioning",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/AirConditioning/AirConditioningCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "AirConditioning_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1226,
+        "name": "Air Conditioning",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\AirConditioning",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/AirConditioning/AirConditioningCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160610",
+            "number": "1",
+            "filename": "AirConditioning_4.5.2.21_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1317,
+        "name": "Air Conditioning",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\AirConditioning",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/AirConditioning/AirConditioningCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "AirConditioning_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1430,
+        "name": "Air Conditioning",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\AirConditioning",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/AirConditioning/AirConditioningCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "AirConditioning_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1820,
+        "name": "Air Conditioning",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\AirConditioning",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/AirConditioning/AirConditioningCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "AirConditioning_4.5.5.0.9903_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1206,
+        "name": "Analytics",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Analytics",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Analytics/AnalyticsCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Analytics_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1241,
+        "name": "Analytics",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Analytics",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Analytics/AnalyticsCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Analytics_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1331,
+        "name": "Analytics",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Analytics",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Analytics/AnalyticsCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Analytics_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1443,
+        "name": "Analytics",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Analytics",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Analytics/AnalyticsCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Analytics_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1201,
+        "name": "Call Centre",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160610",
+            "number": "1",
+            "filename": "CallCentre_4.5.1.26_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1236,
+        "name": "Call Centre",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CallCentre_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1327,
+        "name": "Call Centre",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CallCentre_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1440,
+        "name": "Call Centre",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CallCentre_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1829,
+        "name": "Call Centre",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CallCentre_4.5.5.0.9903_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 265,
+        "name": "Call Centre",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CallCentre/CallCentreCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "CallCentre_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "CallCentre_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1240,
+        "name": "Card Promotions",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CardPromotions",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CardPromotions/CardPromotionsCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CardPromotions_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1330,
+        "name": "Card Promotions",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CardPromotions",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CardPromotions/CardPromotionsCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CardPromotions_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1178,
+        "name": "Cash Desk",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CashDesk_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1213,
+        "name": "Cash Desk",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CashDesk_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1304,
+        "name": "Cash Desk",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CashDesk_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1417,
+        "name": "Cash Desk",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "CashDesk_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1807,
+        "name": "Cash Desk",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "CashDesk_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "CashDesk_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 13,
+        "name": "Cash Desk",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CashDesk/CashdeskCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "CashDesk_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "CashDesk_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1192,
+        "name": "China Country Pack",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPack_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1227,
+        "name": "China Country Pack",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPack_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1318,
+        "name": "China Country Pack",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPack_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1431,
+        "name": "China Country Pack",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPack_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1821,
+        "name": "China Country Pack",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "ChinaCountryPack_4.5.5.0.9903_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1194,
+        "name": "China Country Pack HO",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPackHO_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1229,
+        "name": "China Country Pack HO",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPackHO_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1320,
+        "name": "China Country Pack HO",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPackHO_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1433,
+        "name": "China Country Pack HO",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "ChinaCountryPackHO_4.5.4.5_20160611.1_cdtemplate.exe",
+            "cdtemplate": "ChinaCountryPackHO_4.5.4.5_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 165,
+        "name": "China Country Pack HO",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 158,
+        "name": "China Country Pack",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "ChinaCountryPack_Dev_4.5.6.0.9901_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1200,
+        "name": "Digital Signage",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/SignsPLASMA/SignsPlasmaCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160610",
+            "number": "1",
+            "filename": "DigitalSignage_4.5.1.26_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1235,
+        "name": "Digital Signage",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/SignsPLASMA/SignsPlasmaCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160610",
+            "number": "1",
+            "filename": "DigitalSignage_4.5.2.21_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1326,
+        "name": "Digital Signage",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/SignsPLASMA/SignsPlasmaCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "DigitalSignage_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1439,
+        "name": "Digital Signage",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/SignsPLASMA/SignsPlasmaCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "DigitalSignage_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1193,
+        "name": "Digital Signage LED",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignageLED",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/SignsLED/SignsLEDCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "DigitalSignageLED_4.5.1.26_20160611.1_cdtemplate.exe",
+            "cdtemplate": "DigitalSignageLED_4.5.1.26_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1319,
+        "name": "Digital Signage LED",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignageLED",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/SignsLED/SignsLEDCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "DigitalSignageLED_4.5.3.16_20160611.1_cdtemplate.exe",
+            "cdtemplate": "DigitalSignageLED_4.5.3.16_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 264,
+        "name": "Digital Signage",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage_Dev",
+        "cdtemplateLocation": "$/Vista/Main/SignsPLASMA/SignsPlasmaCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "DigitalSignage_Dev_4.5.6.0.9901_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1199,
+        "name": "Facebook",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Facebook",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Facebook/FacebookCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Facebook_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1183,
+        "name": "Film Programming",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.27",
+            "date": "20160613",
+            "number": "3",
+            "filename": "FilmProgramming_4.5.1.27_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1218,
+        "name": "Film Programming",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.22",
+            "date": "20160613",
+            "number": "2",
+            "filename": "FilmProgramming_4.5.2.22_20160613.2_cdtemplate.exe",
+            "cdtemplate": "FilmProgramming_4.5.2.22_20160613.2_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1309,
+        "name": "Film Programming",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "4",
+            "filename": "FilmProgramming_4.5.3.17_20160613.4.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1422,
+        "name": "Film Programming",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160613",
+            "number": "1",
+            "filename": "FilmProgramming_4.5.4.5_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1812,
+        "name": "Film Programming",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9904",
+            "date": "20160614",
+            "number": "5",
+            "filename": "FilmProgramming_4.5.5.0.9904_20160614.5.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 55,
+        "name": "Film Programming",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming_Dev",
+        "cdtemplateLocation": "$/Vista/Main/FilmProgramming/FilmProgrammingCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "3",
+            "filename": "FilmProgramming_Dev_4.5.6.0.9901_20160613.3_cdtemplate.exe",
+            "cdtemplate": "FilmProgramming_Dev_4.5.6.0.9901_20160613.3_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1212,
+        "name": "France Country Pack",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "FranceCountryPack_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1242,
+        "name": "France Country Pack",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "FranceCountryPack_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1332,
+        "name": "France Country Pack",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "FranceCountryPack_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1444,
+        "name": "France Country Pack",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "FranceCountryPack_4.5.4.5_20160611.1_cdtemplate.exe",
+            "cdtemplate": "FranceCountryPack_4.5.4.5_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1833,
+        "name": "France Country Pack",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "FranceCountryPack_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "FranceCountryPack_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 528,
+        "name": "France Country Pack",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CountryPacks/France/FranceCountryPackCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "FranceCountryPack_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "FranceCountryPack_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1198,
+        "name": "Gatekeeper",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Gatekeeper_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1233,
+        "name": "Gatekeeper",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Gatekeeper_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1324,
+        "name": "Gatekeeper",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Gatekeeper_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1437,
+        "name": "Gatekeeper",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Gatekeeper_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1826,
+        "name": "Gatekeeper",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Gatekeeper_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "Gatekeeper_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 257,
+        "name": "Gatekeeper",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Gatekeeper/GatekeeperCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Gatekeeper_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "Gatekeeper_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1195,
+        "name": "Group Sales",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/GroupSales/GroupSalesCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "GroupSales_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1321,
+        "name": "Group Sales",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/GroupSales/GroupSalesCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "3",
+            "filename": "GroupSales_4.5.3.17_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1434,
+        "name": "Group Sales",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/GroupSales/GroupSalesCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "2",
+            "filename": "GroupSales_4.5.4.6_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1824,
+        "name": "Group Sales",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/GroupSales/GroupSalesCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "3",
+            "filename": "GroupSales_4.5.5.0.9903_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 171,
+        "name": "Group Sales",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales_Dev",
+        "cdtemplateLocation": "$/Vista/Main/GroupSales/GroupSalesCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "GroupSales_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "GroupSales_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1179,
+        "name": "Head Office",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.27",
+            "date": "20160613",
+            "number": "3",
+            "filename": "HeadOffice_4.5.1.27_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1214,
+        "name": "Head Office",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160613",
+            "number": "3",
+            "filename": "HeadOffice_4.5.2.21_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1418,
+        "name": "Head Office",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "3",
+            "filename": "HeadOffice_4.5.4.6_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1808,
+        "name": "Head Office",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160614",
+            "number": "1",
+            "filename": "HeadOffice_4.5.5.0.9903_20160614.1_cdtemplate.exe",
+            "cdtemplate": "HeadOffice_4.5.5.0.9903_20160614.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 15,
+        "name": "Head Office",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice_Dev",
+        "cdtemplateLocation": "$/Vista/Main/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "1",
+            "filename": "HeadOffice_Dev_4.5.6.0.9901_20160614.1_cdtemplate.exe",
+            "cdtemplate": "HeadOffice_Dev_4.5.6.0.9901_20160614.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1469,
+        "name": "Head Office",
+        "branch": "Private",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice_Priv",
+        "cdtemplateLocation": "$/Vista/Branches/Private/ServiceApi/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "HeadOffice_Priv_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "HeadOffice_Priv_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1208,
+        "name": "In Touch",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "InTouch_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1244,
+        "name": "In Touch",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "InTouch_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1334,
+        "name": "In Touch",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "3",
+            "filename": "InTouch_4.5.3.17_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1446,
+        "name": "In Touch",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "InTouch_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1835,
+        "name": "In Touch",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "InTouch_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "InTouch_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 659,
+        "name": "In Touch",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch_Dev",
+        "cdtemplateLocation": "$/Vista/Main/InTouch/InTouchCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "InTouch_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "InTouch_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1181,
+        "name": "Kiosk",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Kiosk_4.5.1.26_20160611.1_cdtemplate.exe",
+            "cdtemplate": "Kiosk_4.5.1.26_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1216,
+        "name": "Kiosk",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Kiosk_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1307,
+        "name": "Kiosk",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "3",
+            "filename": "Kiosk_4.5.3.17_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1420,
+        "name": "Kiosk",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "3",
+            "filename": "Kiosk_4.5.4.6_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1810,
+        "name": "Kiosk",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "2",
+            "filename": "Kiosk_4.5.5.0.9903_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 52,
+        "name": "Kiosk",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Kiosk/KioskCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "2",
+            "filename": "Kiosk_Dev_4.5.6.0.9901_20160614.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1184,
+        "name": "Loyalty",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Loyalty_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1219,
+        "name": "Loyalty",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.22",
+            "date": "20160613",
+            "number": "2",
+            "filename": "Loyalty_4.5.2.22_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1310,
+        "name": "Loyalty",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "2",
+            "filename": "Loyalty_4.5.3.17_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1423,
+        "name": "Loyalty",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "3",
+            "filename": "Loyalty_4.5.4.6_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1813,
+        "name": "Loyalty",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "2",
+            "filename": "Loyalty_4.5.5.0.9903_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 67,
+        "name": "Loyalty",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Loyalty/LoyaltyCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Loyalty_Dev_4.5.6.0.9901_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1246,
+        "name": "Point Of Sale",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\PointOfSale",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Cinema/PointOfSale/PointOfSaleCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "PointOfSale_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1336,
+        "name": "Point Of Sale",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\PointOfSale",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Cinema/PointOfSale/PointOfSaleCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "PointOfSale_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1416,
+        "name": "Prerequisites",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Prerequisites",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Prerequisites/PrerequisitesCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Prerequisites_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1450,
+        "name": "Prerequisites",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Prerequisites",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Prerequisites/PrerequisitesCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Prerequisites_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1839,
+        "name": "Prerequisites",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Prerequisites",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Prerequisites/PrerequisitesCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Prerequisites_4.5.5.0.9903_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 836,
+        "name": "Prerequisites",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Prerequisites_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Prerequisites/PrerequisitesCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Prerequisites_Dev_4.5.6.0.9901_20160613.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1197,
+        "name": "Projection",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Projection_4.5.1.26_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1232,
+        "name": "Projection",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Projection_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1323,
+        "name": "Projection",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Projection_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1436,
+        "name": "Projection",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "Projection_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1825,
+        "name": "Projection",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Projection_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "Projection_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 209,
+        "name": "Projection",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Projection/ProjectionCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "Projection_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "Projection_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1182,
+        "name": "Sales Server",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160610",
+            "number": "1",
+            "filename": "SalesServer_4.5.1.26_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1217,
+        "name": "Sales Server",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "SalesServer_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1308,
+        "name": "Sales Server",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "3",
+            "filename": "SalesServer_4.5.3.17_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1421,
+        "name": "Sales Server",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "3",
+            "filename": "SalesServer_4.5.4.6_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1811,
+        "name": "Sales Server",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160614",
+            "number": "1",
+            "filename": "SalesServer_4.5.5.0.9903_20160614.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 53,
+        "name": "Sales Server",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer_Dev",
+        "cdtemplateLocation": "$/Vista/Main/SalesServer/SalesServerCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "SalesServer_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "SalesServer_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1979,
+        "name": "Service Framework",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ServiceFramework_Dev",
+        "cdtemplateLocation": "$/Vista/Main/ServiceFabric/ServiceFabricCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "7",
+            "filename": "ServiceFramework_Dev_4.5.6.0.9901_20160614.7.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1188,
+        "name": "Staff Scheduling Cinema",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/StaffScheduling/Cinema/StaffSchedulingCinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "StaffSchedulingCinema_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1223,
+        "name": "Staff Scheduling Cinema",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/StaffScheduling/Cinema/StaffSchedulingCinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "StaffSchedulingCinema_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1314,
+        "name": "Staff Scheduling Cinema",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/StaffScheduling/Cinema/StaffSchedulingCinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "StaffSchedulingCinema_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1189,
+        "name": "Staff Scheduling Head Office",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingHeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/StaffScheduling/HeadOffice/StaffSchedulingHeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "StaffSchedulingHeadOffice_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1224,
+        "name": "Staff Scheduling Head Office",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingHeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/StaffScheduling/HeadOffice/StaffSchedulingHeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "StaffSchedulingHeadOffice_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1315,
+        "name": "Staff Scheduling Head Office",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\StaffSchedulingHeadOffice",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/StaffScheduling/HeadOffice/StaffSchedulingHeadOfficeCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "StaffSchedulingHeadOffice_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1180,
+        "name": "Task Scheduler",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1215,
+        "name": "Task Scheduler",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1306,
+        "name": "Task Scheduler",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160610",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.3.16_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1419,
+        "name": "Task Scheduler",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160610",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.4.5_20160610.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1809,
+        "name": "Task Scheduler",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "TaskScheduler_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 34,
+        "name": "Task Scheduler",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler_Dev",
+        "cdtemplateLocation": "$/Vista/Main/TaskScheduler/TaskSchedulerCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "TaskScheduler_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "TaskScheduler_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1190,
+        "name": "Usher Point",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "UsherPoint_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1225,
+        "name": "Usher Point",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "UsherPoint_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1316,
+        "name": "Usher Point",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "UsherPoint_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1429,
+        "name": "Usher Point",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "UsherPoint_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1819,
+        "name": "Usher Point",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "UsherPoint_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "UsherPoint_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 154,
+        "name": "Usher Point",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint_Dev",
+        "cdtemplateLocation": "$/Vista/Main/UsherPointPC/UsherPointCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "UsherPoint_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "UsherPoint_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1203,
+        "name": "Vista Cinema",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.27",
+            "date": "20160613",
+            "number": "2",
+            "filename": "VistaCinema_4.5.1.27_20160613.2.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1238,
+        "name": "Vista Cinema",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.22",
+            "date": "20160613",
+            "number": "3",
+            "filename": "VistaCinema_4.5.2.22_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1328,
+        "name": "Vista Cinema",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "4",
+            "filename": "VistaCinema_4.5.3.17_20160613.4.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1441,
+        "name": "Vista Cinema",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "5",
+            "filename": "VistaCinema_4.5.4.6_20160613.5.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1830,
+        "name": "Vista Cinema",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160614",
+            "number": "1",
+            "filename": "VistaCinema_4.5.5.0.9903_20160614.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 392,
+        "name": "Vista Cinema",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "9",
+            "filename": "VistaCinema_Dev_4.5.6.0.9901_20160614.9_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_Dev_4.5.6.0.9901_20160614.9_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1473,
+        "name": "Vista Cinema",
+        "branch": "Private",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema_Priv",
+        "cdtemplateLocation": "$/Vista/Branches/Private/ServiceApi/Cinema/CinemaCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "VistaCinema_Priv_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_Priv_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1185,
+        "name": "Vista Connect",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "VistaConnect_4.5.1.26_20160612.1_cdtemplate.exe",
+            "cdtemplate": "VistaConnect_4.5.1.26_20160612.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1220,
+        "name": "Vista Connect",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.22",
+            "date": "20160613",
+            "number": "3",
+            "filename": "VistaConnect_4.5.2.22_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1311,
+        "name": "Vista Connect",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160613",
+            "number": "3",
+            "filename": "VistaConnect_4.5.3.17_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1424,
+        "name": "Vista Connect",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.1.1",
+            "date": "20160603",
+            "number": "6",
+            "filename": "VistaConnect_4.5.4.1.1_20160603.6.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1814,
+        "name": "Vista Connect",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9904",
+            "date": "20160614",
+            "number": "12",
+            "filename": "VistaConnect_4.5.5.0.9904_20160614.12_cdtemplate.exe",
+            "cdtemplate": "VistaConnect_4.5.5.0.9904_20160614.12_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 81,
+        "name": "Vista Connect",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect_Dev",
+        "cdtemplateLocation": "$/Vista/Main/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaConnect_Dev_4.5.6.0.9901_20160611.1_cdtemplate.exe",
+            "cdtemplate": "VistaConnect_Dev_4.5.6.0.9901_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1962,
+        "name": "Vista Connect WPM Installer",
+        "branch": "",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect_WPM_Installer",
+        "cdtemplateLocation": "$/Vista/Branches/Private/Connect_WPM_Installer/CommonWeb/ConnectCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "4",
+            "filename": "VistaConnect_WPM_Installer_4.5.6.0.9901_20160614.4_cdtemplate.exe",
+            "cdtemplate": "VistaConnect_WPM_Installer_4.5.6.0.9901_20160614.4_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1209,
+        "name": "Vista Messaging",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaMessaging",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/Messaging/MessagingCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "VistaMessaging_4.5.1.26_20160612.1_cdtemplate.exe",
+            "cdtemplate": "VistaMessaging_4.5.1.26_20160612.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1362,
+        "name": "Vista Notifier",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaNotifier",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/Notifier/NotifierCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaNotifier_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1447,
+        "name": "Vista Notifier",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaNotifier",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/Notifier/NotifierCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaNotifier_4.5.4.5_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1836,
+        "name": "Vista Notifier",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaNotifier",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/Notifier/NotifierCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "6",
+            "filename": "VistaNotifier_4.5.5.0.9903_20160613.6.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 663,
+        "name": "Vista Notifier",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaNotifier_Dev",
+        "cdtemplateLocation": "$/Vista/Main/Notifier/NotifierCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "VistaNotifier_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "VistaNotifier_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1389,
+        "name": "Vista Pricing Platform",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaPricingPlatform",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/VistaPricingPlatform/PricingPlatformCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaPricingPlatform_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1454,
+        "name": "Vista Pricing Platform",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaPricingPlatform",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/VistaPricingPlatform/PricingPlatformCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaPricingPlatform_4.5.4.5_20160611.1_cdtemplate.exe",
+            "cdtemplate": "VistaPricingPlatform_4.5.4.5_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1842,
+        "name": "Vista Pricing Platform",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaPricingPlatform",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/VistaPricingPlatform/PricingPlatformCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "3",
+            "filename": "VistaPricingPlatform_4.5.5.0.9903_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1388,
+        "name": "Vista Pricing Platform",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaPricingPlatform_Dev",
+        "cdtemplateLocation": "$/Vista/Main/VistaPricingPlatform/PricingPlatformCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "VistaPricingPlatform_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "VistaPricingPlatform_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1187,
+        "name": "Vista Web",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "VistaWeb_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1222,
+        "name": "Vista Web",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaWeb_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1313,
+        "name": "Vista Web",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.3.17",
+            "date": "20160614",
+            "number": "1",
+            "filename": "VistaWeb_4.5.3.17_20160614.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1426,
+        "name": "Vista Web",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160614",
+            "number": "1",
+            "filename": "VistaWeb_4.5.4.6_20160614.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1253,
+        "name": "Vista Web Mobile",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "VistaWebMobile_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1249,
+        "name": "Vista Web Mobile",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaWebMobile_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1339,
+        "name": "Vista Web Mobile",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaWebMobile_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1453,
+        "name": "Vista Web Mobile",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.4.5",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaWebMobile_4.5.4.5_20160611.1_cdtemplate.exe",
+            "cdtemplate": "VistaWebMobile_4.5.4.5_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1841,
+        "name": "Vista Web Mobile",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VistaWebMobile_4.5.5.0.9903_20160611.1_cdtemplate.exe",
+            "cdtemplate": "VistaWebMobile_4.5.5.0.9903_20160611.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 96,
+        "name": "Vista Web",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb_Dev",
+        "cdtemplateLocation": "$/Vista/Main/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "1",
+            "filename": "VistaWeb_Dev_4.5.6.0.9901_20160614.1_cdtemplate.exe",
+            "cdtemplate": "VistaWeb_Dev_4.5.6.0.9901_20160614.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1210,
+        "name": "Vouchers And Gift Cards",
+        "branch": "4.5.1",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.1/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.1.26",
+            "date": "20160612",
+            "number": "1",
+            "filename": "VouchersAndGiftCards_4.5.1.26_20160612.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1243,
+        "name": "Vouchers And Gift Cards",
+        "branch": "4.5.2",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.2/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.2.21",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VouchersAndGiftCards_4.5.2.21_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1333,
+        "name": "Vouchers And Gift Cards",
+        "branch": "4.5.3",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.3/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.3.16",
+            "date": "20160611",
+            "number": "1",
+            "filename": "VouchersAndGiftCards_4.5.3.16_20160611.1.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1445,
+        "name": "Vouchers And Gift Cards",
+        "branch": "4.5.4",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.4/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.4.6",
+            "date": "20160613",
+            "number": "3",
+            "filename": "VouchersAndGiftCards_4.5.4.6_20160613.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1834,
+        "name": "Vouchers And Gift Cards",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9904",
+            "date": "20160614",
+            "number": "4",
+            "filename": "VouchersAndGiftCards_4.5.5.0.9904_20160614.4.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 604,
+        "name": "Vouchers And Gift Cards",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards_Dev",
+        "cdtemplateLocation": "$/Vista/Main/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160614",
+            "number": "3",
+            "filename": "VouchersAndGiftCards_Dev_4.5.6.0.9901_20160614.3.exe",
+            "cdtemplate": null
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1844,
+        "name": "Web Payment Processor",
+        "branch": "4.5.5",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\WebPaymentProcessor",
+        "cdtemplateLocation": "$/Vista/Branches/4.5.5/WebPaymentProcessor/WebPaymentProcessorCDTemplate.xml",
+        "output": {
+            "version": "4.5.5.0.9903",
+            "date": "20160613",
+            "number": "1",
+            "filename": "WebPaymentProcessor_4.5.5.0.9903_20160613.1_cdtemplate.exe",
+            "cdtemplate": "WebPaymentProcessor_4.5.5.0.9903_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    },
+    {
+        "id": 1523,
+        "name": "Web Payment Processor",
+        "branch": "Dev",
+        "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\WebPaymentProcessor_Dev",
+        "cdtemplateLocation": "$/Vista/Main/WebPaymentProcessor/WebPaymentProcessorCDTemplate.xml",
+        "output": {
+            "version": "4.5.6.0.9901",
+            "date": "20160613",
+            "number": "1",
+            "filename": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160613.1_cdtemplate.exe",
+            "cdtemplate": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160613.1_cdtemplate.xml"
+        },
+        "cdtemplate": {
+            "version": 0,
+            "additions": [],
+            "deletions": []
+        }
+    }
+]

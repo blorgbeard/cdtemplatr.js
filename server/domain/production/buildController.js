@@ -10,9 +10,9 @@ var BuildOutputController = require('./BuildOutputController.js');
 var tfsCdTemplateLocator = require('./tfsCdTemplateLocator.js');
 var tfs = require('./tfsController.js');
 
-var arrayJoin = require('../utils/arrayJoin.js');
-var compare = require('../utils/compare.js');
-var cache = require('../utils/cache.js');
+var arrayJoin = require('../../utils/arrayJoin.js');
+var compare = require('../../utils/compare.js');
+var cache = require('../../utils/cache.js');
 
 var buildsCache = cache.get('buildsCache', {value: null});
 

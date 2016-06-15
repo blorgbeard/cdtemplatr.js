@@ -9,7 +9,7 @@ var ApproveChangesButton = require("./components/ApproveChangesButton.jsx")
 
 function render() {
   ReactDOM.render(<BuildList url="/api/builds"/>, document.getElementById("buildListContainer"));
-  ReactDOM.render(<BuildDetails url="/api/cdtemplate/diff" />, document.getElementById("buildDetailsContainer"));
+  ReactDOM.render(<BuildDetails url="/api/builds"/>, document.getElementById("buildDetailsContainer"));
 /*
   ReactDOM.render(<ArtefactsTable url="/api/newArtefacts" tableHeading="New artefacts in CD"/>, document.getElementById("newArtefactsContainer"));
   ReactDOM.render(<ArtefactsTable url="/api/removedArtefacts" tableHeading ="Artefacts removed from CD"/>, document.getElementById("removedArtefactsContainer"));
