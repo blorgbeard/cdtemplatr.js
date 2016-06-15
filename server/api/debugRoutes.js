@@ -20,13 +20,6 @@ router.route("/cdtemplate/output/:buildId").get((req, res) => {
   );
 });
 
-router.route("/cdtemplate/diff/:buildId").get((req, res) => {
-  cdtemplate.getCurrentDiff(req.params.buildId).then(
-    result => res.json(result),
-    error => res.json({error: error.toString(), stack: error.stack})
-  );
-});
-
 router.route("/cache/get/:key").get((req, res) => {
   cache.get(req.params.key).then(
     results => res.json(results),

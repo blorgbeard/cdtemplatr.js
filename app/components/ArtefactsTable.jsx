@@ -3,7 +3,7 @@ var events = require("../events.js");
 
 module.exports = ArtefactsTable = React.createClass({
   getInitialState: function() {
-    return {newArtefacts: [{name: "Select a Product above"}]};
+    return {rows: ["Select a Product above"]};
   },
   rowClicked: function(e){
     var row = e.target.parentNode;
@@ -16,10 +16,10 @@ module.exports = ArtefactsTable = React.createClass({
     }
   },
   render: function() {
-    var rows = this.state.newArtefacts.map(function (newArtefact) {
+    var rows = this.props.rows.map(function (newArtefact) {
       return (
         <tr key={newArtefact.key} id={newArtefact.key} onClick={this.rowClicked}>
-          <td>{newArtefact.name}</td>
+          <td>{newArtefact}</td>
         </tr>
       )}.bind(this)
     );
@@ -33,24 +33,7 @@ module.exports = ArtefactsTable = React.createClass({
       </table>
     );
   },
-  loadFromServer: function() {
-    $.ajax({
-      url: this.props.url,
-      dataType: 'json',
-      cache: false,
-      success: function (data) {
-        this.setState({newArtefacts: data});
-      }.bind(this),
-      error: function (xhr, status, err) {
-        //console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  },
   componentDidMount: function() {
-    this.loadFromServer();
-    events.subscribe('buildSelected', function(id) {
-      alert("event fired ! " + id);
-    });
-    setInterval(this.loadFromServer, 10000000);
+
   }
 });

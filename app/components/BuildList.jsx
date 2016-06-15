@@ -1,29 +1,40 @@
 var React = require("react");
 var events = require("../events.js");
 
+var BuildListRow = React.createClass({
+  handleClick: function() {
+    this.props.onRowClicked(this.props.build.key);
+  },
+  render: function() {
+    var result = function() {
+      return (
+        <tr ref="row" onClick={this.handleClick}>
+          <td>
+            <span>{this.props.build.name}</span>
+            &nbsp;
+            <span className="text-muted">{this.props.build.branch}</span>
+          </td>
+          <td>{this.props.build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
+        </tr>
+      );
+    }.bind(this);
+    return result();
+  },
+});
+
 module.exports = BuildList = React.createClass({
   getInitialState: function() {
-    return {builds: [{name: "Loading..."}]};
+    return {builds: []};
   },
-  rowClicked: function (e) {
-    alert('got click');
-    var row = e.target.parentNode;
-    if (row.selected){
-      row.selected = false;
-      row.className = '';
-    } else {
-      row.selected = true;
-      row.className = 'selectedRow';
-    }
-    events.raise('buildSelected', e.target.parentNode["key"]);
+  rowClicked: function (id) {
+    // todo: colour the row and decolour the others
+    console.log("user clicked build " + id);
+    events.raise('buildSelected', id);
   },
   render: function() {
     var rows = this.state.builds.map(function (build) {
         return (
-          <tr key={build.key} onClick={this.rowClicked}>
-            <td><span>{build.name}</span> <span className="text-muted">{build.branch}</span></td>
-            <td>{build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
-          </tr>
+          <BuildListRow key={build.key} build={build} onRowClicked={this.rowClicked} />
         );
     }.bind(this));
     return (
