@@ -35,9 +35,25 @@ var domain = require('./domain/testing.js');
 var apiRouter = apiRouterFactory(domain);
 app.use('/api', apiRouter);
 
+
+/* // hmmmmmmmmmmm
+var tfs = require('./domain/production/tfsController.js');
+var Promise = require('bluebird');
+var writeFile = Promise.promisify(require('fs').writeFile);
 var input = require('./domain/testing/data/builds.json');
+Promise.all(
+  input.map(build => {
+    var path = build.cdtemplateLocation;
+    return tfs.getFileWithMetadata(path).then(result => {
+
+    });
+  })
+);
+//*/
 
 /*  // temp code for munging test data
+var input = require('./domain/testing/data/builds.json');
+
 var output = input.map(build => {
   var buildfilename = build.output.filename;
   if (buildfilename.indexOf('\\') > -1) {

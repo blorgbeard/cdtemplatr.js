@@ -55,17 +55,23 @@ module.exports = BuildList = React.createClass({
         );
     }.bind(this));
     return (
-      <table className="table table-striped table-hover">
-        <thead><tr>
-          <th>Build</th>
-          <th style={{textAlign: "right"}}>
-            <input type="checkbox" ref="toggleFilter" value="filtered"
-                   checked={this.state.filtered}
-                   onChange={this.toggleFilter}/>
-          </th>
-        </tr></thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <div>
+        <table className="table table-striped table-hover build-list-header-table">
+          <thead><tr>
+            <th>Build</th>
+            <th style={{textAlign: "right"}}>
+              <input type="checkbox" ref="toggleFilter" value="filtered"
+                     checked={this.state.filtered}
+                     onChange={this.toggleFilter}/>
+            </th>
+          </tr></thead>
+        </table>
+        <div className="build-list-table">
+          <table className="table table-striped table-hover">
+            <tbody>{rows}</tbody>
+          </table>
+        </div>
+      </div>
     );
   },
   loadFromServer: function() {

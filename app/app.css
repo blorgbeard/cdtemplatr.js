@@ -10,6 +10,14 @@ p.userName {
   table-layout: fixed;
 }
 
+.build-list-table {
+  overflow-y: scroll;
+}
+
+.build-list-header-table {
+  margin-bottom: 0px;
+}
+
 td {
   word-wrap: break-word;
   cursor: default;

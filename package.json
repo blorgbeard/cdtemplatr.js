@@ -24,6 +24,7 @@
     "react-dom": "^15.1.0",
     "reactify": "^1.1.1",
     "smb2": "^0.2.7",
+    "uuid": "^2.0.2",
     "vinyl-source-stream": "^1.1.0"
   }
 }
