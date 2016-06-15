@@ -8,7 +8,7 @@ var BuildListRow = React.createClass({
   render: function() {
     var result = function() {
       return (
-        <tr ref="row" onClick={this.handleClick}>
+        <tr ref="row" className={this.props.selected ? "selectedRow" : ""} onClick={this.handleClick}>
           <td>
             <span>{this.props.build.name}</span>
             &nbsp;
@@ -25,6 +25,7 @@ var BuildListRow = React.createClass({
 module.exports = BuildList = React.createClass({
   getInitialState: function() {
     return {
+      idSelected: 0,
       filtered: true,
       builds: []
     };
@@ -32,11 +33,17 @@ module.exports = BuildList = React.createClass({
   rowClicked: function (id) {
     // todo: colour the row and decolour the others
     console.log("user clicked build " + id);
+    this.setState({
+      idSelected: id,
+      filtered: this.state.filtered,
+      builds: this.state.builds
+    });
     events.raise('buildSelected', id);
   },
   toggleFilter: function() {
     console.log("toggleFilter");
     this.setState({
+      idSelected: this.state.idSelected,
       filtered: !this.state.filtered,
       builds: this.state.builds
     });
@@ -44,7 +51,7 @@ module.exports = BuildList = React.createClass({
   render: function() {
     var rows = this.state.builds.filter(b => !this.state.filtered || b.cdtemplate).map(function (build) {
         return (
-          <BuildListRow key={build.id} build={build} onRowClicked={this.rowClicked} />
+          <BuildListRow key={build.id} build={build} onRowClicked={this.rowClicked} selected={build.id == this.state.idSelected} />
         );
     }.bind(this));
     return (
@@ -68,6 +75,7 @@ module.exports = BuildList = React.createClass({
       cache: false,
       success: function (data) {
         this.setState({
+          idSelected: this.state.idSelected,
           filtered: this.state.filtered,
           builds: data
         });

@@ -46,7 +46,7 @@ module.exports = BuildDetails = React.createClass({
             <div>
               <div><ArtefactsTable rows={this.state.cdtemplate.additions} tableHeading="New artefacts in CD"/></div>
               <div><ArtefactsTable rows={this.state.cdtemplate.deletions} tableHeading="Artefacts removed from CD"/></div>
-              <div><ApproveChangesButton /></div>
+              <div><ApproveChangesButton enabled={false} /></div>
             </div>
           : <p className="bg-success message">The CD is fine! There are no changes to review.</p>}
         </div>

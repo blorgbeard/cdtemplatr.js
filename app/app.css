@@ -35,3 +35,7 @@ span.fuzzy-date {
 .message {
   padding: 15px;
 }
+
+.btn[disabled] {
+  cursor: default;
+}
