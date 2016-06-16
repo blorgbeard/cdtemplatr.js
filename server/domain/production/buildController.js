@@ -26,18 +26,25 @@ function humanizeProjectName(input) {
 }
 
 function joinBuildAndOutput(build, output, tfsCdTemplateLocation) {
+  var filename = output.exe.slice(output.exe.lastIndexOf('\\') + 1);
+  var cdtemplate = null;
+  if (filename.indexOf('_cdtemplate.') > -1) {
+    cdtemplate = filename.replace(/\.exe$/, '.xml');
+  }
   return {
-    key: build.details.id,
+    id: build.details.id,
     name: humanizeProjectName(output.name),
     branch: build.version,
-    version: output.version,
-    date: output.date,
-    number: output.number,
-    buildFolder: output.path,
-    exePath: output.exe,
-    cdtemplate: output.cdtemplate,
-    outputCdTemplateLocation: output.cdtemplatePath,
-    tfsCdTemplateLocation: tfsCdTemplateLocation
+    outputLocation: output.path,
+    cdtemplateLocation: tfsCdTemplateLocation,
+    output: {
+      version: output.version,
+      date: output.date,
+      number: output.number,
+      filename: filename,
+      cdtemplate: cdtemplate
+    },
+    cdtemplate: null,
   };
 }
 
@@ -107,23 +114,15 @@ function getDetails(id) {
   }));
 }
 
-function getTfsCdTemplate(id) {
-  console.log(`get template for ${id}`);
-  var details = getDetails(id);
-  return details.then(build => {
-    console.log(JSON.stringify(build));
-    return tfs.getFileWithMetadata(build[0].tfsCdTemplateLocation);
-  })
+function getTfsCdTemplate(build) {
+  console.log(`get tfs template for ${build.id}`);
+  return tfs.getFileWithMetadata(build.cdtemplateLocation);
 }
 
-function getOutputCdTemplate(id) {
+function getOutputCdTemplate(build) {
   var outputs = new BuildOutputController();
-  console.log(`get template for ${id}`);
-  var details = getDetails(id);
-  return details.then(build => {
-    console.log(JSON.stringify(build));
-    return outputs.getCdTemplate(build[0].outputCdTemplateLocation);
-  });
+  console.log(`get output template for ${build.id}`);
+  return outputs.getCdTemplate(`${build.outputLocation}\\${build.output.cdtemplate}`);
 }
 
 module.exports = {

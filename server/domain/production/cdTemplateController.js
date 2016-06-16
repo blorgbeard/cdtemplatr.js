@@ -27,25 +27,46 @@ function readChunks(chunks) {
   return result;
 }
 
-function getCurrentDiff(id) {
+function getCurrentDiff(build) {
   return Promise.all([
-    buildController.getTfsCdTemplate(id),
-    buildController.getOutputCdTemplate(id)
+    buildController.getTfsCdTemplate(build),
+    buildController.getOutputCdTemplate(build)
   ]).then(docs => {
-    //console.log(JSON.stringify(docs));
     var tfsVersion = docs[0].metadata.version;
     var tfsxml = docs[0].data;
     var outputxml = docs[1];
+    if (tfsxml.length < 10) {
+      console.log(`no file data received for ${build.cdtemplateLocation}`);
+      return null;
+    }
+    if (outputxml.length < 10) {
+      console.log(`no file data received for ${build.outputLocation}`);
+      return null;
+    }
+    console.log(`performing diff for ${build.name} ${build.branch}`);
     var diff = differ.diffLines(tfsxml, outputxml);
-    //console.log(JSON.stringify(diff));
+
     var additions = readChunks(diff.filter(t => t.added));
     var deletions = readChunks(diff.filter(t => t.removed));
+
+    var summary = {
+      total: readChunks(diff).length,
+      additions: additions.length,
+      deletions: deletions.length
+    }
+
+    console.log(JSON.stringify(summary));
+
+    if (summary.total == summary.additions) {
+      // something seems to have gone wrong with the diff
+      // todo: sort it out properly
+      return null;
+    }
 
     // todo: probably should return more metadata:
     // * path to tfs xml file
     // * path to shared folder xml file
     return {
-      buildId: id,
       version: tfsVersion,
       additions: additions,
       deletions: deletions

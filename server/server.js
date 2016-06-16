@@ -2,6 +2,8 @@ var express = require('express');
 var path = require('path');
 var ntlm = require('express-ntlm');
 
+//require('./populateTestData.js');
+
 var app = express();
 
 // serve static stuff like css, js, images..
