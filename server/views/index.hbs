@@ -12,6 +12,7 @@
   <link href="bootstrap.min.css" rel="stylesheet" />
   <link href="app.css" rel="stylesheet" />
   <link href="bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="toastr.css" rel="stylesheet"/>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,6 +44,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap.min.js"></script>
     <script src="bootstrap-toggle.min.js"></script>
+    <script src="toastr.js"></script>
     <script src="main.js"></script>
     <script>
       $(function(){
@@ -51,6 +53,25 @@
           $('.build-list-table').css({ height: $(window).innerHeight() - 130 });
         });
       });
+    </script>
+    <script>
+      toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      };
     </script>
 </body>
 

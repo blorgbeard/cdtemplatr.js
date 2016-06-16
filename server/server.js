@@ -2,7 +2,9 @@ var express = require('express');
 var path = require('path');
 var ntlm = require('express-ntlm');
 
-//require('./populateTestData.js');
+require('./populateTestData.js');
+
+//app.use(bodyParser.urlencoded({ extended: false }));
 
 var app = express();
 
@@ -21,6 +23,8 @@ app.use(ntlm({
 
 // serve the main page
 app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
 app.get('/', function (req, res) {
   res.render('index', {
     title: "cdtemplatr.js"

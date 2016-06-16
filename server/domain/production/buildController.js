@@ -21,7 +21,7 @@ function humanizeProjectName(input) {
   return (input
     .replace(camelCaseToSpace, '$1$4 $2$3$5')
     .replace(/_/g, ' ')
-    .replace(/ (Dev|Main|Priv)$/, ' ($1)')
+    //.replace(/ (Dev|Main|Priv)$/, ' ($1)')
   );
 }
 
@@ -31,10 +31,22 @@ function joinBuildAndOutput(build, output, tfsCdTemplateLocation) {
   if (filename.indexOf('_cdtemplate.') > -1) {
     cdtemplate = filename.replace(/\.exe$/, '.xml');
   }
+  var name = humanizeProjectName(output.name);
+  var nameBranch = (
+    name.endsWith(' Dev') ? 'Dev' :
+    name.endsWith(' Main') ? 'Main' :
+    name.endsWith(' Priv') ? 'Private' :
+    ''
+  );
+  var branch = build.version;
+  if (!branch && nameBranch) {
+    branch = nameBranch;
+    name = name.slice(0, name.lastIndexOf(' '));
+  }
   return {
     id: build.details.id,
-    name: humanizeProjectName(output.name),
-    branch: build.version,
+    name: name,
+    branch: branch,
     outputLocation: output.path,
     cdtemplateLocation: tfsCdTemplateLocation,
     output: {

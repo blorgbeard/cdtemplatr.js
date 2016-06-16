@@ -1,39 +1,38 @@
 var React = require("react");
 var events = require("../events.js");
 
-module.exports = ArtefactsTable = React.createClass({
-  getInitialState: function() {
-    return {rows: ["Select a Product above"]};
-  },
-  rowClicked: function(e){
-    var row = e.target.parentNode;
-    if (row.selected){
-      row.selected = false;
-      row.className = '';
-    } else {
-      row.selected = true;
-      row.className = 'selectedRow';
-    }
+var ArtefactRow = React.createClass({
+  handleClick: function() {
+    this.props.onRowClicked(this.props.index);
   },
   render: function() {
-    var rows = this.props.rows.map(function (newArtefact) {
+    return function(){
       return (
-        <tr key={newArtefact} id={newArtefact} onClick={this.rowClicked}>
-          <td>{newArtefact}</td>
+        <tr className={this.props.row.selected ? "selectedRow" : ""} onClick={this.handleClick}>
+          <td>{this.props.row.filename}</td>
         </tr>
-      )}.bind(this)
-    );
-    var tableHeading = this.props.tableHeading
+      );
+    }.bind(this)();
+  }
+});
+
+module.exports = ArtefactsTable = React.createClass({
+  rowClicked: function(key){
+    this.props.onRowClicked(key);
+  },
+  render: function() {
+    var rows = this.props.rows.map(function(row, index) {
+      return (
+        <ArtefactRow key={index} index={index} onRowClicked={this.rowClicked} row={row}/>
+      );
+    }.bind(this));
     return (
       <table className="table table-hover ArtefactsTable">
         <thead><tr>
-            <th>{tableHeading}</th>
+            <th>{this.props.heading}</th>
         </tr></thead>
         <tbody>{rows}</tbody>
       </table>
     );
-  },
-  componentDidMount: function() {
-
   }
 });

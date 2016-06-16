@@ -11,17 +11,6 @@ module.exports = React.createClass({
     );
   },
   buttonClicked: function(){
-    var selectedRows = document.getElementsByClassName('selectedRow');
-    if (!selectedRows) {
-      alert("No changes selected");
-      return;
-    }
-
-    var rowIds = [];
-    for(var i = 0; i < selectedRows.length; i++){
-      var row = selectedRows[i];
-      rowIds.push(row.id);
-    }
-    alert("Change rows IDs to check in: " + rowIds);
+    this.props.onClicked();
   }
 });

@@ -23,17 +23,61 @@ module.exports = BuildDetails = React.createClass({
       "cdtemplate": {
         "version": 0,
         "additions": [
-          "\\no\\such\\file.xml",
-          "\\there\\are\\no\\files\\here.html"
+          {"filename": "\\no\\such\\file.xml"},
+          {"filename": "\\there\\are\\no\\files\\here.html"}
         ],
         "deletions": [
-          "\\deleted\\file\\here.exe.jpg"
+          {"filename": "\\deleted\\file\\here.exe.jpg"}
         ]
       }
     };
   },
+  additionRowClicked: function(index) {
+    this.state.cdtemplate.additions[index].selected = !this.state.cdtemplate.additions[index].selected;
+    this.setState(this.state);
+  },
+  deletionRowClicked: function(index) {
+    this.state.cdtemplate.deletions[index].selected = !this.state.cdtemplate.deletions[index].selected;
+    this.setState(this.state);
+  },
+  approveChangesClicked: function() {
+    var additions = (
+      this.state.cdtemplate.additions
+        .map((row, index) => ({row:row, index: index}))
+        .filter(t=>t.row.selected)
+        .map(t=>t.index)
+      );
+    var deletions = (
+        this.state.cdtemplate.deletions
+          .map((row, index) => ({row:row, index: index}))
+          .filter(t=>t.row.selected)
+          .map(t=>t.index)
+        );
+    $.ajax({
+      url: this.props.url + "/approve/" + this.state.id,
+      type: 'get',
+      contentType: 'application/json',
+      data: {
+        additions: additions,
+        deletions: deletions
+      },
+      dataType: 'json',
+      success: function (data) {
+        toastr.success(data, "Success!");
+        this.loadFromServer(this.state.id);
+        events.raise('buildListShouldUpdate');
+      }.bind(this),
+      error: function (xhr, status, err) {
+        //console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
   render: function() {
     var content = function() {
+      approveButtonEnabled = (
+        this.state.cdtemplate &&
+        this.state.cdtemplate.additions.concat(this.state.cdtemplate.deletions).filter(t=>t.selected).length > 0
+      );
       return (
         <div>
           <h1>{this.state.name}&nbsp;<span className="text-muted">{this.state.branch}</span></h1>
@@ -44,9 +88,19 @@ module.exports = BuildDetails = React.createClass({
           <h2>Build output changes</h2>
           {(!!this.state.output.cdtemplate) ?
             <div>
-              <div><ArtefactsTable rows={this.state.cdtemplate.additions} tableHeading="New artefacts in CD"/></div>
-              <div><ArtefactsTable rows={this.state.cdtemplate.deletions} tableHeading="Artefacts removed from CD"/></div>
-              <div><ApproveChangesButton enabled={false} /></div>
+              <div>
+                <ArtefactsTable
+                    rows={this.state.cdtemplate.additions}
+                    heading="Files added to build"
+                    onRowClicked={this.additionRowClicked} />
+                </div>
+              <div>
+                <ArtefactsTable
+                    rows={this.state.cdtemplate.deletions}
+                    heading="Files removed from build"
+                    onRowClicked={this.deletionRowClicked} />
+              </div>
+              <div><ApproveChangesButton enabled={approveButtonEnabled} onClicked={this.approveChangesClicked}/></div>
             </div>
           : <p className="bg-success message">The CD is fine! There are no changes to review.</p>}
         </div>
@@ -56,10 +110,14 @@ module.exports = BuildDetails = React.createClass({
   },
   loadFromServer: function(id) {
     $.ajax({
-      url: this.props.url + "/" + id,
+      url: this.props.url + "/details/" + id,
       dataType: 'json',
       cache: false,
       success: function (data) {
+        if (data.cdtemplate) {
+          data.cdtemplate.additions = data.cdtemplate.additions.map(filename=>({filename: filename}));
+          data.cdtemplate.deletions = data.cdtemplate.deletions.map(filename=>({filename: filename}));
+        }
         this.setState(data);
       }.bind(this),
       error: function (xhr, status, err) {

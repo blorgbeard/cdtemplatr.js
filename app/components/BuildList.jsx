@@ -80,8 +80,13 @@ module.exports = BuildList = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
+        var idSelected = this.state.idSelected;
+        if (idSelected <= 0) {
+          idSelected = data.filter(b => !this.state.filtered || b.cdtemplate)[0].id;
+          events.raise('buildSelected', idSelected);
+        }
         this.setState({
-          idSelected: this.state.idSelected,
+          idSelected: idSelected,
           filtered: this.state.filtered,
           builds: data
         });
@@ -103,5 +108,6 @@ module.exports = BuildList = React.createClass({
     if (this.props.pollInterval) {
       setInterval(this.loadFromServer, this.props.pollInterval);
     }
+    events.subscribe('buildListShouldUpdate', this.loadFromServer);
   }
 });
