@@ -14,7 +14,7 @@ var BuildListRow = React.createClass({
             &nbsp;
             <span className="text-muted">{this.props.build.branch}</span>
           </td>
-          <td style={{textAlign: "right"}}>{this.props.build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
+          <td className="noselect" style={{textAlign: "right"}}>{this.props.build.cdtemplate ? <span className="glyphicon glyphicon-alert text-danger"/> : ""}</td>
         </tr>
       );
     }.bind(this);

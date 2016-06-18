@@ -23,9 +23,9 @@ function getBuildDetails(id) {
 function approveChanges(build, additionIndexes, deletionIndexes) {
   //console.log("approveChanges: " + JSON.stringify(build));
   if (additionIndexes) {
-    console.log(JSON.stringify(additionIndexes));
+    //console.log(JSON.stringify(additionIndexes));
     build.cdtemplate.additions = build.cdtemplate.additions.filter((line, index) => {
-      console.log(JSON.stringify(index));
+      //console.log(JSON.stringify(index));
       var lineInList = additionIndexes.filter(t => t == index).length > 0;
       return !lineInList;
     });
@@ -46,7 +46,7 @@ function approveChanges(build, additionIndexes, deletionIndexes) {
   // update in memory, but not disk
   data = data.map(t => t.id == build.id ? build : t);
 
-  return Promise.resolve(`Committed ${build.name} ${build.branch} template changes`);// as ${ntlm.UserName}`);
+  return Promise.resolve(`Committed ${build.name} ${build.branch} template changes.`);
 }
 
 module.exports = {

@@ -2,7 +2,7 @@ p.userName {
   padding: 0 25px 0 0;
 }
 
-.btn {
+.btn .navbar {
   border-radius:0;
 }
 
@@ -46,4 +46,16 @@ span.fuzzy-date {
 
 .btn[disabled] {
   cursor: default;
+}
+
+
+/* http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }

@@ -32,13 +32,25 @@ module.exports = BuildDetails = React.createClass({
       }
     };
   },
-  additionRowClicked: function(index) {
-    this.state.cdtemplate.additions[index].selected = !this.state.cdtemplate.additions[index].selected;
-    this.setState(this.state);
+  selectRange(array, value, min, max) {
+    var changed = false;
+    for (var i = min; i <= max; i++) {
+      if (array[i].selected != value) {
+        array[i].selected = value;
+        changed = true;
+      }
+    }
+    return changed;
   },
-  deletionRowClicked: function(index) {
-    this.state.cdtemplate.deletions[index].selected = !this.state.cdtemplate.deletions[index].selected;
-    this.setState(this.state);
+  selectAdditions: function(value, min, max) {
+    if (this.selectRange(this.state.cdtemplate.additions, value, min, max)) {
+      this.setState(this.state);
+    }
+  },
+  selectDeletions: function(value, min, max) {
+    if (this.selectRange(this.state.cdtemplate.deletions, value, min, max)) {
+      this.setState(this.state);
+    }
   },
   approveChangesClicked: function() {
     var additions = (
@@ -92,13 +104,13 @@ module.exports = BuildDetails = React.createClass({
                 <ArtefactsTable
                     rows={this.state.cdtemplate.additions}
                     heading="Files added to build"
-                    onRowClicked={this.additionRowClicked} />
+                    setSelection={this.selectAdditions} />
                 </div>
               <div>
                 <ArtefactsTable
                     rows={this.state.cdtemplate.deletions}
                     heading="Files removed from build"
-                    onRowClicked={this.deletionRowClicked} />
+                    setSelection={this.selectDeletions} />
               </div>
               <div><ApproveChangesButton enabled={approveButtonEnabled} onClicked={this.approveChangesClicked}/></div>
             </div>

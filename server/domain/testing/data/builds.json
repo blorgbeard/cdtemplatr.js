@@ -22,9 +22,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/AirConditioning/AirConditioningCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160614",
+            "date": "20160616",
             "number": "1",
-            "filename": "AirConditioning_4.5.2.22_20160614.1.exe",
+            "filename": "AirConditioning_4.5.2.22_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -142,9 +142,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.1/CallCentre/CallCentreCDTemplate.xml",
         "output": {
             "version": "4.5.1.27",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "CallCentre_4.5.1.27_20160615.1.exe",
+            "filename": "CallCentre_4.5.1.27_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -211,15 +211,15 @@
     },
     {
         "id": 265,
-        "name": "Call Centre (Dev)",
-        "branch": "",
+        "name": "Call Centre",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CallCentre_Dev",
         "cdtemplateLocation": "$/Vista/Main/CallCentre/CallCentreCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
             "date": "20160616",
-            "number": "1",
-            "filename": "CallCentre_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "number": "2",
+            "filename": "CallCentre_Dev_4.5.6.0.9901_20160616.2_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -345,8 +345,8 @@
     },
     {
         "id": 13,
-        "name": "Cash Desk (Dev)",
-        "branch": "",
+        "name": "Cash Desk",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\CashDesk_Dev",
         "cdtemplateLocation": "$/Vista/Main/CashDesk/CashdeskCDTemplate.xml",
         "output": {
@@ -1142,16 +1142,16 @@
     },
     {
         "id": 165,
-        "name": "China Country Pack HO (Dev)",
-        "branch": "",
+        "name": "China Country Pack HO",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPackHO_Dev",
         "cdtemplateLocation": "$/Vista/Main/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "ChinaCountryPackHO_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 185142,
@@ -1197,7 +1197,7 @@
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\modules\\bori\\partials\\styling.html",
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\modules\\bori\\partials\\styling-2186c74634.html",
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\scripts\\app-revenue.js",
-                "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\scripts\\app-revenue-8ab03df2fc.js",
+                "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\scripts\\app-revenue-7c1292e767.js",
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\styles\\app-revenue.css",
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\styles\\app-revenue-1398af4d48.css",
                 "\\BoxOfficeRevenueInquiry\\BoxOfficeRevenueInquiry\\App\\dist\\styles\\base-site-styles.css",
@@ -1794,15 +1794,15 @@
     },
     {
         "id": 158,
-        "name": "China Country Pack (Dev)",
-        "branch": "",
+        "name": "China Country Pack",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ChinaCountryPack_Dev",
         "cdtemplateLocation": "$/Vista/Main/CountryPacks/China/Cinema/ChinaCountryPackCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160614",
+            "date": "20160616",
             "number": "1",
-            "filename": "ChinaCountryPack_Dev_4.5.6.0.9901_20160614.1.exe",
+            "filename": "ChinaCountryPack_Dev_4.5.6.0.9901_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -1815,9 +1815,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/SignsPLASMA/SignsPlasmaCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "DigitalSignage_4.5.2.22_20160615.1.exe",
+            "filename": "DigitalSignage_4.5.2.22_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -1948,15 +1948,15 @@
     },
     {
         "id": 264,
-        "name": "Digital Signage (Dev)",
-        "branch": "",
+        "name": "Digital Signage",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\DigitalSignage_Dev",
         "cdtemplateLocation": "$/Vista/Main/SignsPLASMA/SignsPlasmaCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160614",
+            "date": "20160616",
             "number": "1",
-            "filename": "DigitalSignage_Dev_4.5.6.0.9901_20160614.1.exe",
+            "filename": "DigitalSignage_Dev_4.5.6.0.9901_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -1984,9 +1984,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.1/FilmProgramming/FilmProgrammingCDTemplate.xml",
         "output": {
             "version": "4.5.1.27",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "FilmProgramming_4.5.1.27_20160615.1.exe",
+            "filename": "FilmProgramming_4.5.1.27_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -1999,9 +1999,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/FilmProgramming/FilmProgrammingCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160615",
-            "number": "3",
-            "filename": "FilmProgramming_4.5.2.22_20160615.3.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "FilmProgramming_4.5.2.22_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -2014,9 +2014,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/FilmProgramming/FilmProgrammingCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "FilmProgramming_4.5.3.17_20160615.1.exe",
+            "filename": "FilmProgramming_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -2044,48 +2044,168 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.5/FilmProgramming/FilmProgrammingCDTemplate.xml",
         "output": {
             "version": "4.5.5.0.9904",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "FilmProgramming_4.5.5.0.9904_20160615.1_cdtemplate.exe",
-            "cdtemplate": "FilmProgramming_4.5.5.0.9904_20160615.1_cdtemplate.xml"
+            "filename": "FilmProgramming_4.5.5.0.9904_20160616.1_cdtemplate.exe",
+            "cdtemplate": "FilmProgramming_4.5.5.0.9904_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 186796,
-            "additions": [],
+            "additions": [
+                "\\Cinema\\FilmProgCin_ProgramScheduler\\WSVistaProgramScheduler\\bin\\Ninject.dll",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-future-c3d58d0579.js",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-program-21b4a20071.js"
+            ],
             "deletions": [
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\EFCache.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visAreaCatMaint.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visAreaCatMaint.dll.config",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\Infragistics2.Win.Misc.v8.2.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\Infragistics2.Win.UltraWinDataSource.v8.2.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBFilmPalette.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBPolicySelectors.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBShowtimeBuilderStepOne.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBShowtimeBuilderStepTwo.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBShowtimeBuilderStepTwoLaunch.exe",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBShowtimeBuilderStepTwoLaunch.exe.config",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFBShowtimeViewer.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFilmProgrammingControls.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visFilmProgrammingControls.dll.config",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visHoldoverSheetViewer.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visHoldoverSheetViewer.reg",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visHoldoverSheetViewerLaunch.exe",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visHoldoverSheetViewerLaunch.exe.config",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visShowtimeControls.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\Vista.Circuit.Domain.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\Vista.Circuit.Domain.dll.config",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visTrailerScheduling.dll",
+                "\\Cinema\\FilmProgCin_FSCin\\BackOffice\\visTrailerScheduling.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\AxInterop.InetCtlsObjects.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\AxInterop.ShockwaveFlashObjects.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\AxInterop.WMPLib.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\C1.Win.C1TrueDBGrid.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics.WebUI.Shared.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\infragistics.webui.ultrawebgrid.v2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Documents.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.AppStylistSupport.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.SupportDialogs.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraChart.v8.2.Design.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraGauge.v8.2.Design.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinCalcManager.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinCalcManager.v8.2.FormulaBuilder.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinDock.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinGauge.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinGrid.DocumentExport.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinInkProvider.Ink17.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinInkProvider.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinListBar.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinListView.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinMaskedEdit.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinSchedule.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinSpellChecker.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinStatusBar.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinTabbedMdi.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinTabControl.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.UltraWinToolbars.v8.2.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Infragistics2.Win.v8.2.Design.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Interop.ShockwaveFlashObjects.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Interop.WMPLib.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visAlertSubscriptions.dll",
                 "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visAttributeMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visCdnClient.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visCinemaLocationTypeMaint.dll",
                 "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visCinemaMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visCinemaOperatorHOMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visCircuitMaint.dll",
                 "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visConfig.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visConfigurationMaint.dll",
                 "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visDistributorMaint.dll",
                 "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visDistributorMaint.dll.config",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmCategoryMaint.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmCategoryMaint.dll.config",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visMovieFormatMaint.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visMovieFormatMaint.dll.config",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visSalesProfileMaint.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Vista.Cabinets.Domain.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Vista.Cabinets.Domain.dll.config",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Vista.Circuit.Domain.Pricing.dll",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\Vista.Circuit.Domain.Pricing.dll.config",
-                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTicketTypeMaint.dll"
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visEdiFilmImportBase.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visEdiFilmImportFilmWeb.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visExtractGenerate.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBBoxOfficeInquiry.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBBulkContracts.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCinemaPlanning.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCinemaPlanning.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCircuitPlanning.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCircuitPlanning.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCorporateBooking.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBCorporateBooking.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBFilmPalette.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBPolicySelectors.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramGrid.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramGrid.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramGrid.XmlSerializers.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramScheduler.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramScheduler.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramScheduler.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBProgramScheduler.XmlSerializers.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBShowtimeBuilderStepOne.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBShowtimeBuilderStepTwo.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBShowtimeBuilderStepTwoLaunch.exe",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBShowtimeBuilderStepTwoLaunch.exe.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBShowtimeViewer.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBTrailerSchedule.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBTrailerSchedule.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFBTrailerSchedule.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmCensorMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmProgrammingControls.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmProgrammingControls.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFilmSoundtrackMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFuturePlanningGroups.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visFuturePlanningGroups.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHierarchyManager.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOContractAdjustmentWizard.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOContractMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOFilmHireCalculate.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOFilmHireEngine.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOFilmHireEnquiry.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOFilmHireManager.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOFilmHireWorksheet.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheet.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheet.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheet.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheetViewer.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheetViewer.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheetViewerLaunch.exe",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHoldoverSheetViewerLaunch.exe.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOPricingController.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOScreenDeductionInvoices.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOScreenDeductionInvoices.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visHOTicketFeeEngine.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visMediaLibrary.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visNumberToWords.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visNumberToWords.reg",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visPersonMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visPrinting.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visSessionTypeMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visShowtimeControls.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTicketClassMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTicketPriceAdjustmentMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTicketTypeMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTimeZoneMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTrailerMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTrailerScheduling.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visTrailerScheduling.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visUserGroupMaint.dll",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visUserGroupMaint.dll.config",
+                "\\FilmProgramming\\FilmProg_FS\\FilmProgramming\\visUserMaint.dll",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-future-2b0abbb6d9.js",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-program-fa13eb1f70.js"
             ]
         }
     },
     {
         "id": 55,
-        "name": "Film Programming (Dev)",
-        "branch": "",
+        "name": "Film Programming",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FilmProgramming_Dev",
         "cdtemplateLocation": "$/Vista/Main/FilmProgramming/FilmProgrammingCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
-            "number": "3",
-            "filename": "FilmProgramming_Dev_4.5.6.0.9901_20160615.3_cdtemplate.exe",
-            "cdtemplate": "FilmProgramming_Dev_4.5.6.0.9901_20160615.3_cdtemplate.xml"
+            "date": "20160616",
+            "number": "2",
+            "filename": "FilmProgramming_Dev_4.5.6.0.9901_20160616.2_cdtemplate.exe",
+            "cdtemplate": "FilmProgramming_Dev_4.5.6.0.9901_20160616.2_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 170433,
@@ -2215,6 +2335,7 @@
                 "\\FilmProgramming\\_Install_Customisation\\WSVistaIntegration\\NuGet.Config",
                 "\\FilmProgramming\\_Install_Customisation\\WSVistaIntegration\\packages.config",
                 "\\FilmProgramming\\Database\\1_Tables\\tblFuturePlan_Detail.sql",
+                "\\FilmProgramming\\Database\\1_Tables\\tblSession_TicketRule.sql",
                 "\\FilmProgramming\\Database\\1_Tables\\tblTrailerPlan.sql",
                 "\\FilmProgramming\\Database\\1_Tables\\tblTrailerPlan_Site.sql",
                 "\\FilmProgramming\\Database\\1_Tables\\tblTrailerPlanDetail.sql",
@@ -2242,6 +2363,7 @@
                 "\\FilmProgramming\\Database\\3_DRI\\DRI_tblTrailerScheduleFilm_FP.sql",
                 "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblFBDetail_Attribute.sql",
                 "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblFuturePlan_Detail.sql",
+                "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblSession_TicketRule.sql",
                 "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblTrailerPlan_Site.sql",
                 "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblTrailerPlanDetail.sql",
                 "\\FilmProgramming\\Database\\3_DRI_FP\\DRI_tblTrailerPriority.sql",
@@ -2452,7 +2574,7 @@
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\programinquiry\\partials\\welcome.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\programinquiry\\partials\\welcome-b5d64be0c5.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\day-scheduler\\day-scheduler.html",
-                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\day-scheduler\\day-scheduler-5af0642f68.html",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\day-scheduler\\day-scheduler-746b32e9ee.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\main-nav\\main-nav.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\main-nav\\main-nav-73278d9ee8.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\components\\scheduler-header\\scheduler-header.html",
@@ -2462,11 +2584,11 @@
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\partials\\login.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\modules\\session-scheduler\\partials\\login-e2220c704f.html",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-future.js",
-                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-future-0619cb54c8.js",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-future-9a89bde2bf.js",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-program.js",
-                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-program-d7469b2962.js",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-program-1d5022e706.js",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-session.js",
-                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-session-b121c1f269.js",
+                "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\app-session-7e25a3618a.js",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\signalr.js",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\scripts\\signalr-47a82fed4e.js",
                 "\\FilmProgramming\\FilmProgrammingWeb\\FilmProgrammingWeb\\App\\dist\\styles\\app-future.css",
@@ -3009,16 +3131,16 @@
     },
     {
         "id": 528,
-        "name": "France Country Pack (Dev)",
-        "branch": "",
+        "name": "France Country Pack",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\FranceCountryPack_Dev",
         "cdtemplateLocation": "$/Vista/Main/CountryPacks/France/FranceCountryPackCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "FranceCountryPack_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "FranceCountryPack_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "FranceCountryPack_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "FranceCountryPack_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 174464,
@@ -3208,15 +3330,15 @@
     },
     {
         "id": 257,
-        "name": "Gatekeeper (Dev)",
-        "branch": "",
+        "name": "Gatekeeper",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Gatekeeper_Dev",
         "cdtemplateLocation": "$/Vista/Main/Gatekeeper/GatekeeperCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "Gatekeeper_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
+            "filename": "Gatekeeper_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3244,9 +3366,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/GroupSales/GroupSalesCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "GroupSales_4.5.3.17_20160615.1.exe",
+            "filename": "GroupSales_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3259,9 +3381,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/GroupSales/GroupSalesCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "GroupSales_4.5.4.6_20160615.1.exe",
+            "filename": "GroupSales_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3283,15 +3405,15 @@
     },
     {
         "id": 171,
-        "name": "Group Sales (Dev)",
-        "branch": "",
+        "name": "Group Sales",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\GroupSales_Dev",
         "cdtemplateLocation": "$/Vista/Main/GroupSales/GroupSalesCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
             "date": "20160616",
-            "number": "4",
-            "filename": "GroupSales_Dev_4.5.6.0.9901_20160616.4_cdtemplate.exe",
+            "number": "8",
+            "filename": "GroupSales_Dev_4.5.6.0.9901_20160616.8_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3304,9 +3426,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.1/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
         "output": {
             "version": "4.5.1.27",
-            "date": "20160613",
-            "number": "3",
-            "filename": "HeadOffice_4.5.1.27_20160613.3.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "HeadOffice_4.5.1.27_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3334,9 +3456,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160614",
+            "date": "20160616",
             "number": "1",
-            "filename": "HeadOffice_4.5.3.17_20160614.1.exe",
+            "filename": "HeadOffice_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3349,9 +3471,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "HeadOffice_4.5.4.6_20160615.1.exe",
+            "filename": "HeadOffice_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -3438,16 +3560,16 @@
     },
     {
         "id": 15,
-        "name": "Head Office (Dev)",
-        "branch": "",
+        "name": "Head Office",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice_Dev",
         "cdtemplateLocation": "$/Vista/Main/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
             "date": "20160616",
-            "number": "3",
-            "filename": "HeadOffice_Dev_4.5.6.0.9901_20160616.3_cdtemplate.exe",
-            "cdtemplate": "HeadOffice_Dev_4.5.6.0.9901_20160616.3_cdtemplate.xml"
+            "number": "6",
+            "filename": "HeadOffice_Dev_4.5.6.0.9901_20160616.6_cdtemplate.exe",
+            "cdtemplate": "HeadOffice_Dev_4.5.6.0.9901_20160616.6_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 183019,
@@ -3461,34 +3583,34 @@
                 "\\AppPortal\\Central\\APPPORTAL_CinemaStatsWeb\\VistaCinemaStatsWeb\\bin\\System.Web.WebPages.Deployment.dll",
                 "\\AppPortal\\Central\\APPPORTAL_CinemaStatsWeb\\VistaCinemaStatsWeb\\bin\\Vista.DependencyInjection.dll",
                 "\\AppPortal\\Central\\APPPORTAL_CinemaStatsWeb\\VistaCinemaStatsWeb\\bin\\Vista.Diagnostics.dll",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Resources\\Vista.ico.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\C1.Win.C1Input.2.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\C1.Win.C1List.2.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Infragistics2.Shared.v8.2.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Infragistics2.Win.UltraWinGrid.v8.2.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Infragistics2.Win.v8.2.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Ninject.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visAppPortalConfigBase.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visAppPortalUtils.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visAppPortalUtils.XmlSerializers.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visCabinetCustomBase.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visCommon.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visControls.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visData.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visDataProvider.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visDataProviderDCService.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visDataProviderDCService.XmlSerializers.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visLoyaltyClient.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visLOYALVISTA.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visReports.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visReportSelector.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visReportSelector.XmlSerializers.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visRibbonControls.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Vista.Diagnostics.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\Vista.Loyalty.Support.dll.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\VistaReportingClient.exe.deploy",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\VistaReportingClient.exe.manifest",
-                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_3\\visWinForms.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Resources\\Vista.ico.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\C1.Win.C1Input.2.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\C1.Win.C1List.2.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Infragistics2.Shared.v8.2.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Infragistics2.Win.UltraWinGrid.v8.2.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Infragistics2.Win.v8.2.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Ninject.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visAppPortalConfigBase.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visAppPortalUtils.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visAppPortalUtils.XmlSerializers.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visCabinetCustomBase.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visCommon.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visControls.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visData.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visDataProvider.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visDataProviderDCService.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visDataProviderDCService.XmlSerializers.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visLoyaltyClient.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visLOYALVISTA.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visReports.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visReportSelector.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visReportSelector.XmlSerializers.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visRibbonControls.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Vista.Diagnostics.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\Vista.Loyalty.Support.dll.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\VistaReportingClient.exe.deploy",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\VistaReportingClient.exe.manifest",
+                "\\AppPortal\\Central\\APPPORTAL_Rpt\\VistaAppPortal\\apps\\WebReporting\\Exe\\Application Files\\VistaReportingClient_45_6_60616_6\\visWinForms.dll.deploy",
                 "\\AppPortal\\Central\\APPPORTAL_VistaAppPortal\\VistaAppPortal\\bin\\Vista.Diagnostics.dll",
                 "\\AppPortal\\Central\\APPPORTAL_VistaAppPortal\\VistaAppPortal\\LanguageFiles\\ARMEN_A.XML",
                 "\\AppPortal\\Central\\APPPORTAL_VistaAppPortal\\VistaAppPortal\\LanguageFiles\\ARMEN_C.XML",
@@ -3788,6 +3910,7 @@
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\NLog.dll",
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\Owin.dll",
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\Swashbuckle.Core.dll",
+                "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\Swashbuckle.WebHost.dll",
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\System.IdentityModel.Tokens.Jwt.dll",
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\System.Net.Http.Formatting.dll",
                 "\\HeadOffice\\CMDSERVICEHO\\Services\\HeadOfficeMasterData\\bin\\System.Web.Cors.dll",
@@ -3847,6 +3970,7 @@
                 "\\HeadOffice\\Database\\1_Tables\\tblFacilityType.sql",
                 "\\HeadOffice\\Database\\1_Tables\\tblGroupBookingDisplayCategory.sql",
                 "\\HeadOffice\\Database\\1_Tables\\tblHireCharge.sql",
+                "\\HeadOffice\\Database\\1_Tables\\tblItemExpectedReceipt.sql",
                 "\\HeadOffice\\Database\\1_Tables\\tblItemReorderApproval.sql",
                 "\\HeadOffice\\Database\\1_Tables\\tblItemReorderDetail.sql",
                 "\\HeadOffice\\Database\\1_Tables\\tblItemReorderHeader.sql",
@@ -3873,9 +3997,18 @@
                 "\\HeadOffice\\Database\\1_Tables\\XFER_tblVenueFacility.sql",
                 "\\HeadOffice\\Database\\1_Tables\\XFER_tblVenueFacilityReservationExceptions.sql",
                 "\\HeadOffice\\Database\\1b_TablesHOExtensions\\tblItemReorderHeader_HOExt.sql",
+                "\\HeadOffice\\Database\\1z_TablesAlterColumnSize\\AlterColumnSize_tblItemExpectedReceipt.sql",
                 "\\HeadOffice\\Database\\1z_TablesAlterColumnSize\\AlterColumnSize_tblItemReorderDetail.sql",
                 "\\HeadOffice\\Database\\1z_TablesAlterColumnSize_HO\\AlterColumnSize_tblPaymentHistory_HO.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_CreateExpectedReceipts.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_DefaultOrderDays.sql",
                 "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_HeadOfficeAuthenticationService.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_PurchaseOrderNumAutoGenerated.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_ReorderCompleteBeforeApproved.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_ReorderExportBeforeApproved.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_ReorderPurchaseOrderNoReq.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_SecurityOverOperationalLimit.sql",
+                "\\HeadOffice\\Database\\2a_popConfig\\popConfigure_UseItemHOCodeOnReports.sql",
                 "\\HeadOffice\\Database\\2a_popLookup\\poptblLookup_FT_CLASS.sql",
                 "\\HeadOffice\\Database\\2a_popLookup\\poptblLookup_HIRECAT.sql",
                 "\\HeadOffice\\Database\\2a_popLookup\\poptblLookup_ITEMR_STAT_ItemReorderHeaderStatus.sql",
@@ -4158,8 +4291,8 @@
     },
     {
         "id": 1469,
-        "name": "Head Office (Priv)",
-        "branch": "",
+        "name": "Head Office",
+        "branch": "Private",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice_Priv",
         "cdtemplateLocation": "$/Vista/Branches/Private/ServiceApi/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
         "output": {
@@ -4620,9 +4753,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/InTouch/InTouchCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "InTouch_4.5.3.17_20160615.1.exe",
+            "filename": "InTouch_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4659,15 +4792,15 @@
     },
     {
         "id": 659,
-        "name": "In Touch (Dev)",
-        "branch": "",
+        "name": "In Touch",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\InTouch_Dev",
         "cdtemplateLocation": "$/Vista/Main/InTouch/InTouchCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "InTouch_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
+            "filename": "InTouch_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4680,9 +4813,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.4/Kiosk/KioskCDTemplate.xml",
         "output": {
             "version": "4.4.33",
-            "date": "20160615",
-            "number": "2",
-            "filename": "Kiosk_4.4.33_20160615.2.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "Kiosk_4.4.33_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4725,9 +4858,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/Kiosk/KioskCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160614",
+            "date": "20160616",
             "number": "1",
-            "filename": "Kiosk_4.5.3.17_20160614.1.exe",
+            "filename": "Kiosk_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4740,9 +4873,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/Kiosk/KioskCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "Kiosk_4.5.4.6_20160615.1.exe",
+            "filename": "Kiosk_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4764,8 +4897,8 @@
     },
     {
         "id": 52,
-        "name": "Kiosk (Dev)",
-        "branch": "",
+        "name": "Kiosk",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Kiosk_Dev",
         "cdtemplateLocation": "$/Vista/Main/Kiosk/KioskCDTemplate.xml",
         "output": {
@@ -4800,9 +4933,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/Loyalty/LoyaltyCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "Loyalty_4.5.2.22_20160615.1.exe",
+            "filename": "Loyalty_4.5.2.22_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4816,8 +4949,8 @@
         "output": {
             "version": "4.5.3.17",
             "date": "20160616",
-            "number": "1",
-            "filename": "Loyalty_4.5.3.17_20160616.1.exe",
+            "number": "2",
+            "filename": "Loyalty_4.5.3.17_20160616.2.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4830,9 +4963,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/Loyalty/LoyaltyCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
-            "number": "1",
-            "filename": "Loyalty_4.5.4.6_20160615.1.exe",
+            "date": "20160616",
+            "number": "2",
+            "filename": "Loyalty_4.5.4.6_20160616.2.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4854,15 +4987,15 @@
     },
     {
         "id": 67,
-        "name": "Loyalty (Dev)",
-        "branch": "",
+        "name": "Loyalty",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Loyalty_Dev",
         "cdtemplateLocation": "$/Vista/Main/Loyalty/LoyaltyCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
             "date": "20160616",
-            "number": "1",
-            "filename": "Loyalty_Dev_4.5.6.0.9901_20160616.1.exe",
+            "number": "3",
+            "filename": "Loyalty_Dev_4.5.6.0.9901_20160616.3.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -4944,15 +5077,15 @@
     },
     {
         "id": 836,
-        "name": "Prerequisites (Dev)",
-        "branch": "",
+        "name": "Prerequisites",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Prerequisites_Dev",
         "cdtemplateLocation": "$/Vista/Main/Prerequisites/PrerequisitesCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "Prerequisites_Dev_4.5.6.0.9901_20160615.1.exe",
+            "filename": "Prerequisites_Dev_4.5.6.0.9901_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5057,16 +5190,16 @@
     },
     {
         "id": 209,
-        "name": "Projection (Dev)",
-        "branch": "",
+        "name": "Projection",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\Projection_Dev",
         "cdtemplateLocation": "$/Vista/Main/Projection/ProjectionCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "Projection_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "Projection_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "Projection_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "Projection_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 141713,
@@ -5102,9 +5235,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.1/SalesServer/SalesServerCDTemplate.xml",
         "output": {
             "version": "4.5.1.27",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "SalesServer_4.5.1.27_20160615.1.exe",
+            "filename": "SalesServer_4.5.1.27_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5132,9 +5265,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/SalesServer/SalesServerCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "SalesServer_4.5.3.17_20160615.1.exe",
+            "filename": "SalesServer_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5147,9 +5280,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/SalesServer/SalesServerCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "SalesServer_4.5.4.6_20160615.1.exe",
+            "filename": "SalesServer_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5171,16 +5304,16 @@
     },
     {
         "id": 53,
-        "name": "Sales Server (Dev)",
-        "branch": "",
+        "name": "Sales Server",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\SalesServer_Dev",
         "cdtemplateLocation": "$/Vista/Main/SalesServer/SalesServerCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
-            "number": "2",
-            "filename": "SalesServer_Dev_4.5.6.0.9901_20160615.2_cdtemplate.exe",
-            "cdtemplate": "SalesServer_Dev_4.5.6.0.9901_20160615.2_cdtemplate.xml"
+            "date": "20160616",
+            "number": "1",
+            "filename": "SalesServer_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "SalesServer_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 161785,
@@ -5252,6 +5385,12 @@
                 "\\visInstallHelp.dll"
             ],
             "deletions": [
+                "\\_Install_Customisation\\Customers\\VieShow\\libInvoiceFormat.dll",
+                "\\_Install_Customisation\\Customers\\VieShow\\QREncrypter.dll",
+                "\\_Install_Customisation\\Customers\\VieShow\\visPOSControls.dll",
+                "\\_Install_Customisation\\Customers\\VieShow\\Vista.VieShow.OnScreenKeyboard.dll",
+                "\\_Install_Customisation\\Customers\\VieShow\\visVieShowEGUI.dll",
+                "\\_Install_Customisation\\Customers\\VieShow\\visVieShowEGUI.dll.config",
                 "\\_Install_Customisation\\SellingDataExtracts\\visMovieTickets\\Bin\\NLog.config",
                 "\\_Locales\\SetupServer.en-NZ.resources",
                 "\\_Locales\\SetupServer.zh-CN.resources",
@@ -5283,15 +5422,15 @@
     },
     {
         "id": 1979,
-        "name": "Service Framework (Dev)",
-        "branch": "",
+        "name": "Service Framework",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\ServiceFramework_Dev",
         "cdtemplateLocation": "$/Vista/Main/ServiceFabric/ServiceFabricCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "ServiceFramework_Dev_4.5.6.0.9901_20160615.1.exe",
+            "filename": "ServiceFramework_Dev_4.5.6.0.9901_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5424,9 +5563,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/TaskScheduler/TaskSchedulerCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "TaskScheduler_4.5.3.17_20160615.1.exe",
+            "filename": "TaskScheduler_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5439,9 +5578,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/TaskScheduler/TaskSchedulerCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160613",
-            "number": "2",
-            "filename": "TaskScheduler_4.5.4.6_20160613.2.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "TaskScheduler_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5498,16 +5637,16 @@
     },
     {
         "id": 34,
-        "name": "Task Scheduler (Dev)",
-        "branch": "",
+        "name": "Task Scheduler",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\TaskScheduler_Dev",
         "cdtemplateLocation": "$/Vista/Main/TaskScheduler/TaskSchedulerCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "TaskScheduler_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "TaskScheduler_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "TaskScheduler_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "TaskScheduler_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 161712,
@@ -5682,16 +5821,16 @@
     },
     {
         "id": 154,
-        "name": "Usher Point (Dev)",
-        "branch": "",
+        "name": "Usher Point",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\UsherPoint_Dev",
         "cdtemplateLocation": "$/Vista/Main/UsherPointPC/UsherPointCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "UsherPoint_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "UsherPoint_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "UsherPoint_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "UsherPoint_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 150691,
@@ -5791,22 +5930,14 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.1/Cinema/CinemaCDTemplate.xml",
         "output": {
             "version": "4.5.1.27",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaCinema_4.5.1.27_20160615.1_cdtemplate.exe",
-            "cdtemplate": "VistaCinema_4.5.1.27_20160615.1_cdtemplate.xml"
+            "filename": "VistaCinema_4.5.1.27_20160616.1_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_4.5.1.27_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
-            "version": 185251,
-            "additions": [
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\log4net.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\UC-CAJA.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\visMedianetDatafast.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Database\\popPaymentModuleConfig_Ecuador Kiosk.sql",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Database\\popPaymentModuleConfig_Ecuador Pos.sql",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Documentation\\Medianet Datafast POS Payment Connector Installation Guide.pdf",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\PrintTemplate\\ReceiptCardPayment.txt"
-            ],
+            "version": 187149,
+            "additions": [],
             "deletions": []
         }
     },
@@ -5818,22 +5949,14 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/Cinema/CinemaCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160615",
-            "number": "1",
-            "filename": "VistaCinema_4.5.2.22_20160615.1_cdtemplate.exe",
-            "cdtemplate": "VistaCinema_4.5.2.22_20160615.1_cdtemplate.xml"
+            "date": "20160616",
+            "number": "2",
+            "filename": "VistaCinema_4.5.2.22_20160616.2_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_4.5.2.22_20160616.2_cdtemplate.xml"
         },
         "cdtemplate": {
-            "version": 185248,
-            "additions": [
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\log4net.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\UC-CAJA.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\bin\\visMedianetDatafast.dll",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Database\\popPaymentModuleConfig_Ecuador Kiosk.sql",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Database\\popPaymentModuleConfig_Ecuador Pos.sql",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\Documentation\\Medianet Datafast POS Payment Connector Installation Guide.pdf",
-                "\\_Install_Customisation\\PaymentConnectors\\EcuadorMedianetDatafast\\PrintTemplate\\ReceiptCardPayment.txt"
-            ],
+            "version": 187148,
+            "additions": [],
             "deletions": []
         }
     },
@@ -5845,9 +5968,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/Cinema/CinemaCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160617",
             "number": "1",
-            "filename": "VistaCinema_4.5.3.17_20160615.1.exe",
+            "filename": "VistaCinema_4.5.3.17_20160617.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -5859,16 +5982,18 @@
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema",
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/Cinema/CinemaCDTemplate.xml",
         "output": {
-            "version": "4.5.4.6",
+            "version": "4.5.4.4.1",
             "date": "20160616",
             "number": "2",
-            "filename": "VistaCinema_4.5.4.6_20160616.2_cdtemplate.exe",
-            "cdtemplate": "VistaCinema_4.5.4.6_20160616.2_cdtemplate.xml"
+            "filename": "VistaCinema_4.5.4.4.1_20160616.2_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_4.5.4.4.1_20160616.2_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 187046,
             "additions": [],
-            "deletions": []
+            "deletions": [
+                "\\KITCHENSERVICE\\KitchenService\\LatestVersion\\Vista.Diagnostics.dll"
+            ]
         }
     },
     {
@@ -5894,19 +6019,19 @@
     },
     {
         "id": 392,
-        "name": "Vista Cinema (Dev)",
-        "branch": "",
+        "name": "Vista Cinema",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema_Dev",
         "cdtemplateLocation": "$/Vista/Main/Cinema/CinemaCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
             "date": "20160616",
-            "number": "7",
-            "filename": "VistaCinema_Dev_4.5.6.0.9901_20160616.7_cdtemplate.exe",
-            "cdtemplate": "VistaCinema_Dev_4.5.6.0.9901_20160616.7_cdtemplate.xml"
+            "number": "9",
+            "filename": "VistaCinema_Dev_4.5.6.0.9901_20160616.9_cdtemplate.exe",
+            "cdtemplate": "VistaCinema_Dev_4.5.6.0.9901_20160616.9_cdtemplate.xml"
         },
         "cdtemplate": {
-            "version": 186897,
+            "version": 187117,
             "additions": [
                 "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Circuit.Domain.Brazil\\bin\\Vista.Brazil.TaxNumber.Common.dll",
                 "\\_Install_Customisation\\Customers\\Brazil\\Domain\\Vista.Circuit.Domain.Brazil\\bin\\Vista.Environment.OnPremise.FileUtilities.dll",
@@ -6012,11 +6137,9 @@
                 "\\Database\\2a_popProcessDefinition\\poptblProcessDefinition_ReleaseTableBookings.sql",
                 "\\Database\\2f_popOther\\1_popTblHireCharge.sql",
                 "\\Database\\2f_popOther\\popTblFacilityType.sql",
-                "\\Database\\5_Views\\vwTicketNumber.sql",
                 "\\Database\\6b_Sps\\spReleaseTableBookings.sql",
                 "\\Database\\90Rpt_1_popReports\\popRpt_PaymentVoucher.sql",
                 "\\Database\\90rpt_3_reportSps\\RptPaymentVoucher.sql",
-                "\\Database\\94_MigrateData\\Migrate_tblTicketNumbers.sql",
                 "\\TaskServiceTasks\\TaskService\\LatestVersion\\Vista.Diagnostics.Logging.Nlog.Target.File.dll",
                 "\\VistaPOS\\VistaPOS\\Tab.Service.dll",
                 "\\VistaUtilities\\VistaUtilities\\data\\PrintTemplateTestUtility\\Boca\\CCReceipt.txt",
@@ -6109,8 +6232,8 @@
     },
     {
         "id": 1473,
-        "name": "Vista Cinema (Priv)",
-        "branch": "",
+        "name": "Vista Cinema",
+        "branch": "Private",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaCinema_Priv",
         "cdtemplateLocation": "$/Vista/Branches/Private/ServiceApi/Cinema/CinemaCDTemplate.xml",
         "output": {
@@ -7918,9 +8041,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.2/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.2.22",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaConnect_4.5.2.22_20160615.1.exe",
+            "filename": "VistaConnect_4.5.2.22_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -7933,9 +8056,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaConnect_4.5.3.17_20160615.1.exe",
+            "filename": "VistaConnect_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -7948,9 +8071,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaConnect_4.5.4.6_20160615.1.exe",
+            "filename": "VistaConnect_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -7963,24 +8086,24 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.5/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.5.0.9904",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaConnect_4.5.5.0.9904_20160615.1_cdtemplate.exe",
+            "filename": "VistaConnect_4.5.5.0.9904_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
     },
     {
         "id": 81,
-        "name": "Vista Connect (Dev)",
-        "branch": "",
+        "name": "Vista Connect",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaConnect_Dev",
         "cdtemplateLocation": "$/Vista/Main/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "2",
-            "filename": "VistaConnect_Dev_4.5.6.0.9901_20160615.2_cdtemplate.exe",
+            "filename": "VistaConnect_Dev_4.5.6.0.9901_20160616.2_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -7993,9 +8116,9 @@
         "cdtemplateLocation": "$/Vista/Branches/Private/Connect_WPM_Installer/CommonWeb/ConnectCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160616",
+            "date": "20160617",
             "number": "1",
-            "filename": "VistaConnect_WPM_Installer_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "filename": "VistaConnect_WPM_Installer_4.5.6.0.9901_20160617.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8172,15 +8295,15 @@
     },
     {
         "id": 663,
-        "name": "Vista Notifier (Dev)",
-        "branch": "",
+        "name": "Vista Notifier",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaNotifier_Dev",
         "cdtemplateLocation": "$/Vista/Main/Notifier/NotifierCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaNotifier_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
+            "filename": "VistaNotifier_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8232,15 +8355,15 @@
     },
     {
         "id": 1388,
-        "name": "Vista Pricing Platform (Dev)",
-        "branch": "",
+        "name": "Vista Pricing Platform",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaPricingPlatform_Dev",
         "cdtemplateLocation": "$/Vista/Main/VistaPricingPlatform/PricingPlatformCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
-            "number": "1",
-            "filename": "VistaPricingPlatform_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
+            "date": "20160616",
+            "number": "4",
+            "filename": "VistaPricingPlatform_Dev_4.5.6.0.9901_20160616.4_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8283,9 +8406,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.3/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
         "output": {
             "version": "4.5.3.17",
-            "date": "20160615",
-            "number": "2",
-            "filename": "VistaWeb_4.5.3.17_20160615.2.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "VistaWeb_4.5.3.17_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8298,9 +8421,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
-            "number": "3",
-            "filename": "VistaWeb_4.5.4.6_20160615.3.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "VistaWeb_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8313,9 +8436,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.5/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
         "output": {
             "version": "4.5.5.0.9904",
-            "date": "20160615",
-            "number": "5",
-            "filename": "VistaWeb_4.5.5.0.9904_20160615.5_cdtemplate.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "VistaWeb_4.5.5.0.9904_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8437,30 +8560,30 @@
     },
     {
         "id": 1088,
-        "name": "Vista Web Mobile (Dev)",
-        "branch": "",
+        "name": "Vista Web Mobile",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWebMobile_Dev",
         "cdtemplateLocation": "$/Vista/Main/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VistaWebMobile_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
+            "filename": "VistaWebMobile_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
     },
     {
         "id": 96,
-        "name": "Vista Web (Dev)",
-        "branch": "",
+        "name": "Vista Web",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VistaWeb_Dev",
         "cdtemplateLocation": "$/Vista/Main/InternetTicketing/.build.mobile/VistaWebMobileCdTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
-            "number": "4",
-            "filename": "VistaWeb_Dev_4.5.6.0.9901_20160615.4_cdtemplate.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "VistaWeb_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8518,9 +8641,9 @@
         "cdtemplateLocation": "$/Vista/Branches/4.5.4/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
         "output": {
             "version": "4.5.4.6",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "VouchersAndGiftCards_4.5.4.6_20160615.1.exe",
+            "filename": "VouchersAndGiftCards_4.5.4.6_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8542,15 +8665,15 @@
     },
     {
         "id": 604,
-        "name": "Vouchers And Gift Cards (Dev)",
-        "branch": "",
+        "name": "Vouchers And Gift Cards",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\VouchersAndGiftCards_Dev",
         "cdtemplateLocation": "$/Vista/Main/VoucherManagement/VouchersAndGiftCardsCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
-            "number": "3",
-            "filename": "VouchersAndGiftCards_Dev_4.5.6.0.9901_20160615.3.exe",
+            "date": "20160616",
+            "number": "1",
+            "filename": "VouchersAndGiftCards_Dev_4.5.6.0.9901_20160616.1.exe",
             "cdtemplate": null
         },
         "cdtemplate": null
@@ -8578,16 +8701,16 @@
     },
     {
         "id": 1523,
-        "name": "Web Payment Processor (Dev)",
-        "branch": "",
+        "name": "Web Payment Processor",
+        "branch": "Dev",
         "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\WebPaymentProcessor_Dev",
         "cdtemplateLocation": "$/Vista/Main/WebPaymentProcessor/WebPaymentProcessorCDTemplate.xml",
         "output": {
             "version": "4.5.6.0.9901",
-            "date": "20160615",
+            "date": "20160616",
             "number": "1",
-            "filename": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160615.1_cdtemplate.exe",
-            "cdtemplate": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160615.1_cdtemplate.xml"
+            "filename": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160616.1_cdtemplate.exe",
+            "cdtemplate": "WebPaymentProcessor_Dev_4.5.6.0.9901_20160616.1_cdtemplate.xml"
         },
         "cdtemplate": {
             "version": 184367,

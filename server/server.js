@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var ntlm = require('express-ntlm');
 
-require('./populateTestData.js');
+//require('./populateTestData.js');
 
 //app.use(bodyParser.urlencoded({ extended: false }));
 

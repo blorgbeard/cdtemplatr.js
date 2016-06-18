@@ -111,7 +111,11 @@ function getList() {
   if (buildsCache.value) {
     return Promise.resolve(buildsCache.value);
   }
-  return getBuildsWithFolders(buildDefinitionController.getList()).then(result => {
+  return getBuildsWithFolders(
+    buildDefinitionController.getList().then(builds => {
+      return Promise.all(builds.map(build => buildDefinitionController.getDetails(build.id)));
+    })
+  ).then(result => {
     buildsCache.value = result;
     return result;
   });

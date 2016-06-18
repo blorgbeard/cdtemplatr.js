@@ -12,12 +12,15 @@ var compare = require('../../utils/compare.js');
 var winauth = require('../../conf/windowslogin.json');
 
 function getBuildDetails(buildId) {
-  return tfs.get(`build/Definitions/${buildId}`).then(result => {
+  return tfs.get(`build/Definitions/${buildId}`).then(definition => {
       // this field is double-encoded for some reason
-      var mapping = result.repository.properties.tfvcMapping;
+      var mapping = definition.repository.properties.tfvcMapping;
       var parsed = JSON.parse(mapping);
-      result.repository.properties.tfvcMapping = parsed;
-      return result;
+      definition.repository.properties.tfvcMapping = parsed;
+      return tfs.get(`build/Builds/${definition.lastBuild.id}`).then(build => {
+        definition.lastBuild = build;
+        return definition;
+      });      
   });
 }
 

@@ -24,7 +24,7 @@ function createRouter(domain) {
   router.route('/builds/approve/:id', jsonBodyParser).get((req, res) => {
     var additions = req.query.additions;//.map(t=>Number(t));
     var deletions = req.query.deletions;//.map(t=>Number(t));
-    console.log(JSON.stringify(additions));
+    //console.log(JSON.stringify(additions));
     return domain.getBuildDetails(req.params.id).then(build => {
       //console.log("route: " + JSON.stringify(build));
       return domain.approveChanges(build, additions, deletions).then(
