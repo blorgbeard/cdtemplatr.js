@@ -7,5 +7,5 @@
     "collection": "DefaultCollection",
     "project": "ExampleProject"
   },
-  "mongo": "mongodb://localhost:27017/cdtemplatr"
+  "couchdb": "http://localhost:5984"
 }
