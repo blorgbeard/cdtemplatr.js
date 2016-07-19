@@ -3,7 +3,7 @@
   "description": "",
   "main": "server/server.js",
   "authors": [
-    "Philip du Fresne <philip.du.fresne@vista.co.nz>"
+    "Philip du Fresne <philip.du.fresne@vista.co>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/blorgbeard/cdtemplatr.js",

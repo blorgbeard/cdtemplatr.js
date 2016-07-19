@@ -37,10 +37,16 @@ jspm_packages
 .node_repl_history
 
 # deployed app
-app/dist/
+src/website/app/dist/
 
 # bower cache
-app/lib/
+src/website/app/lib/
 
 # sooper seecrit passwords
-windowslogin.json
+src/shared/config/windowslogin.json
+
+# semi seecrit vista server config
+src/shared/config/config.json
+
+# folder with stuff that shouldn't be checked in yet
+scratch
