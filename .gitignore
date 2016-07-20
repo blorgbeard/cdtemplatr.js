@@ -50,3 +50,6 @@ src/shared/config/config.json
 
 # folder with stuff that shouldn't be checked in yet
 scratch
+
+# root ca for tfs server
+*.cer

@@ -1,7 +1,8 @@
 'use strict';
 
 var assert = require('assert');
-
+var fs = require('fs');
+var path = require('path');
 var log = require('./Log')("TfsService");
 
 // construct an url pointing to tfs
@@ -20,6 +21,12 @@ function createTfs(config, winauth) {
   assert(log);
 
   config = config.tfs;
+
+  var ca = null;
+  if (config.ca) {
+    ca = fs.readFileSync(path.join(PROJECT_ROOT, config.ca));
+  }
+
   log.debug(`Connecting to tfs: ${config.protocol}://${config.server}:${config.port}`);
 
   var NtlmRest = require('./services/ntlmrest.js');
@@ -31,7 +38,7 @@ function createTfs(config, winauth) {
       config.protocol, config.server, config.port,
       config.root, config.collection  // don't know project id yet
   );
-  var restTfsNoProject = new NtlmRest(baseUrl, winauth);
+  var restTfsNoProject = new NtlmRest(baseUrl, winauth, ca);
   return restTfsNoProject.getObject(
     'projects', {apiVersion: "2.0"}
   ).then(projects => {
@@ -47,7 +54,7 @@ function createTfs(config, winauth) {
       config.protocol, config.server, config.port,
       config.root, config.collection, project.id  // now we know project id
     );
-    var tfsService = new NtlmRest(url, winauth);
+    var tfsService = new NtlmRest(url, winauth, ca);
     var tfs = new Tfs(tfsService);
     return tfs;
   });

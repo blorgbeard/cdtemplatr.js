@@ -1,8 +1,5 @@
 'use strict';
 
-global.requireShared = function(name) {
-  return require(require('path').join(__dirname, "../shared", name));
-}
 var config = requireShared('Config')();
 var log = requireShared('Log')("buildListChangeMonitor", "trace");  // todo: get level from config
 log.info("Starting up..");

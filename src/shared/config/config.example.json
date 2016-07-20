@@ -5,7 +5,8 @@
     "port": 8080,
     "root": "tfs",
     "collection": "DefaultCollection",
-    "project": "ExampleProject"
+    "project": "ExampleProject",
+    "ca": "CompanyRootCertificate.cer"
   },
   "couchdb": "http://localhost:5984"
 }

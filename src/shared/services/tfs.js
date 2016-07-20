@@ -1,7 +1,7 @@
 'use strict';
 
 var Promise = require('bluebird');
-var log = require('../Log')("ntlmrest");
+var log = require('../Log')("tfs");
 
 function decodeTfsFile(data) {
   // hack: clean out UTF-8 replacement characters caused by weird encoding

@@ -6,7 +6,7 @@ var querystring = require('querystring');
 
 var log = require('../Log')("ntlmrest");
 
-module.exports = function(server, auth) {
+module.exports = function(server, auth, ca) {
 
   // execute a get request to the specified path, using optional args dictionary
   this.get = function(path, args) {
@@ -27,7 +27,8 @@ module.exports = function(server, auth) {
         workstation: auth.workstation,
         username: auth.username,
         password: auth.password,
-        domain: auth.domain
+        domain: auth.domain,
+        ca: ca
       }, function (err, res) {
         if (err) {
           return reject(err);
