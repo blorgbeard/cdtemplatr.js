@@ -1,7 +1,7 @@
 'use strict';
 
-var config = requireShared('Config')();
-var log = requireShared('Log')("buildListChangeMonitor", "trace");  // todo: get level from config
+var config = requireShared('config');
+var log = requireShared('Log')("buildListChangeMonitor");
 log.info("Starting up..");
 
 var Promise = require('bluebird');
@@ -17,7 +17,7 @@ var Database = requireShared('Database');
 var poll = function(db, tfs, interval) {
   log.info("Polling for new builds..");
   Promise.all([
-    db.getNames(),
+    db.build.getNames(),
     tfs.getBuildDefinitions()
   ]).then(results => {
     var dbList = results[0];
@@ -49,7 +49,7 @@ var poll = function(db, tfs, interval) {
 
     if (newBuilds.length > 0) {
       return Promise.all(
-        newBuilds.map(t => db.saveBuild(t))
+        newBuilds.map(t => db.build.saveBuild(t))
       ).then(() => log.info(`Saved ${newBuilds.length} builds.`));
     }
 
@@ -59,7 +59,7 @@ var poll = function(db, tfs, interval) {
   });
 };
 
-Database(config, log.child('Database')).then(db => {
+Database(config).then(db => {
   log.debug("Connected to couchdb.");
   TfsService(config, winauth).then(tfs => {
     log.debug("Connected to tfs.");

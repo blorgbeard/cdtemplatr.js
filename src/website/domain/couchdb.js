@@ -4,10 +4,10 @@ module.exports = function(config) {
   return requireShared('Database')(config).then(db => {
     return {
       getBuilds: function() {
-        return db.getAll();
+        return db.build.getAll();
       },
       getBuildDetails: function(id) {
-        return db.get(id);
+        return db.build.get(id);
       },
       approveChanges: null
     };

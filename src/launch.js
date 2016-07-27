@@ -10,12 +10,20 @@ global.requireShared = function(name) {
   return require(path.join(__dirname, "shared", name));
 }
 
+var config = requireShared('config');
+
+// initialize logging with configured log-level. it will default to the same value
+// whenever anything else requires it after this.
+var log = requireShared('Log')("launch.js", config.loglevel || "debug");
+
 // launch the actual process
 // I hope this works with pm2 :\
 if (process.argv.length == 3) {
   // first two arguments are "node" and "launch.js"
-  require(path.join(__dirname, process.argv[2], 'index.js'));
+  var app = process.argv[2];
+  log.info(`Launching ${app}`);
+  require(path.join(__dirname, app, 'index.js'));
 }
 else {
-  console.error('Syntax: node launch.js [name of subfolder containing index.js]');
+  log.fatal('Syntax: node launch.js [name of subfolder containing index.js]');
 }

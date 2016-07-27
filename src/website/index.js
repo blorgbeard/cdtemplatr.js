@@ -1,18 +1,12 @@
 'use strict';
 
-global.requireShared = function(name) {
-  return require(require('path').join(__dirname, "../shared", name));
-}
-
-var log = requireShared('Log')("server", "trace");
+var log = requireShared('Log')("website", "trace");
 
 var express = require('express');
 var path = require('path');
 var ntlm = require('express-ntlm');
 
-//require('./populateTestData.js');
-
-//app.use(bodyParser.urlencoded({ extended: false }));
+var config = requireShared('config');
 
 var app = express();
 
@@ -23,22 +17,27 @@ app.use(express.static(path.join(__dirname, "/app/dist")));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
 
+app.use(function(req, res, next) {
+  log.trace(`${req.ip} sent ${req.method} ${req.originalUrl}`);
+  return next();
+});
+
 var indexRoute = express.Router();
 
 // "authenticate" users with NTLM (but don't actually check with a domain controller)
 indexRoute.use('/', ntlm({
   debug: function() {
-    var args = Array.prototype.slice.apply(arguments);
-    console.log.apply(null, args);
+    log.trace(Array.prototype.slice.apply(arguments).join(' '));
   },
+  // todo: config
+  // todo: authenticate properly!
   domain: 'AUCKLAND'
   //domaincontroller: 'ldap:// ???'
 }));
 
-
 indexRoute.get('/', function (req, res) {
   res.render('index', {
-    title: "cdtemplatr.js"
+    title: config.website.title || "cdtemplatr.js"
   });
 });
 
@@ -51,13 +50,32 @@ var apiRouterFactory = require('./routes/api.js');
 //var domain = require('./domain/testing.js');
 //var domain = require('./domain/production.js');
 
-var config = requireShared('Config')();
 require('./domain/couchdb')(config).then(domain => {
   var apiRouter = apiRouterFactory(domain);
   app.use('/api', apiRouter);
 
   // start serving!
-  app.listen(7777, function () {
-      console.log("Started listening on port", 7777);
+  var protocol = config.website.protocol;
+  var server = null;
+  var port = null;
+  if (protocol === 'http') {
+    server = require('http').createServer(app);
+    port = 80;
+  } else if (protocol === 'https') {
+    var tls = requireShared('config/tls');
+    if (!tls.pfx || !tls.pfx.file) {
+      throw Error("No certificate configured - unable to serve via https.");
+    }
+    log.debug(`Using ${tls.pfx.file} as https certificate.`);
+    var credentials = {
+      pfx: require('fs').readFileSync(path.join(PROJECT_ROOT, tls.pfx.file)),
+      passphrase: tls.pfx.passphrase
+    };
+    server = require('https').createServer(credentials, app);
+    port = 443;
+  }
+  port = config.website.port || port;
+  server.listen(port, function () {
+      log.info(`Started listening on port ${port}.`);
   });
 });

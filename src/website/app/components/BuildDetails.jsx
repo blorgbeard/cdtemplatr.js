@@ -9,17 +9,19 @@ module.exports = BuildDetails = React.createClass({
   getInitialState: function() {
     return {
       "id": -1,
-      "name": "No Projeckt",
+      "name": "NoProjeckt",
+      "friendlyName": "No Projekt",
       "branch": "Dev",
-      "outputLocation": "\\\\vistafp\\Data\\V4CDs\\InTesting\\HeadOffice_Dev",
-      "cdtemplateLocation": "$/Vista/Main/HeadOffice/HeadOffice/HeadOfficeCDTemplate.xml",
+      "tfs": {
+        "location": "/no/such/path",
+        "revision": null
+      },
       "output": {
-        "version": "4.5.6.0.9901",
-        "date": "20160614",
-        "number": "1",
-        "filename": "HeadOffice_Dev_4.5.6.0.9901_20160614.1_cdtemplate.exe",
-        "cdtemplate": "HeadOffice_Dev_4.5.6.0.9901_20160614.1_cdtemplate.xml"
-      }
+        "id": null
+      },
+      "tfsMetadata": null,
+      "outputMetadata": null,
+      "diff": null
     };
   },
   selectRange(array, value, min, max) {
@@ -77,28 +79,32 @@ module.exports = BuildDetails = React.createClass({
   render: function() {
     var content = function() {
       approveButtonEnabled = (
-        this.state.cdtemplate &&
-        this.state.cdtemplate.additions.concat(this.state.cdtemplate.deletions).filter(t=>t.selected).length > 0
+        this.state.diff &&
+        this.state.diff.additions.concat(this.state.diff.deletions).filter(t=>t.selected).length > 0
       );
       return (
         <div>
           <h1>{this.state.friendlyName}&nbsp;<span className="text-muted">{this.state.branch}</span></h1>
-          <p>Version: {this.state.output.version}, built <span title={moment(this.state.output.date).format('LLLL')} className="fuzzy-date">
-              {moment(this.state.output.date).fromNow()}
-          </span>.</p>
-          <p>Link to build: <a href={"file:" + this.state.outputLocation}>{this.state.output.filename}</a></p>
+          <p>Version: {this.state.output && this.state.output.version || "(unknown)"},
+             built {(!!this.state.output)
+              ? <span title={moment(this.state.output.finishTime).format('LLLL')} className="fuzzy-date">
+                {moment(this.state.output.finishTime).fromNow()}
+               </span>
+             : "(unknown)"
+            }.
+          </p>
           <h2>Build output changes</h2>
-          {(!!this.state.cdtemplate) ?
+          {(!!this.state.diff) ?
             <div>
               <div>
                 <ArtefactsTable
-                    rows={this.state.cdtemplate.diff.additions}
+                    rows={this.state.diff.additions}
                     heading="Files added to build"
                     setSelection={this.selectAdditions} />
                 </div>
               <div>
                 <ArtefactsTable
-                    rows={this.state.cdtemplate.diff.deletions}
+                    rows={this.state.diff.deletions}
                     heading="Files removed from build"
                     setSelection={this.selectDeletions} />
               </div>

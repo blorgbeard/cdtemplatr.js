@@ -16,6 +16,7 @@ gulp.task("bundle", function () {
 
 gulp.task("copy", ["bundle"], function () {
     return gulp.src([
+      "src/website/app/*.png",
       "src/website/app/favicon*.*",
       "src/website/app/lib/bootstrap/dist/css/bootstrap.min.*",
       "src/website/app/lib/bootstrap/dist/js/bootstrap.min.*",

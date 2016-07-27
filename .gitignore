@@ -44,12 +44,15 @@ src/website/app/lib/
 
 # sooper seecrit passwords
 src/shared/config/windowslogin.json
+src/shared/config/tls.js
 
-# semi seecrit vista server config
-src/shared/config/config.json
+# semi seecrit server config
+src/shared/config/config.js
+
 
 # folder with stuff that shouldn't be checked in yet
 scratch
 
-# root ca for tfs server
+# root ca for tfs server, private key for https server
 *.cer
+*.pfx
