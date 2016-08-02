@@ -75,7 +75,7 @@ require('./domain/couchdb')(config).then(domain => {
     port = 443;
   }
   port = config.website.port || port;
-  server.listen(port, function () {
+  server.listen(process.env.PORT || port, function () {
       log.info(`Started listening on port ${port}.`);
   });
 });
