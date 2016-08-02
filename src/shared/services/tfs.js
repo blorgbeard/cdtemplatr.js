@@ -107,7 +107,7 @@ module.exports = function(service) {
     return service.getObject(`build/definitions/${id}`, {
       apiVersion: "2.0"
     }).then(result => {
-      log.trace(result, `getBuildDefinition ${id} returned successfully.`);
+      log.trace(`getBuildDefinition ${id} returned successfully.`);
       return result;
     });
   }
@@ -117,7 +117,7 @@ module.exports = function(service) {
     return service.getObject(`build/builds/${id}`, {
       apiVersion: "2.0"
     }).then(result => {
-      log.trace(result, `getBuild ${id} returned successfully.`);
+      log.trace(`getBuild ${id} returned successfully.`);
       return result;
     });
   }

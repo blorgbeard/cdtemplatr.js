@@ -11,7 +11,7 @@ module.exports = function(db, tfs) {
       // get the build details from tfs so we can get the definition id
       return tfs.getBuild(buildId).then(
         build => {
-          var buildDefinitionId = build.definition.id;
+          var buildDefinitionId = "" + build.definition.id;
           // upload the new output to the database
           return db.outputCd.upsert(buildDefinitionId, buildId, cdtemplate).then(() => {
             // update the cdtemplate path in the database
