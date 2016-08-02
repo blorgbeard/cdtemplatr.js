@@ -10,9 +10,9 @@ var app = express();
 
 var Promise = require('bluebird');
 
-Promise.all([
+Promise.all([    
   requireShared('Database')(config),
-  requireShared('TfsService')(config, requireShared('config/windowslogin'))
+  requireShared('TfsService')(config, requireShared('config/windowslogin'))  
 ]).then(results => {
 
   var controller = require('./build/Controller')(results[0], results[1]);

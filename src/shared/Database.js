@@ -18,7 +18,6 @@ function createDb(nano, database) {
 
 function createDesign(db, designMaker) {
   if (!designMaker) {
-    console.log("skipping");
     return Promise.resolve(true);
   }
   var rev = null;

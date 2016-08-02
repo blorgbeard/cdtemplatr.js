@@ -46,8 +46,13 @@ module.exports = function(service) {
     return service.getObject('tfvc/items', {
       apiVersion: "1.0",
       scopePath: path
-    }).then(metadata => {
-      metadata = metadata.value[0];
+    }).then(result => {
+      if (!result.value) {
+        var error = Error(`${result.typeKey}: ${result.message}`);
+        error.response = result;
+        throw error;
+      }
+      var metadata = result.value[0];
       log.trace(metadata, `getFileMetadata ${path} returned successfully.`)
       return metadata;
     });
@@ -92,7 +97,7 @@ module.exports = function(service) {
       apiVersion: "2.0"
     }).then(result => {
       result = result.value;
-      log.trace(`getBuildDefinitions returned ${result.length} entries`);
+      log.trace(`getBuildDefinitions returned ${result.length} entries.`);
       return result;
     });
   }
@@ -114,6 +119,25 @@ module.exports = function(service) {
     }).then(result => {
       log.trace(result, `getBuild ${id} returned successfully.`);
       return result;
+    });
+  }
+
+  // get list of subscriptions (event hooks)
+  this.getSubscriptions = function() {
+    return service.getObject("subscriptions", {
+      apiVersion: "1.0"
+    }).then(result => {
+      result = result.value;
+      log.trace(`getSubscriptions returned ${result.length} entries.`);
+      return result;
+    });
+  };
+
+  this.addSubscription = function(doc) {
+    return service.post("subscriptions", {
+      apiVersion: "1.0"
+    }, JSON.stringify(doc), {
+      "Content-Type": "application/json"
     });
   }
 

@@ -2,8 +2,6 @@
 
 var log = requireShared('Log')("outputs/controller");
 var Promise = require('bluebird');
-var xml2js = require('xml2js');
-var parseString = Promise.promisify(xml2js.parseString);
 
 module.exports = function(db, tfs) {
   return {
