@@ -43,8 +43,9 @@ module.exports = function Build(db) {
     updateTfsPath: function(id, newPath) {
       log.trace(`updateTfsPath ${id} ${newPath}`);
       return db.atomic("build", "cd-template-location", id, newPath).then(result => {
-        log.trace(result, "updateTfsPath returned successfully.");
-        return result[0];
+        var rev = result[1]["x-couch-update-newrev"];
+        log.trace(`updateTfsPath ${id}; ${result[0]}` + (rev && `; new rev ${rev}.` || "."));
+        return result;
       });
     }
   };

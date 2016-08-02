@@ -12,6 +12,10 @@ module.exports = function (rev) {
     language: "javascript",
     "updates": {
       "cd-template-location": `function (doc, req) {
+        if (!doc) {
+          // possible that we got a build before we found the definition
+          doc = {_id: req.id};
+        }
         if (!doc.tfs) {
           doc.tfs = {};
         }
@@ -39,4 +43,4 @@ module.exports = function (rev) {
       }
     }
   };
-}
+};

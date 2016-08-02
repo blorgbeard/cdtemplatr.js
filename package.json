@@ -16,6 +16,7 @@
     "browserify": "^13.0.1",
     "diff": "^2.2.3",
     "express": "^4.13.4",
+    "express-fileupload": "0.0.5",
     "express-ntlm": "^2.1.4",
     "gulp": "^3.9.1",
     "hbs": "^4.0.0",

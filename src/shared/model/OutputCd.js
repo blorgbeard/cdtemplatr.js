@@ -1,9 +1,10 @@
 'use strict';
 
-module.exports = function(outputBuildId) {
+module.exports = function(buildDefinitionId, buildId) {
   return {
-    _id: outputBuildId,
-    id: outputBuildId,
-    data: null
+    _id: buildDefinitionId,
+    buildDefinitionId: buildDefinitionId,
+    buildId: buildId,
+    data: null,
   };
-}
+};
