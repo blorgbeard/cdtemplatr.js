@@ -15,11 +15,10 @@ function getTfsBaseUrl(protocol, server, port, root, collection, project) {
 }
 
 // create the tfs service
-function createTfs(config, winauth) {
+function createTfs(config) {
   assert(config);
-  assert(winauth);
-  assert(log);
-
+  
+  winauth = config.secret.windows;
   config = config.tfs;
 
   var ca = null;

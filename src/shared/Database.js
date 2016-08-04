@@ -3,6 +3,8 @@
 var log = require('./Log')("Database");
 var Promise = require('bluebird');
 
+var LdapLoookup = requireShared('services/LdapLookup');
+
 function createDb(nano, database) {
   return nano.db.create(database).then(()=>{
     log.debug("Created database: " + database);
@@ -48,6 +50,7 @@ module.exports = function(config) {
   var Diff = requireShared('database/repositories/Diff');
   var TfsCd = requireShared('database/repositories/TfsCd');
   var OutputCd = requireShared('database/repositories/OutputCd');
+  var User = requireShared('database/repositories/User');
 
   var buildDesign = requireShared('database/design/build');
   var diffDesign = requireShared('database/design/diff');
@@ -58,13 +61,20 @@ module.exports = function(config) {
      createDb(nano, 'build').then(db => createDesign(db, buildDesign).then(() => db)),
      createDb(nano, 'diff').then(db => createDesign(db, diffDesign).then(() => db)),
      createDb(nano, 'tfs_cd').then(db => createDesign(db, tfsCdDesign).then(() => db)),
-     createDb(nano, 'output_cd').then(db => createDesign(db, outputCdDesign).then(() => db))
+     createDb(nano, 'output_cd').then(db => createDesign(db, outputCdDesign).then(() => db)),
+     createDb(nano, 'user').then(db => createDesign(db, null).then(() => db))
   ]).then(results => {
     return {
       build: Build(results[0]),
       diff: Diff(results[1]),
       tfsCd: TfsCd(results[2]),
-      outputCd: OutputCd(results[3])
+      outputCd: OutputCd(results[3]),
+      user: User(results[4], new LdapLoookup({
+        url: config.ldap.url,
+        base: config.ldap.base,
+        bindDN: `${config.secret.windows.username}@${config.secret.windows.domain}`,
+        bindCredentials: config.secret.windows.password
+      }))
     };
   });
 };

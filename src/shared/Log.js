@@ -1,22 +1,19 @@
 'use strict';
 
 var baseLogger = null;
+var baseLevel = null;
+
+var pino = require('pino');
+var pretty = pino.pretty();
+pretty.pipe(process.stdout);  
 
 module.exports = function(name, level) {
-  if (baseLogger == null) {
-    var pino = require('pino');
-    var pretty = pino.pretty();
-    pretty.pipe(process.stdout);
-    var log = pino({
-      name: name,
-      level: level || "trace"
-    }, pretty);
-    baseLogger = log;
-    return log;
+  if (!baseLevel) {
+    baseLevel = level;
   }
-  log = baseLogger.child({
+  var log = pino({
     name: name,
-    level: level
-  });
+    level: level || "trace"
+  }, pretty);
   return log;
 };

@@ -5,7 +5,7 @@ module.exports = function(tfsLocation, tfsRevision, outputBuildId) {
     key: {
       tfs: null,
       output: null,        
-    }
+    },
     added: [],
     removed: []
   };

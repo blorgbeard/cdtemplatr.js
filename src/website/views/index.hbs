@@ -56,7 +56,10 @@
         </ul>
       </div><!--/.nav-collapse -->
     </div>
-    <p class="navbar-text navbar-right userName">{{ntlm.DomainName}}\\{{ntlm.UserName}}</p>
+    <p class="navbar-text navbar-right userName" title="Best {{user.title}} ever!">
+      <img width=16 height=16 src="data:image/jpg;base64,{{user.thumbnailPhoto}}" />
+      {{user.displayName}}
+      </p>
   </div>
     <div class="container-fluid">
       <div class="row">

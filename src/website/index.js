@@ -10,47 +10,55 @@ var config = requireShared('config');
 
 var app = express();
 
-// serve static stuff like css, js, images..
-app.use(express.static(path.join(__dirname, "/app/dist")));
-
-// serve the main page
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, '/views'));
-
-app.use(function(req, res, next) {
-  log.trace(`${req.ip} sent ${req.method} ${req.originalUrl}`);
-  return next();
-});
-
-var indexRoute = express.Router();
-
-// "authenticate" users with NTLM (but don't actually check with a domain controller)
-indexRoute.use('/', ntlm({
+// authenticate users with NTLM
+app.use('/', ntlm({
   debug: function() {
     log.trace(Array.prototype.slice.apply(arguments).join(' '));
   },
-  // todo: config
-  // todo: authenticate properly!
-  domain: 'AUCKLAND'
-  //domaincontroller: 'ldap:// ???'
+  domain: 'AUCKLAND',
+  domaincontroller: config.ldap && config.ldap.url || undefined
 }));
 
-indexRoute.get('/', function (req, res) {
-  res.render('index', {
-    title: config.website.title || "cdtemplatr.js"
+requireShared('Database')(config).then(db => {
+
+  app.use(function(req, res, next) {
+    if (res.locals.ntlm) {
+      var username = res.locals.ntlm.UserName;
+      log.trace(`${username} @ ${req.ip} sent ${req.method} ${req.originalUrl}`);
+      db.user.get(username).then(user => {
+        res.locals.user = user;
+        return next();
+      });          
+    } else {
+      throw new Error("Not authorized.");
+    }    
   });
-});
 
-app.use('/', indexRoute);
+  // serve static stuff like css, js, images..
+  app.use(express.static(path.join(__dirname, "/app/dist")));
 
-// set up the api that the react components will talk to
-var apiRouterFactory = require('./routes/api.js');
+  // serve the main page
+  app.set('view engine', 'hbs');
+  app.set('views', path.join(__dirname, '/views'));
 
-// choose a domain!
-//var domain = require('./domain/testing.js');
-//var domain = require('./domain/production.js');
+  var indexRoute = express.Router();
 
-require('./domain/couchdb')(config).then(domain => {
+  indexRoute.get('/', function (req, res) {
+    res.render('index', {
+      title: config.website.title || "cdtemplatr.js"
+    });
+  });
+
+  app.use('/', indexRoute);
+
+  // set up the api that the react components will talk to
+  var apiRouterFactory = require('./routes/api.js');
+
+  // choose a domain!
+  //var domain = require('./domain/testing.js');
+  //var domain = require('./domain/production.js');
+
+  var domain = require('./domain/couchdb')(db);
   var apiRouter = apiRouterFactory(domain);
   app.use('/api', apiRouter);
 
@@ -62,8 +70,8 @@ require('./domain/couchdb')(config).then(domain => {
     server = require('http').createServer(app);
     port = 80;
   } else if (protocol === 'https') {
-    var tls = requireShared('config/tls');
-    if (!tls.pfx || !tls.pfx.file) {
+    var tls = config.secret.tls;
+    if (!tls || !tls.pfx || !tls.pfx.file) {
       throw Error("No certificate configured - unable to serve via https.");
     }
     log.debug(`Using ${tls.pfx.file} as https certificate.`);

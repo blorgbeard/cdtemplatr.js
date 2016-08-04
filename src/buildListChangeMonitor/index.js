@@ -7,7 +7,6 @@ log.info("Starting up..");
 var Promise = require('bluebird');
 var _ = require('lodash');
 
-var winauth = requireShared("config/windowslogin.json");
 var Build = requireShared('model/Build');
 var buildNameParser = require('./services/BuildNameParser')();
 
@@ -61,7 +60,7 @@ var poll = function(db, tfs, interval) {
 
 Database(config).then(db => {
   log.debug("Connected to couchdb.");
-  TfsService(config, winauth).then(tfs => {
+  TfsService(config).then(tfs => {
     log.debug("Connected to tfs.");
     poll(db, tfs, 1000 * 60 * 30);
   });
