@@ -25,10 +25,9 @@ function createDesign(db, designMaker) {
   var rev = null;
   var newDesign = designMaker(undefined);
   return (
-     db.get(newDesign._id).then(result => {
-      var oldDesign = result[0];
+     db.get(newDesign._id).then(oldDesign => {
       var updatedDesign = designMaker(oldDesign._rev);
-      if (JSON.stringify(updatedDesign) !== JSON.stringify(result[0])) {
+      if (JSON.stringify(updatedDesign) !== JSON.stringify(oldDesign)) {
         log.debug("Updating existing design: " + updatedDesign._id);
         return db.insert(updatedDesign);
       }
@@ -44,7 +43,7 @@ function createDesign(db, designMaker) {
 
 module.exports = function(config) {
   log.debug("Connecting to couchdb: " + config.couchdb);
-  var nano = require('nano-blue')(config.couchdb);
+  var nano = requireShared('services/nano-blue')(config.couchdb);
 
   var Build = requireShared('database/repositories/Build');
   var Diff = requireShared('database/repositories/Diff');

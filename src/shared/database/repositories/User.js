@@ -10,7 +10,7 @@ module.exports = function(db, ldapLookup) {
     get: function(id) {
       // todo: if cached more than 1 day ago, renew from ldap.
       return db.get(id).then(
-        result => result[0],
+        result => result,
         error => {
           return new Promise((resolve, reject) => {
             ldapLookup.search(id, (error, profile) => {            

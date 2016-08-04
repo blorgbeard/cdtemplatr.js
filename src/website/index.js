@@ -16,7 +16,7 @@ app.use('/', ntlm({
     log.trace(Array.prototype.slice.apply(arguments).join(' '));
   },
   domain: 'AUCKLAND',
-  domaincontroller: config.ldap && config.ldap.url || undefined
+//  domaincontroller: config.ldap && config.ldap.url || undefined
 }));
 
 requireShared('Database')(config).then(db => {

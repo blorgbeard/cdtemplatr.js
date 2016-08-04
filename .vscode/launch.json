@@ -22,6 +22,26 @@
             "outDir": null
         },
         {
+            "name": "diffService",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/src/launch.js",
+            "stopOnEntry": false,
+            "args": ["diffService"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [                
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },
+        {
             "name": "Attach",
             "type": "node",
             "request": "attach",
