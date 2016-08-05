@@ -1,7 +1,7 @@
 'use strict';
 
 var log = requireShared('Log')("repo/OutputCd");
-var OutputCd = requireShared('model/OutputCd');
+var OutputCd = requireShared('domain/model/OutputCd');
 
 module.exports = function(db) {
   return {

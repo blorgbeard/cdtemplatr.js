@@ -7,10 +7,10 @@ log.info("Starting up..");
 var Promise = require('bluebird');
 var _ = require('lodash');
 
-var Build = requireShared('model/Build');
+var Build = requireShared('domain/model/Build');
 
-var TfsService = requireShared('TfsService');
-var Database = requireShared('Database');
+var TfsService = requireShared('Tfs');
+var Domain = requireShared('Domain');
 
 var poll = function(db, tfs, interval) {
   log.info("Polling for updated cdtemplate.xml files in tfs..");
@@ -39,7 +39,7 @@ var poll = function(db, tfs, interval) {
   });
 };
 
-Database(config).then(db => {
+Domain(config).then(db => {
   log.debug("Connected to couchdb.");
   TfsService(config).then(tfs => {
     log.debug("Connected to tfs.");

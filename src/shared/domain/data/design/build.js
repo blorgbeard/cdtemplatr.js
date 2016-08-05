@@ -4,7 +4,7 @@
   see the model classes for the data-structure
 */
 
-module.exports = function (rev) {
+function CreateDesignDoc(rev) {
   return {
     // todo: consider moving each view to its own design doc for optimization purposes
     _id: "_design/build",
@@ -43,4 +43,9 @@ module.exports = function (rev) {
       }
     }
   };
+}
+
+module.exports = {
+  database: "build",
+  design: CreateDesignDoc
 };

@@ -4,7 +4,7 @@ var Promise = require('bluebird');
 var httpntlm = require('httpntlm');
 var querystring = require('querystring');
 
-var log = require('../Log')("ntlmrest");
+var log = requireShared('Log')("ntlmrest");
 
 module.exports = function(server, auth, ca) {
 

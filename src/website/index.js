@@ -1,12 +1,12 @@
 'use strict';
 
-var log = requireShared('Log')("website", "trace");
+var log = requireShared('Log')("website");
 
 var express = require('express');
 var path = require('path');
 var ntlm = require('express-ntlm');
 
-var config = requireShared('config');
+var config = requireShared('Config');
 
 var app = express();
 
@@ -19,7 +19,7 @@ app.use('/', ntlm({
 //  domaincontroller: config.ldap && config.ldap.url || undefined
 }));
 
-requireShared('Database')(config).then(db => {
+requireShared('Domain')(config).then(db => {
 
   app.use(function(req, res, next) {
     if (res.locals.ntlm) {

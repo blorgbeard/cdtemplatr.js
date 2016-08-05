@@ -3,7 +3,7 @@
 var log = requireShared("Log")("diffService");
 var config = requireShared('Config');
 
-requireShared("Database")(config).then(db => {
+requireShared("Domain")(config).then(db => {
   var buildsInCatchupList = new Set();
   
   var feed = db.build.follow({since: 1, feed: "continuous", include_docs:true});
@@ -12,7 +12,7 @@ requireShared("Database")(config).then(db => {
 
   feed.on("change", change => {
     if (feed.caught_up) {
-      // process change
+      // process single change
       
     } else {
       buildsInCatchupList.add(change.id);
@@ -21,7 +21,7 @@ requireShared("Database")(config).then(db => {
   feed.on("error", error => { throw(error); });
   feed.on("catchup", seq_id => {
     console.log(`Caught up to ${seq_id}.`);
-    console.log(buildsInCatchupList);
+    // process changes from list
   })
   feed.follow();
 });

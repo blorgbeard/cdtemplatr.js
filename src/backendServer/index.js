@@ -11,8 +11,8 @@ var app = express();
 var Promise = require('bluebird');
 
 Promise.all([    
-  requireShared('Database')(config),
-  requireShared('TfsService')(config)  
+  requireShared('Domain')(config),
+  requireShared('Tfs')(config)  
 ]).then(results => {
 
   var controller = require('./build/Controller')(results[0], results[1]);
@@ -22,6 +22,6 @@ Promise.all([
   var port = config.backendServer.port || 7778;
 
   app.listen(port, function () {
-      log.info(`Started listening on port ${port}.`);
+    log.info(`Started listening on port ${port}.`);
   });
 });

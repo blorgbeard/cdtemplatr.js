@@ -1,6 +1,6 @@
 'use strict';
 
-var log = require('../Log')("LdapLookup");
+var log = requireShared('Log')("LdapLookup");
 var ldap = require('ldapjs');
 
 var LdapLookup = module.exports = function(options){

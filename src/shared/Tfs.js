@@ -3,7 +3,7 @@
 var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
-var log = require('./Log')("TfsService");
+var log = requireShared('Log')("Tfs");
 
 // construct an url pointing to tfs
 function getTfsBaseUrl(protocol, server, port, root, collection, project) {
@@ -28,8 +28,9 @@ function createTfs(config) {
 
   log.debug(`Connecting to tfs: ${config.protocol}://${config.server}:${config.port}`);
 
-  var NtlmRest = require('./services/ntlmrest.js');
-  var Tfs = require('./services/tfs.js');
+  var NtlmRest = requireShared('tfs/NtlmRest');
+  var TfsService = requireShared('tfs/TfsService');
+
   // we don't know the project id yet, so we need to make one "special" request
   // to get it from Tfs. We do this directly through the Rest service, rather
   // than implementing support for it in the Tfs service.
@@ -53,8 +54,8 @@ function createTfs(config) {
       config.protocol, config.server, config.port,
       config.root, config.collection, project.id  // now we know project id
     );
-    var tfsService = new NtlmRest(url, winauth, ca);
-    var tfs = new Tfs(tfsService);
+    var tfsRest = new NtlmRest(url, winauth, ca);
+    var tfs = new TfsService(tfsRest);
     return tfs;
   });
 };

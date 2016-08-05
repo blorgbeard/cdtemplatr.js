@@ -3,7 +3,7 @@
 var log = requireShared('Log')("repo/User");
 var Promise = require('bluebird');
 
-var User = requireShared('model/User');
+var User = requireShared('domain/model/User');
 
 module.exports = function(db, ldapLookup) {
   return {
