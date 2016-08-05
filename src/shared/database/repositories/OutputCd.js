@@ -7,7 +7,6 @@ module.exports = function(db) {
   return {
     get: function(buildDefinitionId) {
       return db.get(buildDefinitionId).then(result => {
-        result = result[0];
         log.trace(`get ${buildDefinitionId} returned data for build ${result.buildId}.`);
         return result;
       });
@@ -36,7 +35,7 @@ module.exports = function(db) {
         }
       ).then(() => {
         db.insert(doc).then(result => {
-          var rev = result[0].rev;
+          var rev = result.rev;
           log.trace(`upsert ${buildDefinitionId} build ${buildId}; new rev ${rev}`);
           return rev;
         });
