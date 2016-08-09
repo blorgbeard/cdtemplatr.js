@@ -14,7 +14,12 @@ module.exports = function(controller) {
     }
     var file = req.files[Object.keys(req.files)[0]];
     log.trace(`POST build=${req.params.buildId} (path=${req.query.tfs}); received ${file.name} (${file.data.length} bytes).`);
-    var fileText = file.data.toString('ucs2');
+    var data = file.data;
+    if (data[0] == 0xFF && data[1] == 0xFE) {
+      // hax: remove BOM
+      data = data.slice(2);
+    }
+    var fileText = data.toString('ucs2');
     controller.addBuildOutput(req.params.buildId, fileText, req.query.tfs).then(
       result => res.status(200).end(),
       error => {

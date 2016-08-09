@@ -41,6 +41,26 @@
             "sourceMaps": false,
             "outDir": null
         },
+        {
+            "name": "tfsCdChangeMonitor",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/src/launch.js",
+            "stopOnEntry": false,
+            "args": ["tfsCdChangeMonitor"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [                
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },
 	    {
             "name": "buildListChangeMonitor",
             "type": "node",
@@ -48,6 +68,46 @@
             "program": "${workspaceRoot}/src/launch.js",
             "stopOnEntry": false,
             "args": ["buildListChangeMonitor"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [                
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },        
+        {
+            "name": "backendServer",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/src/launch.js",
+            "stopOnEntry": false,
+            "args": ["backendServer"],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [                
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "externalConsole": false,
+            "sourceMaps": false,
+            "outDir": null
+        },
+        {
+            "name": "tfsPathGuesser",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/src/launch.js",
+            "stopOnEntry": false,
+            "args": ["tfsPathGuesser"],
             "cwd": "${workspaceRoot}",
             "preLaunchTask": null,
             "runtimeExecutable": null,

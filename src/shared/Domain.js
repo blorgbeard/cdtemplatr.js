@@ -51,13 +51,14 @@ module.exports = function(config) {
   var Diff = requireShared('domain/repositories/Diff');
   var OutputCd = requireShared('domain/repositories/OutputCd');
   var User = requireShared('domain/repositories/User');
+  var State = requireShared('domain/repositories/State');
 
   var designs = [
     requireShared('domain/data/design/build'),
     requireShared('domain/data/design/outputCd')
   ];
 
-  var databaseNames = ['build', 'output_cd', 'diff', 'user'];
+  var databaseNames = ['build', 'output_cd', 'diff', 'user', 'state'];
   return Promise.all(databaseNames.map(name => createDb(nano, name).then(db => [name, db]))).then(databases => {
     
     // convert from nested array to keyed object:
@@ -72,12 +73,16 @@ module.exports = function(config) {
         build: Build(databases["build"]),
         diff: Diff(databases["diff"]),
         outputCd: OutputCd(databases["output_cd"]),
+        // todo: this fails when ldap not available
+        // so, can't access builds when unable to create new users..
+        // seems not SOLID.. 
         user: User(databases["user"], new LdapLoookup({
           url: config.ldap.url,
           base: config.ldap.base,
           bindDN: `${config.secret.windows.username}@${config.secret.windows.domain}`,
           bindCredentials: config.secret.windows.password
-        })) 
+        })),
+        state: State(databases["state"]) 
       };
     });
   });

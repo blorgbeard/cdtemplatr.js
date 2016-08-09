@@ -15,15 +15,15 @@ var Domain = requireShared('Domain');
 var poll = function(db, tfs, interval) {
   log.info("Polling for updated cdtemplate.xml files in tfs..");
   db.build.getAll().then(builds => {
-    builds = builds.filter(t => t.tfs && t.tfs.location);
+    builds = builds.filter(t => t.latest && t.latest.tfs && t.latest.tfs.location);
 
     return Promise.all(
       builds.map(build => 
-        tfs.getFileMetadata(build.tfs.location).then(
+        tfs.getFileMetadata(build.latest.tfs.location).then(
           metadata => {
-            if (!build.tfs.revision || (build.tfs.revision < metadata.version)) {
-              log.info(`Updating cdtemplate for build ${build._id} (${build.name}) from ${build.tfs.revision} to ${metadata.version}.`);
-              build.tfs.revision = metadata.version;
+            if (!build.latest.tfs.revision || (build.latest.tfs.revision < metadata.version)) {
+              log.info(`Updating cdtemplate for build ${build._id} (${build.name}) from ${build.latest.tfs.revision} to ${metadata.version}.`);
+              build.latest.tfs.revision = metadata.version;
               return db.build.saveBuild(build);
             }
           },

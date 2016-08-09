@@ -13,7 +13,7 @@ module.exports = function(name, level) {
   }
   var log = pino({
     name: name,
-    level: level || "trace"
+    level: level || baseLevel || "trace"
   }, pretty);
   return log;
 };

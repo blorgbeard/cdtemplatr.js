@@ -22,7 +22,7 @@ module.exports = function(db) {
       return db.head(buildDefinitionId).then(
         result => {
           // trim leading and trailing quotes
-          var rev = result[1].etag.replace(/^\"/, "").replace(/\"$/, "");
+          var rev = result.etag.replace(/^\"/, "").replace(/\"$/, "");
           log.trace(`upsert ${buildDefinitionId} build ${buildId}; existing rev ${rev}.`);
           doc._rev = rev;
         },
@@ -34,7 +34,7 @@ module.exports = function(db) {
           else throw error;
         }
       ).then(() => {
-        db.insert(doc).then(result => {
+        return db.insert(doc).then(result => {
           var rev = result.rev;
           log.trace(`upsert ${buildDefinitionId} build ${buildId}; new rev ${rev}`);
           return rev;

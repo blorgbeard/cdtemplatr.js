@@ -5,6 +5,7 @@ var nano = require('nano');
 var _ = require('lodash');
 
 var blacklist = ['use', 'scope', 'follow'];     // pdf: added follow to list
+var multilist = ['head'];
 
 /**
  * Promisifies the exposed functions on an object
@@ -17,10 +18,15 @@ function deepPromisify(obj) {
     if (blacklist.indexOf(key) !== -1) {
       promisifiedObj[key] = value;
       return;
-    }
+    }    
 
     if (typeof value === 'function') {
-      promisifiedObj[key] = bluebird.promisify(value, obj);
+      if (key == "head") {
+        // head returns ["", {headers}], so just filter that nicely
+        promisifiedObj[key] = key => bluebird.promisify(value, {multiArgs: true})(key).then(t => t[1]);
+      } else {
+        promisifiedObj[key] = bluebird.promisify(value);
+      }
     } else if (typeof value === 'object') {
       promisifiedObj[key] = deepPromisify(value);
     } else {

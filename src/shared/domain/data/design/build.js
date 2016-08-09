@@ -9,25 +9,7 @@ function CreateDesignDoc(rev) {
     // todo: consider moving each view to its own design doc for optimization purposes
     _id: "_design/build",
     _rev: rev,
-    language: "javascript",
-    "updates": {
-      "cd-template-location": `function (doc, req) {
-        if (!doc) {
-          // possible that we got a build before we found the definition
-          doc = {_id: req.id};
-        }
-        if (!doc.tfs) {
-          doc.tfs = {};
-        }
-        if (doc.tfs.location !== req.body) {
-          doc.tfs.location = req.body;
-          doc.tfs.revision = null;
-          return [doc, 'value was set'];
-        } else {
-          return [null, 'value unchanged'];
-        }
-      }`
-    },
+    language: "javascript",    
     views: {
       "namesById": {
         "map": "function(doc) { emit(doc._id, {name: doc.name, _rev: doc._rev}); }",

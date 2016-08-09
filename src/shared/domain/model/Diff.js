@@ -1,12 +1,20 @@
 'use strict';
 
-module.exports = function(tfsLocation, tfsRevision, outputBuildId) {
+module.exports = function(buildDefinitionId, tfsLocation, tfsRevision, outputBuildId) {
   return {
-    key: {
-      tfs: null,
-      output: null,        
+    _id: buildDefinitionId,
+    buildDefinitionId: buildDefinitionId,
+    version: {
+      tfs: {
+        location: tfsLocation,
+        revision: tfsRevision
+      },
+      output: outputBuildId,
     },
-    added: [],
-    removed: []
+    // todo: split changes into chunks for easy approval of related changes?
+    data: {
+      additions: [],
+      deletions: []
+    }
   };
 }

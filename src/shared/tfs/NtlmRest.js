@@ -32,10 +32,11 @@ module.exports = function(server, auth, ca) {
         if (err) {
           return reject(err);
         }
-		if (res.statusCode >= 200 && res.statusCode < 300) {
-			return fulfill(res.body);
-		}
-		return reject({url: url, res: res});
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          return fulfill(res.body);
+        }
+        log.error(res, `${method} ${url} failed.`);
+        return reject(Error(`${url}: ${res.statusCode}`));
       });
     });
   } 

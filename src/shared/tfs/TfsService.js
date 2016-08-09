@@ -3,14 +3,16 @@
 var Promise = require('bluebird');
 var log = requireShared('Log')("TfsService");
 
-function decodeTfsFile(data) {
-  // hack: clean out UTF-8 replacement characters caused by weird encoding
-  // don't know where they are coming from, possibly dodgy httpntlm library
-  // then decode as ucs2 (the subset of utf16 that nodejs supports)
-  var buffer = new Buffer(data);
-  var decoded = buffer.slice(6).toString('ucs2');
-  //console.log(decoded.slice(0, 80));
-  return decoded;
+function decodeTfsFile(text) {    
+  if (text.startsWith("��")) {
+    // hack: clean out UTF-8 replacement characters (probably) caused by httpntlm
+    // failing to recognise BOM.
+    var sliced = text.slice(2);    
+    var buffer = new Buffer(sliced, "binary");
+    var encoded = buffer.toString("ucs2");
+    return encoded;
+  }
+  return utf8.encode(text);
 }
 
 module.exports = function(service) {
@@ -60,9 +62,9 @@ module.exports = function(service) {
 
   // get {metadata: metadata, data: data} for a file (at latest version).
   this.getFileWithMetadata = function(path) {
-    return getFileMetadata(service, path).then(metadata => {
+    return this.getFileMetadata(path).then(metadata => {
       var version = metadata.version;
-      return getFileAtVersion(service, path, version).then(data => {
+      return this.getFileAtVersion(path, version).then(data => {
         return {metadata: metadata, data: data}
       });
     })

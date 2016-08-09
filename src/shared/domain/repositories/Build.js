@@ -24,29 +24,13 @@ module.exports = function Build(db) {
         return result;
       });
     },
-    getByName: function(name) {
-      return db.view("build", "byName", {keys: [name]}).then(result => {
-        var list = result.rows();
-        log.trace(`getByName return ${list.length} items.`);
-        if (result.length == 1) return result;
-        return null;
-      });
-    },
     saveBuild: function(build) {
       log.trace(`saveBuild ${build._id} (${build.name})`);
       return db.insert(build).then(result => {
         log.trace(`saveBuild ${build._id} saved revision ${result.rev}.`);
         return result;
       });
-    },
-    updateTfsPath: function(id, newPath) {
-      log.trace(`updateTfsPath ${id} ${newPath}`);
-      return db.atomic("build", "cd-template-location", id, newPath).then(result => {
-        var rev = result[1]["x-couch-update-newrev"];
-        log.trace(`updateTfsPath ${id}; ${result}` + (rev && `; new rev ${rev}.` || "."));
-        return result;
-      });
-    },
+    },    
     follow: function(params, callback) {
       return db.follow(params || {}, callback);
     }

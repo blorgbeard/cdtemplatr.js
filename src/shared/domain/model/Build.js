@@ -7,7 +7,13 @@ module.exports = function(id) {
     name: null,
     friendlyName: null,
     branch: null,
-    tfs: null,
-    output: null,
+    latest: {
+      tfs: null,
+      output: null,
+    },
+    diff: {
+      tfs: null,
+      output: null,      
+    }
   };
 }
