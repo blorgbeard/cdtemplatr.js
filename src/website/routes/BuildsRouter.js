@@ -10,20 +10,20 @@ function wrapError(error) {
 var bodyParser = require('body-parser');
 var jsonBodyParser = bodyParser.json();
 
-function createRouter(domain) {
+function createRouter(controller) {
   var router = require("express").Router();
 
-  router.route('/builds').get((req, res) => domain.getBuilds().then(
+  router.route('/').get((req, res) => controller.all().then(
     result => res.json(result),
     failure => res.json(wrapError(failure))
   ));
 
-  router.route('/builds/details/:id').get((req, res) => domain.getBuildDetails(req.params.id).then(
+  router.route('/:id').get((req, res) => controller.get(req.params.id).then(
     result => res.json(result),
     failure => res.json(wrapError(failure))
   ));
 
-  router.route('/builds/approve/:id', jsonBodyParser).get((req, res) => {
+  router.route('/commit/:id', jsonBodyParser).get((req, res) => {
     var additions = req.query.additions;//.map(t=>Number(t));
     var deletions = req.query.deletions;//.map(t=>Number(t));
     //console.log(JSON.stringify(additions));

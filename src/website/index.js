@@ -52,15 +52,11 @@ requireShared('Domain')(config).then(db => {
   app.use('/', indexRoute);
 
   // set up the api that the react components will talk to
-  var apiRouterFactory = require('./routes/api.js');
-
-  // choose a domain!
-  //var domain = require('./domain/testing.js');
-  //var domain = require('./domain/production.js');
-
-  var domain = require('./domain/couchdb')(db);
-  var apiRouter = apiRouterFactory(domain);
-  app.use('/api', apiRouter);
+  var BuildsController = require('./controllers/BuildController')
+  var buildsController = new BuildsController(db);
+  var BuildsRouter = require('./routes/BuildsRouter');
+  var buildsRouter = new BuildsRouter(buildsController);
+  app.use('/api/builds', buildsRouter);
 
   // start serving!
   var protocol = config.website.protocol;

@@ -8,20 +8,12 @@ var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 module.exports = BuildDetails = React.createClass({
   getInitialState: function() {
     return {
-      "id": -1,
-      "name": "NoProjeckt",
-      "friendlyName": "No Projekt",
-      "branch": "Dev",
-      "tfs": {
-        "location": "/no/such/path",
-        "revision": null
+      build: {
+        "id": -1,
+        "name": "NoProjeckt",
+        "friendlyName": "No Projekt",
       },
-      "output": {
-        "id": null
-      },
-      "tfsMetadata": null,
-      "outputMetadata": null,
-      "diff": null
+      diff: null
     };
   },
   selectRange(array, value, min, max) {
@@ -35,30 +27,30 @@ module.exports = BuildDetails = React.createClass({
     return changed;
   },
   selectAdditions: function(value, min, max) {
-    if (this.selectRange(this.state.cdtemplate.additions, value, min, max)) {
+    if (this.selectRange(this.state.diff.data.additions, value, min, max)) {
       this.setState(this.state);
     }
   },
   selectDeletions: function(value, min, max) {
-    if (this.selectRange(this.state.cdtemplate.deletions, value, min, max)) {
+    if (this.selectRange(this.state.diff.data.deletions, value, min, max)) {
       this.setState(this.state);
     }
   },
   approveChangesClicked: function() {
     var additions = (
-      this.state.cdtemplate.additions
+      this.state.diff.data.additions
         .map((row, index) => ({row:row, index: index}))
         .filter(t=>t.row.selected)
         .map(t=>t.index)
       );
     var deletions = (
-        this.state.cdtemplate.deletions
+        this.state.diff.data.deletions
           .map((row, index) => ({row:row, index: index}))
           .filter(t=>t.row.selected)
           .map(t=>t.index)
         );
     $.ajax({
-      url: this.props.url + "/approve/" + this.state.id,
+      url: this.props.url + "/approve/" + this.state.build.id,
       type: 'get',
       contentType: 'application/json',
       data: {
@@ -68,7 +60,7 @@ module.exports = BuildDetails = React.createClass({
       dataType: 'json',
       success: function (data) {
         toastr.success(data, "Success!");
-        this.loadFromServer(this.state.id);
+        this.loadFromServer(this.state.build.id);
         events.raise('buildListShouldUpdate');
       }.bind(this),
       error: function (xhr, status, err) {
@@ -80,12 +72,12 @@ module.exports = BuildDetails = React.createClass({
     var content = function() {
       approveButtonEnabled = (
         this.state.diff &&
-        this.state.diff.additions.concat(this.state.diff.deletions).filter(t=>t.selected).length > 0
+        this.state.diff.data.additions.concat(this.state.diff.data.deletions).filter(t=>t.selected).length > 0
       );
       return (
         <div>
-          <h1>{this.state.friendlyName}&nbsp;<span className="text-muted">{this.state.branch}</span></h1>
-          <p>Version: {this.state.output && this.state.output.version || "(unknown)"},
+          <h1>{this.state.build.friendlyName}&nbsp;<span className="text-muted">{this.state.build.branch}</span></h1>
+          <p>Version: {"(unknown)"},
              built {(!!this.state.output)
               ? <span title={moment(this.state.output.finishTime).format('LLLL')} className="fuzzy-date">
                 {moment(this.state.output.finishTime).fromNow()}
@@ -94,20 +86,24 @@ module.exports = BuildDetails = React.createClass({
             }.
           </p>
           <h2>Build output changes</h2>
-          {(!!this.state.diff) ?
+          {(this.state.hasAdditions || this.state.hasDeletions) ?
             <div>
+              {(this.state.hasAdditions) ? 
               <div>
                 <ArtefactsTable
-                    rows={this.state.diff.additions}
+                    rows={this.state.diff.data.additions}
                     heading="Files added to build"
                     setSelection={this.selectAdditions} />
-                </div>
+              </div>
+              : ""}
+              {(this.state.hasDeletions) ? 
               <div>
                 <ArtefactsTable
-                    rows={this.state.diff.deletions}
+                    rows={this.state.diff.data.deletions}
                     heading="Files removed from build"
                     setSelection={this.selectDeletions} />
               </div>
+              : "" }
               <div><ApproveChangesButton enabled={approveButtonEnabled} onClicked={this.approveChangesClicked}/></div>
             </div>
           : <p className="bg-success message">The CD is fine! There are no changes to review.</p>}
@@ -118,13 +114,15 @@ module.exports = BuildDetails = React.createClass({
   },
   loadFromServer: function(id) {
     $.ajax({
-      url: this.props.url + "/details/" + id,
+      url: this.props.url + "/" + id,
       dataType: 'json',
       cache: false,
       success: function (data) {
-        if (data.cdtemplate) {
-          data.cdtemplate.additions = data.cdtemplate.additions.map(filename=>({filename: filename}));
-          data.cdtemplate.deletions = data.cdtemplate.deletions.map(filename=>({filename: filename}));
+        if (data.diff && data.diff.data) {
+          data.diff.data.additions = data.diff.data.additions.map(filename=>({filename: filename}));
+          data.diff.data.deletions = data.diff.data.deletions.map(filename=>({filename: filename}));
+          data.hasAdditions = data.diff.data.additions.length > 0;
+          data.hasDeletions = data.diff.data.deletions.length > 0;
         }
         this.setState(data);
       }.bind(this),

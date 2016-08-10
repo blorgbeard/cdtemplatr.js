@@ -22,7 +22,7 @@ module.exports = function Diff(db) {
       )
     },
     get: function(buildDefinitionId) {
-      return db.get(buildDefinitionid).then(result => {
+      return db.get(buildDefinitionId).then(result => {
         log.trace(`get ${buildDefinitionId} returned successfully.`)
         return result;
       });
