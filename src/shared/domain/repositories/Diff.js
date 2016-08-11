@@ -22,10 +22,18 @@ module.exports = function Diff(db) {
       )
     },
     get: function(buildDefinitionId) {
-      return db.get(buildDefinitionId).then(result => {
-        log.trace(`get ${buildDefinitionId} returned successfully.`)
-        return result;
-      });
+      return db.get(buildDefinitionId).then(
+        result => {
+          log.trace(`get ${buildDefinitionId} returned successfully.`)
+          return result;
+        },
+        error => {
+          if (error.statusCode === 404) {
+            return undefined;
+          }
+          throw error;
+        }
+      );
     },
     put: function(diff) {
       return db.insert(diff).then(result => {

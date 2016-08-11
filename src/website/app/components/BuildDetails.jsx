@@ -1,11 +1,13 @@
 var React = require("react");
+var Promise = require('bluebird');
+
 var moment = require("moment");
 var events = require("../events.js");
 
 var ArtefactsTable = require("./ArtefactsTable.jsx")
 var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
-module.exports = BuildDetails = React.createClass({
+module.exports = BuildDetails = React.createClass({  
   getInitialState: function() {
     return {
       build: {
@@ -76,15 +78,17 @@ module.exports = BuildDetails = React.createClass({
       );
       return (
         <div>
-          <h1>{this.state.build.friendlyName}&nbsp;<span className="text-muted">{this.state.build.branch}</span></h1>
-          <p>Version: {"(unknown)"},
-             built {(!!this.state.output)
-              ? <span title={moment(this.state.output.finishTime).format('LLLL')} className="fuzzy-date">
-                {moment(this.state.output.finishTime).fromNow()}
-               </span>
-             : "(unknown)"
-            }.
-          </p>
+          <h1>{this.state.build.friendlyName}&nbsp;<span className="text-muted">{this.state.build.branch}</span></h1>          
+          {(!!this.state.tfsLastBuild) 
+            ? <p>
+                <span>{this.state.tfsLastBuild.buildNumber} </span>
+                <span>{this.state.tfsLastBuild.result} </span>
+                <span title={moment(this.state.tfsLastBuild.finishTime).format('LLLL')} className="fuzzy-date">
+                  {moment(this.state.tfsLastBuild.finishTime).fromNow()}
+                </span>
+              </p>
+            : <p className="text-muted">Build state unknown.</p>          
+          }          
           <h2>Build output changes</h2>
           {(this.state.hasAdditions || this.state.hasDeletions) ?
             <div>
@@ -130,8 +134,37 @@ module.exports = BuildDetails = React.createClass({
         //console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
+    this.getTfs.then(tfsUrl => {
+      $.ajax({
+        url: tfsUrl + "/build/definitions/" + id + "?api-version=2.0",
+        xhrFields: { withCredentials: true },
+        success: definition => {
+          this.state.tfsDefinition = definition;
+          //this.setState(this.state);
+          $.ajax({
+            url: this.state.tfsDefinition.lastBuild.url,
+            xhrFields: { withCredentials: true },
+            success: build => {
+              this.state.tfsLastBuild = build;
+              this.setState(this.state);
+            }
+          });
+        }
+      });
+    });
   },
   componentDidMount: function() {
+    this.getTfs = new Promise((resolve, reject) => {
+      $.ajax({
+        url: this.props.tfs + "/" + "_apis/projects?api-version=2.0",
+        xhrFields: { withCredentials: true },  
+        success: resolve,
+        error: (req, status, error) => reject(new Error(status))              
+      });
+    }).then(result => {
+      var id = result.value.filter(t=>t.name === "Vista")[0].id;
+      return this.props.tfs + "/" + id + "/_apis";
+    });
     events.subscribe('buildSelected', function(id) {
       //alert('event fired')
       this.loadFromServer(id);
