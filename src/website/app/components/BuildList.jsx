@@ -49,7 +49,7 @@ module.exports = BuildList = React.createClass({
     });
   },
   render: function() {
-    var rows = this.state.builds.filter(b => !this.state.filtered || b.cdtemplate).map(function (build) {
+    var rows = this.state.builds.filter(b => !this.state.filtered || b.hasChanges).map(function (build) {
         return (
           <BuildListRow key={build.id} build={build} onRowClicked={this.rowClicked} selected={build.id == this.state.idSelected} />
         );

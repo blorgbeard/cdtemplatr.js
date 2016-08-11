@@ -7,9 +7,11 @@ var Promise = require('bluebird');
 var config = requireShared('Config');
 var diff = require('./diff.js');
 
+var lastChangeProcessed_key = "diffService_lastSeqProcessed";
+
 var defaultState = {
-  _id: "diffService_state",
-  lastChangeProcessed: 0
+  _id: lastChangeProcessed_key,
+  value: 0
 }
 
 requireShared("Domain")(config).then(db => {
@@ -18,16 +20,16 @@ requireShared("Domain")(config).then(db => {
     requireShared("Tfs")(config)
   ]).then(dependencies => {
     
-    var state = dependencies[0];
+    var lastChangeProcessed = dependencies[0].value;
     var tfs = dependencies[1];
     var controller = require('./Controller')(db, tfs, diff);
       
     var buildsInCatchupList = new Set();
     
-    log.info(`Last sequence number processed is ${state.lastChangeProcessed}. Checking for subsequent changes.`);
+    log.info(`Last sequence number processed is ${lastChangeProcessed}. Checking for subsequent changes.`);
 
     var feed = db.build.follow({
-      since: state.lastChangeProcessed, 
+      since: lastChangeProcessed, 
       feed: "continuous", 
       include_docs: false // todo: would be more optimal to include them and pass them to the controller?
     });
@@ -37,8 +39,9 @@ requireShared("Domain")(config).then(db => {
         // process single change
         log.debug(`Processing change sequence ${change.seq}.`)
         controller.ensure(change.id).then(result => {
-          state.lastChangeProcessed = change.seq;
-          return db.state.put(state);
+          return db.state.bump(lastChangeProcessed_key, change.seq).then(()=>{
+            log.debug(`Processed change sequence ${change.seq}.`)
+          });
         });
       } else {
         // still catching up, add to set of IDs to process
@@ -47,15 +50,14 @@ requireShared("Domain")(config).then(db => {
     });
     feed.on("error", error => { throw(error); });
     feed.on("catchup", seq_id => {
-      log.info(`Found ${buildsInCatchupList.size} changes since sequence ${state.lastChangeProcessed}.`);
+      log.info(`Found ${buildsInCatchupList.size} changes since sequence ${lastChangeProcessed}.`);
       if (buildsInCatchupList.size === 0) {
         log.info("Waiting for more changes.");
         return;
       }
       log.info("Processing backlog of changes.");
       Promise.all(Array.from(buildsInCatchupList).map(buildId => controller.ensure(buildId))).then(() => {
-        state.lastChangeProcessed = seq_id;
-        db.state.put(state).then(()=> {
+        return db.state.bump(lastChangeProcessed_key, seq_id).then(result => {
           log.info("Backlog processed. Waiting for more changes.");
           buildsInCatchupList = new Set();  // just.. in case.
         });        

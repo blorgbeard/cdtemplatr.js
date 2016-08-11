@@ -20,7 +20,7 @@ module.exports = function Build(db) {
     },
     get: function(id) {
       return db.get(id).then(result => {
-        log.trace(result, `get ${id} returned successfully.`);
+        log.trace(`get ${id} returned revision ${result._rev}.`);
         return result;
       });
     },

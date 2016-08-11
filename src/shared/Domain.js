@@ -55,7 +55,8 @@ module.exports = function(config) {
 
   var designs = [
     requireShared('domain/data/design/build'),
-    requireShared('domain/data/design/outputCd')
+    requireShared('domain/data/design/outputCd'),
+    requireShared('domain/data/design/state')
   ];
 
   var databaseNames = ['build', 'output_cd', 'diff', 'user', 'state'];

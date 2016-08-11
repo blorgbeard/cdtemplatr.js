@@ -14,6 +14,7 @@ module.exports = function(id) {
     diff: {
       tfs: null,
       output: null,      
-    }
+    },
+    hasChanges: false
   };
 }

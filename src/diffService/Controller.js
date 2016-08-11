@@ -14,7 +14,6 @@ module.exports = function(domain, tfs, diffService) {
           (build.latest) &&
           (build.latest.tfs) &&
           (build.latest.tfs.location) &&
-          (build.latest.tfs.revision) &&
           (build.latest.output)
         );
 
@@ -50,16 +49,18 @@ module.exports = function(domain, tfs, diffService) {
             log.error(`Build definition ${buildDefinitionId} says ${build.latest.outputCd} is latest build, but latest recorded is only ${outputCd.buildId}. Skipping diff.`);
             return;
           }
-          if (tfsCd.metadata.version < build.latest.tfs.revision) {
+          if (build.latest.tfs.revision && (tfsCd.metadata.version < build.latest.tfs.revision)) {
             log.error(`Build definition ${buildDefinitionId} says ${build.latest.tfs.revision} is latest cdtemplate, but latest in tfs is only ${tfsCd.metadata.version}. Skipping diff.`);
             return;
           }
   
-          // do diff (this sometimes takes a few seconds! can we find a faster method?)
+          // do diff (this seems fast enough if the files are not completely different)
           log.debug(`Beginning diff of cdtemplate from build ${outputCd.buildId} and ${tfsCd.metadata.path} revision ${tfsCd.metadata.version}`);
           var newDiff = diffService(tfsCd.data, outputCd.data);
           log.debug(`Completed diff of cdtemplate from build ${outputCd.buildId} and ${tfsCd.metadata.path} revision ${tfsCd.metadata.version}`);
           
+          // todo: ignore certain changes
+
           var newDiffDoc = new Diff(
             buildDefinitionId, 
             tfsCd.metadata.path,
@@ -70,7 +71,12 @@ module.exports = function(domain, tfs, diffService) {
 
           newDiffDoc._rev = oldRevison;
 
-          return domain.diff.put(newDiffDoc);
+          return domain.diff.put(newDiffDoc).then(() => {
+            build.diff = newDiffDoc.version;
+            build.hasChanges = newDiffDoc.data.additions.length > 0 || 
+                               newDiffDoc.data.deletions.length > 0;
+            return domain.build.saveBuild(build);
+          });
 
         });
       });

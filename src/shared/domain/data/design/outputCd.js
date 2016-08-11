@@ -4,6 +4,8 @@
   see the model classes for the data-structure
 */
 
+// todo: delete? not used?
+
 function CreateDesignDoc(rev) {
   return {
     _id: "_design/outputCd",
