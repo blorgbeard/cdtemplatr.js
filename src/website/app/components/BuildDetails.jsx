@@ -123,8 +123,6 @@ module.exports = BuildDetails = React.createClass({
       cache: false,
       success: function (data) {
         if (data.diff && data.diff.data) {
-          data.diff.data.additions = data.diff.data.additions.map(filename=>({filename: filename}));
-          data.diff.data.deletions = data.diff.data.deletions.map(filename=>({filename: filename}));
           data.hasAdditions = data.diff.data.additions.length > 0;
           data.hasDeletions = data.diff.data.deletions.length > 0;
         }
