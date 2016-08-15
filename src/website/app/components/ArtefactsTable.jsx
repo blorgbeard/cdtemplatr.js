@@ -15,7 +15,7 @@ var ArtefactRow = React.createClass({
         <tr className={this.props.row.selected ? "selectedRow" : ""}
              onMouseDown={this.handleMouseDown}
              onMouseOver={this.handleMouseOver}>
-          <td colSpan={this.props.colSpan || 1}>{this.props.row.filename}</td>
+          <td colSpan={this.props.colSpan || 1}>{this.props.row.xml}</td>
         </tr>
       );
     }.bind(this)();
