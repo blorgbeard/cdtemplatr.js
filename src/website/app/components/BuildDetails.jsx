@@ -7,6 +7,44 @@ var events = require("../events.js");
 var ArtefactsTable = require("./ArtefactsTable.jsx")
 var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
+
+// ---- todo: move out into module
+
+var fetchWithCredentials = function(url) {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: url,
+      method: method,
+      xhrFields: { withCredentials: true },  
+      success: resolve,
+      error: (req, status, error) => reject(new Error(status))
+    });
+  });
+};
+
+var Tfs = function(projectUrl) {
+  return {
+    getBuildDefinition: function(id) {
+      return fetchWithCredentials(projectUrl + `/build/definitions/${id}?api-version=2.0`);
+    },
+    getBuild: function(id) {
+      return fetchWithCredentials(projectUrl + `/build/builds/${id}?api-version=2.0`);
+    },
+    getFile: function(path) {
+      return fetchWithCredentials(projectUrl + `/tfvc/items?api-version=1.0&path=${path}`);
+    }
+  };
+};
+
+var TfsFactory = function(baseUrl, projectName) {
+  return fetchWithCredentials(baseUrl + "/_apis/projects?api-version=2.0").then(result => {
+    var id = result.value.filter(t=>t.name === projectName)[0].id;
+    return new Tfs(baseUrl + "/" + id + "/_apis");
+  });
+};
+
+// --------------------------------
+
 module.exports = BuildDetails = React.createClass({  
   getInitialState: function() {
     return {
@@ -39,6 +77,12 @@ module.exports = BuildDetails = React.createClass({
     }
   },
   approveChangesClicked: function() {
+    this.tfs.then(tfs => {
+      tfs.getFile(this.state.diff.version.tfs.location).then(file => {
+        console.log(file);
+      });
+    });
+
     var additions = (
       this.state.diff.data.additions
         .map((row, index) => ({row:row, index: index}))
@@ -132,37 +176,18 @@ module.exports = BuildDetails = React.createClass({
         //console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-    this.getTfs.then(tfsUrl => {
-      $.ajax({
-        url: tfsUrl + "/build/definitions/" + id + "?api-version=2.0",
-        xhrFields: { withCredentials: true },
-        success: definition => {
-          this.state.tfsDefinition = definition;
-          //this.setState(this.state);
-          $.ajax({
-            url: this.state.tfsDefinition.lastBuild.url,
-            xhrFields: { withCredentials: true },
-            success: build => {
-              this.state.tfsLastBuild = build;
-              this.setState(this.state);
-            }
-          });
-        }
+    this.getTfs.then(tfs => {
+      tfs.getBuildDefinition(id).then(definition => {
+        this.state.tfsDefinition = definition;
+        tfs.getBuild(definition.lastBuild.id).then(build => {
+          this.state.tfsLastBuild = build;
+          this.setState(this.state);
+        });
       });
-    });
+    });    
   },
   componentDidMount: function() {
-    this.getTfs = new Promise((resolve, reject) => {
-      $.ajax({
-        url: this.props.tfs + "/" + "_apis/projects?api-version=2.0",
-        xhrFields: { withCredentials: true },  
-        success: resolve,
-        error: (req, status, error) => reject(new Error(status))              
-      });
-    }).then(result => {
-      var id = result.value.filter(t=>t.name === "Vista")[0].id;
-      return this.props.tfs + "/" + id + "/_apis";
-    });
+    this.getTfs = TfsFactory(this.props.tfsUrl, this.props.tfsProject);
     events.subscribe('buildSelected', function(id) {
       //alert('event fired')
       this.loadFromServer(id);
