@@ -12,6 +12,13 @@ function patch(file, additions, deletions) {
     var ixAdd = 0;
     var ixDel = 0;
     for (var xml of lines) {
+      
+      if (xml.trim() === "") {
+        // ignore empty lines completely (leave them in place though)
+        output.push(xml);
+        continue;
+      }
+
       var line = parseLine(xml, parents[parents.length-1]);
       if (line.type === "directory") {
         parents.push(line.path);
