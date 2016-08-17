@@ -162,7 +162,7 @@ module.exports = BuildDetails = React.createClass({
     });    
   },
   componentDidMount: function() {
-    this.getTfs = TfsFactory(this.props.tfs, "Vista");
+    this.getTfs = TfsFactory(this.props.tfsUrl, this.props.tfsProject);
     events.subscribe('buildSelected', function(id) {
       //alert('event fired')
       this.loadFromServer(id);
