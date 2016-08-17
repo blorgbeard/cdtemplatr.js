@@ -10,12 +10,12 @@ var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
 // ---- todo: move out into module
 
-var fetchWithCredentials = function(url) {
+var fetchWithCredentials = function(url, dataType) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: url,
-      method: method,
-      xhrFields: { withCredentials: true },  
+      xhrFields: { withCredentials: true },
+      dataType: dataType,  
       success: resolve,
       error: (req, status, error) => reject(new Error(status))
     });
@@ -31,7 +31,7 @@ var Tfs = function(projectUrl) {
       return fetchWithCredentials(projectUrl + `/build/builds/${id}?api-version=2.0`);
     },
     getFile: function(path) {
-      return fetchWithCredentials(projectUrl + `/tfvc/items?api-version=1.0&path=${path}`);
+      return fetchWithCredentials(projectUrl + `/tfvc/items?api-version=1.0&path=${path}`, "text");
     }
   };
 };
@@ -77,42 +77,17 @@ module.exports = BuildDetails = React.createClass({
     }
   },
   approveChangesClicked: function() {
-    this.tfs.then(tfs => {
+
+    var additions = this.state.diff.data.additions.filter(t=>t.selected);
+    var deletions = this.state.diff.data.deletions.filter(t=>t.selected);
+    
+    this.getTfs.then(tfs => {
       tfs.getFile(this.state.diff.version.tfs.location).then(file => {
-        console.log(file);
+        var lines = file.split("\r\n");
+        var output = [];
       });
     });
-
-    var additions = (
-      this.state.diff.data.additions
-        .map((row, index) => ({row:row, index: index}))
-        .filter(t=>t.row.selected)
-        .map(t=>t.index)
-      );
-    var deletions = (
-        this.state.diff.data.deletions
-          .map((row, index) => ({row:row, index: index}))
-          .filter(t=>t.row.selected)
-          .map(t=>t.index)
-        );
-    $.ajax({
-      url: this.props.url + "/approve/" + this.state.build.id,
-      type: 'get',
-      contentType: 'application/json',
-      data: {
-        additions: additions,
-        deletions: deletions
-      },
-      dataType: 'json',
-      success: function (data) {
-        toastr.success(data, "Success!");
-        this.loadFromServer(this.state.build.id);
-        events.raise('buildListShouldUpdate');
-      }.bind(this),
-      error: function (xhr, status, err) {
-        //console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+    
   },
   render: function() {
     var content = function() {
