@@ -91,5 +91,18 @@ describe('compare', function() {
             { type: 'directory-end', path: '\\zzz\\hello' }, 
             { type: 'directory-end', path: '\\zzz\\zubat' }
         ) < 0);
-    });    
+    }); 
+
+    it('should sort in case-insensitive mode', function() {
+        assert(compare(
+            { type: 'directory', path: '\\AAA' }, 
+            { type: 'directory-end', path: '\\zzz' }
+        ) < 0);
+        assert(compare(
+            { type: 'directory', path: '\\aaa' }, 
+            { type: 'directory-end', path: '\\ZZZ' }
+        ) < 0);        
+    }); 
+
+
 });

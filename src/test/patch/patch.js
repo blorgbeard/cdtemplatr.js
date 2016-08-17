@@ -5,9 +5,9 @@ describe('patch', function() {
     it('should work correctly in a simple case', function() {
         const input = [
             '<directory name="">',
-            '<file name="\\aardvark"/>',
+            '<file name="\\Aardvark"/>',
             '<file name="\\lollipop"/>',
-            '<file name="\\xylophone"/>',
+            '<file name="\\Xylophone"/>',
             '</directory>'
         ].join('\r\n');
         
@@ -17,12 +17,12 @@ describe('patch', function() {
         ];
 
         const deletions = [
-            { xml: '<file name="\\xylophone"/>' }
+            { xml: '<file name="\\Xylophone"/>' }
         ];
 
         const expected = [
             '<directory name="">',
-            '<file name="\\aardvark"/>',
+            '<file name="\\Aardvark"/>',
             '<file name="\\fishies"/>',
             '<file name="\\gophers"/>',
             '<file name="\\lollipop"/>',
