@@ -3,7 +3,7 @@
 function parseLine(line, parent) {
 
   var matchOpenDirectory = /<directory name="(.*)">/
-  var matchFile = /<file name="(.*)"\/>/;
+  var matchFile = /<file name="(.*)" ?\/>/;
   var matchCloseDirectory = /<\/directory>/
 
   var openDirectory = line.match(matchOpenDirectory);

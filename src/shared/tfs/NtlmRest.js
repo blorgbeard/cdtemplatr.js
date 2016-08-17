@@ -41,6 +41,8 @@ module.exports = function(server, auth, ca) {
     });
   } 
 
+  this.url = server;
+
   this.get = (path, args) => sendRequest("get", path, args);
   this.getObject = (path, args) => sendRequest("get", path, args).then(JSON.parse);  
   

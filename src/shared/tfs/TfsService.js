@@ -17,6 +17,8 @@ function decodeTfsFile(text) {
 
 module.exports = function(service) {
 
+  this.url = service.url;
+
   // download a file (at the latest version).
   this.getFile = function(path) {
     return service.get('tfvc/items', {

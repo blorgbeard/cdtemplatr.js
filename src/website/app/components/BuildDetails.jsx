@@ -7,43 +7,10 @@ var events = require("../events.js");
 var ArtefactsTable = require("./ArtefactsTable.jsx")
 var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
+var patch = require('../utils/patch/patch').patch;
+var parseLine = require('../utils/patch/parse').parseLine;
 
-// ---- todo: move out into module
-
-var fetchWithCredentials = function(url) {
-  return new Promise((resolve, reject) => {
-    $.ajax({
-      url: url,
-      method: method,
-      xhrFields: { withCredentials: true },  
-      success: resolve,
-      error: (req, status, error) => reject(new Error(status))
-    });
-  });
-};
-
-var Tfs = function(projectUrl) {
-  return {
-    getBuildDefinition: function(id) {
-      return fetchWithCredentials(projectUrl + `/build/definitions/${id}?api-version=2.0`);
-    },
-    getBuild: function(id) {
-      return fetchWithCredentials(projectUrl + `/build/builds/${id}?api-version=2.0`);
-    },
-    getFile: function(path) {
-      return fetchWithCredentials(projectUrl + `/tfvc/items?api-version=1.0&path=${path}`);
-    }
-  };
-};
-
-var TfsFactory = function(baseUrl, projectName) {
-  return fetchWithCredentials(baseUrl + "/_apis/projects?api-version=2.0").then(result => {
-    var id = result.value.filter(t=>t.name === projectName)[0].id;
-    return new Tfs(baseUrl + "/" + id + "/_apis");
-  });
-};
-
-// --------------------------------
+var Tfs = require('../utils/tfs/Tfs');
 
 module.exports = BuildDetails = React.createClass({  
   getInitialState: function() {
@@ -77,41 +44,18 @@ module.exports = BuildDetails = React.createClass({
     }
   },
   approveChangesClicked: function() {
-    this.tfs.then(tfs => {
-      tfs.getFile(this.state.diff.version.tfs.location).then(file => {
-        console.log(file);
-      });
-    });
 
-    var additions = (
-      this.state.diff.data.additions
-        .map((row, index) => ({row:row, index: index}))
-        .filter(t=>t.row.selected)
-        .map(t=>t.index)
-      );
-    var deletions = (
-        this.state.diff.data.deletions
-          .map((row, index) => ({row:row, index: index}))
-          .filter(t=>t.row.selected)
-          .map(t=>t.index)
-        );
-    $.ajax({
-      url: this.props.url + "/approve/" + this.state.build.id,
-      type: 'get',
-      contentType: 'application/json',
-      data: {
-        additions: additions,
-        deletions: deletions
-      },
-      dataType: 'json',
-      success: function (data) {
-        toastr.success(data, "Success!");
-        this.loadFromServer(this.state.build.id);
-        events.raise('buildListShouldUpdate');
-      }.bind(this),
-      error: function (xhr, status, err) {
-        //console.error(this.props.url, status, err.toString());
-      }.bind(this)
+    var additions = this.state.diff.data.additions.filter(t=>t.selected);
+    var deletions = this.state.diff.data.deletions.filter(t=>t.selected);
+
+    var path = this.state.diff.version.tfs.location;
+
+    this.tfs.getFileMetadata(path).then(metadata => {
+      var version = metadata.value[0].version;
+      this.tfs.getFile(path, version).then(file => {
+        var patched = patch(file, additions, deletions);
+        return this.tfs.commitFile(path, version, patched);
+      });        
     });
   },
   render: function() {
@@ -176,18 +120,18 @@ module.exports = BuildDetails = React.createClass({
         //console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-    this.getTfs.then(tfs => {
-      tfs.getBuildDefinition(id).then(definition => {
-        this.state.tfsDefinition = definition;
-        tfs.getBuild(definition.lastBuild.id).then(build => {
-          this.state.tfsLastBuild = build;
-          this.setState(this.state);
-        });
+    
+    this.tfs.getBuildDefinition(id).then(definition => {
+      this.state.tfsDefinition = definition;
+      this.tfs.getBuild(definition.lastBuild.id).then(build => {
+        this.state.tfsLastBuild = build;
+        this.setState(this.state);
       });
-    });    
+    });
+        
   },
   componentDidMount: function() {
-    this.getTfs = TfsFactory(this.props.tfsUrl, this.props.tfsProject);
+    this.tfs = new Tfs(this.props.tfs);
     events.subscribe('buildSelected', function(id) {
       //alert('event fired')
       this.loadFromServer(id);

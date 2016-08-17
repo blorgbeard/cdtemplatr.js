@@ -9,7 +9,7 @@ var ApproveChangesButton = require("./components/ApproveChangesButton.jsx")
 
 function render() {
   ReactDOM.render(<BuildList url="/api/builds"/>, document.getElementById("buildListContainer"));
-  ReactDOM.render(<BuildDetails url="/api/builds"/>, document.getElementById("buildDetailsContainer"));
+  ReactDOM.render(<BuildDetails url="/api/builds" tfs="___GULP_WILL_REPLACE_WITH_TFS_BASE_URL___"/>, document.getElementById("buildDetailsContainer"));
 }
 
 render();

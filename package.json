@@ -14,6 +14,7 @@
     "bluebird": "^3.4.0",
     "body-parser": "^1.15.2",
     "browserify": "^13.0.1",
+    "browserify-transform-tools": "^1.6.0",
     "diff": "^2.2.3",
     "express": "^4.13.4",
     "express-fileupload": "0.0.5",
