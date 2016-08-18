@@ -34,7 +34,7 @@ module.exports = BuildList = React.createClass({
     });
   },
   render: function() {
-    var rows = this.state.builds.filter(b => !this.state.filtered || b.hasChanges || b.id == this.props.id).map(function (build) {
+    var rows = this.props.builds.filter(b => !this.state.filtered || b.hasChanges || b.id == this.props.id).map(function (build) {
         return (
           <BuildListRow key={build.id} build={build} onRowClicked={this.props.rowClicked} selected={(build.id == this.props.id)} />
         );
