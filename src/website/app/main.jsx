@@ -9,10 +9,12 @@ var browserHistory = require('react-router').browserHistory;
 var Main = require("./components/Main.jsx"); 
 
 function render() { 
+  const tfs = "___GULP_WILL_REPLACE_WITH_TFS_BASE_URL___";
   ReactDOM.render(
     <Router history={browserHistory}>
-      <Route path="/" component={Main} url="/api/builds"/>      
-      <Route path="/build/:id" component={Main} url="/api/builds" tfs="___GULP_WILL_REPLACE_WITH_TFS_BASE_URL___"/>
+      <Route path="/" component={Main} />      
+      <Route path="/build/:id" component={Main} tfs={tfs}/>
+      <Route path="/build/named/:name" component={Main} tfs={tfs}/>
     </Router>,
     document.getElementById("mainContainer")
   );

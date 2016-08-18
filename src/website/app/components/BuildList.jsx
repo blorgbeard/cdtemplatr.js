@@ -25,23 +25,18 @@ var BuildListRow = React.createClass({
 module.exports = BuildList = React.createClass({
   getInitialState: function() {
     return {
-      idSelected: this.props.id,
       filtered: true,
-      builds: []
     };
   },  
   toggleFilter: function() {
-    console.log("toggleFilter");
     this.setState({
-      idSelected: this.state.idSelected,
       filtered: !this.state.filtered,
-      builds: this.state.builds
     });
   },
   render: function() {
     var rows = this.state.builds.filter(b => !this.state.filtered || b.hasChanges || b.id == this.props.id).map(function (build) {
         return (
-          <BuildListRow key={build.id} build={build} onRowClicked={this.props.rowClicked} selected={build.id == this.props.id} />
+          <BuildListRow key={build.id} build={build} onRowClicked={this.props.rowClicked} selected={(build.id == this.props.id)} />
         );
     }.bind(this));
     return (
@@ -63,29 +58,7 @@ module.exports = BuildList = React.createClass({
         </div>
       </div>
     );
-  },
-  loadFromServer: function(url) {
-    $.ajax({
-      url: url,
-      dataType: 'json',
-      cache: false,
-      success: function (data) {
-        var idSelected = this.state.idSelected;
-        if (idSelected < 0) {
-          var filtered = data.filter(b => !this.state.filtered || b.cdtemplate);
-          if (filtered.length > 0) {
-            idSelected = filtered[0].id;
-            events.raise('buildSelected', idSelected);
-          }
-        }
-        this.setState({
-          idSelected: idSelected,
-          filtered: this.state.filtered,
-          builds: data
-        });
-      }.bind(this)
-    });
-  },
+  },  
   componentDidMount: function() {
     $(this.refs.toggleFilter).bootstrapToggle({
       on: 'Failed Only',
@@ -93,12 +66,6 @@ module.exports = BuildList = React.createClass({
       size: 'mini',
       width: 100
     });
-    $(this.refs.toggleFilter).change(this.toggleFilter);
-    this.loadFromServer(this.props.url);    
-  },
-  componentWillReceiveProps(nextProps) {
-    if (this.props.url !== nextProps.url) {
-      this.loadFromServer(nextProps.url);
-    }    
+    $(this.refs.toggleFilter).change(this.toggleFilter);        
   }
 });
