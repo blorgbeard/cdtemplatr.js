@@ -10,7 +10,9 @@ var get = function(url, dataType) {
       cache: false,
       dataType: dataType,  
       success: resolve,
-      error: (req, status, error) => reject(new Error(status))
+      error: (req, status, error) => {
+        reject(new Error(status));
+      }
     });
   });
 };
@@ -26,7 +28,9 @@ var post = function(url, data) {
       processData: false,
       xhrFields: { withCredentials: true },
       success: resolve,
-      error: (req, status, error) => reject(new Error(status))
+      error: (req, status, error) => {
+        reject(new Error(status));
+      }
     });
   });
 };

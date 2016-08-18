@@ -1,15 +1,21 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
 
-var BuildList = require("./components/BuildList.jsx");
-var BuildDetails = require("./components/BuildDetails.jsx");
+var Router = require('react-router').Router
+var Route = require('react-router').Route
 
-var ArtefactsTable = require("./components/ArtefactsTable.jsx")
-var ApproveChangesButton = require("./components/ApproveChangesButton.jsx")
+var browserHistory = require('react-router').browserHistory;
 
-function render() {
-  ReactDOM.render(<BuildList url="/api/builds"/>, document.getElementById("buildListContainer"));
-  ReactDOM.render(<BuildDetails url="/api/builds" tfs="___GULP_WILL_REPLACE_WITH_TFS_BASE_URL___"/>, document.getElementById("buildDetailsContainer"));
+var Main = require("./components/Main.jsx"); 
+
+function render() { 
+  ReactDOM.render(
+    <Router history={browserHistory}>
+      <Route path="/" component={Main} url="/api/builds"/>      
+      <Route path="/build/:id" component={Main} url="/api/builds" tfs="___GULP_WILL_REPLACE_WITH_TFS_BASE_URL___"/>
+    </Router>,
+    document.getElementById("mainContainer")
+  );
 }
 
 render();

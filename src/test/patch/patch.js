@@ -82,10 +82,7 @@ describe('patch', function() {
             '</directory>'
         ].join('\r\n');
         
-        const additions = [
-            { xml: '<file name="\\fishies"/>' },
-            { xml: '<file name="\\ziggurat"/>' }
-        ];
+        const additions = [];
 
         const deletions = [
             { xml: '<directory name="\\hello">' },
@@ -97,9 +94,7 @@ describe('patch', function() {
 
         const expected = [
             '<directory name="">',
-            '<file name="\\fishies"/>',
             '<file name="\\xylophone"/>',
-            '<file name="\\ziggurat"/>',
             '</directory>'
         ].join('\r\n');
 

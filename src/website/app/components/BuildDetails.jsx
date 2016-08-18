@@ -115,10 +115,7 @@ module.exports = BuildDetails = React.createClass({
           data.hasDeletions = data.diff.data.deletions.length > 0;
         }
         this.setState(data);
-      }.bind(this),
-      error: function (xhr, status, err) {
-        //console.error(this.props.url, status, err.toString());
-      }.bind(this)
+      }.bind(this)      
     });
     
     this.tfs.getBuildDefinition(id).then(definition => {
@@ -131,10 +128,13 @@ module.exports = BuildDetails = React.createClass({
         
   },
   componentDidMount: function() {
-    this.tfs = new Tfs(this.props.tfs);
-    events.subscribe('buildSelected', function(id) {
-      //alert('event fired')
-      this.loadFromServer(id);
-    }.bind(this));
+    this.tfs = new Tfs(this.props.tfs);    
+    this.loadFromServer(this.props.id);
+  },
+  componentWillReceiveProps(nextProps) {
+    this.tfs = new Tfs(nextProps.tfs);
+    if (this.props.id !== nextProps.id) {
+      this.loadFromServer(nextProps.id);
+    }
   }
 });

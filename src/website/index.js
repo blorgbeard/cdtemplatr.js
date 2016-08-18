@@ -43,11 +43,15 @@ requireShared('Domain')(config).then(db => {
 
   var indexRoute = express.Router();
 
-  indexRoute.get('/', function (req, res) {
+  function renderIndex(req, res) {
     res.render('index', {
       title: config.website.title || "cdtemplatr.js"
     });
-  });
+  }
+
+  indexRoute.get("/", renderIndex);
+  indexRoute.get("/build", renderIndex);
+  indexRoute.get("/build/*", renderIndex);
 
   app.use('/', indexRoute);
 

@@ -3,7 +3,7 @@ var events = require("../events.js");
 
 var BuildListRow = React.createClass({
   handleClick: function() {
-    this.props.onRowClicked(this.props.build.id);
+    this.props.onRowClicked(this.props.build.id);    
   },
   render: function() {
     var result = function() {
@@ -25,21 +25,11 @@ var BuildListRow = React.createClass({
 module.exports = BuildList = React.createClass({
   getInitialState: function() {
     return {
-      idSelected: -1,
+      idSelected: this.props.id,
       filtered: true,
       builds: []
     };
-  },
-  rowClicked: function (id) {
-    // todo: colour the row and decolour the others
-    console.log("user clicked build " + id);
-    this.setState({
-      idSelected: id,
-      filtered: this.state.filtered,
-      builds: this.state.builds
-    });
-    events.raise('buildSelected', id);
-  },
+  },  
   toggleFilter: function() {
     console.log("toggleFilter");
     this.setState({
@@ -49,9 +39,9 @@ module.exports = BuildList = React.createClass({
     });
   },
   render: function() {
-    var rows = this.state.builds.filter(b => !this.state.filtered || b.hasChanges).map(function (build) {
+    var rows = this.state.builds.filter(b => !this.state.filtered || b.hasChanges || b.id == this.props.id).map(function (build) {
         return (
-          <BuildListRow key={build.id} build={build} onRowClicked={this.rowClicked} selected={build.id == this.state.idSelected} />
+          <BuildListRow key={build.id} build={build} onRowClicked={this.props.rowClicked} selected={build.id == this.props.id} />
         );
     }.bind(this));
     return (
@@ -74,9 +64,9 @@ module.exports = BuildList = React.createClass({
       </div>
     );
   },
-  loadFromServer: function() {
+  loadFromServer: function(url) {
     $.ajax({
-      url: this.props.url,
+      url: url,
       dataType: 'json',
       cache: false,
       success: function (data) {
@@ -93,9 +83,6 @@ module.exports = BuildList = React.createClass({
           filtered: this.state.filtered,
           builds: data
         });
-      }.bind(this),
-      error: function (xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
   },
@@ -107,10 +94,11 @@ module.exports = BuildList = React.createClass({
       width: 100
     });
     $(this.refs.toggleFilter).change(this.toggleFilter);
-    this.loadFromServer();
-    if (this.props.pollInterval) {
-      setInterval(this.loadFromServer, this.props.pollInterval);
-    }
-    events.subscribe('buildListShouldUpdate', this.loadFromServer);
+    this.loadFromServer(this.props.url);    
+  },
+  componentWillReceiveProps(nextProps) {
+    if (this.props.url !== nextProps.url) {
+      this.loadFromServer(nextProps.url);
+    }    
   }
 });
