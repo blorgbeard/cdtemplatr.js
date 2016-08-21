@@ -24,7 +24,7 @@ function chopFieldList(ix1, ix2, list) {
 
   // if both indexes are in the same string, this becomes very simple
   if (index1.itemIndex === index2.itemIndex) {
-    result[index1.itemIndex] = list[index1.itemIndex].slice(index1.indexIntoItem, index2.indexIntoItem + 1);
+    result[index1.itemIndex] = list[index1.itemIndex].slice(Math.max(0, index1.indexIntoItem), index2.indexIntoItem + 1);
     return result;
   }
 
@@ -137,7 +137,7 @@ module.exports = {
           }
             
           state.ixHaystack++;
-          state.ixFilter++;          
+          state.ixFilter++;
         }
         // end of this part of the match
 

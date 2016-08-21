@@ -75,8 +75,8 @@ module.exports = BuildList = React.createClass({
         return build;        
       }
       var resultToHtml = result => result.map(chunk => {
-        if (chunk.text) return chunk.text;
-        if (chunk.match) return `<b>${chunk.match}</b>`;
+        if (chunk.text != undefined) return chunk.text;
+        if (chunk.match != undefined) return `<b>${chunk.match}</b>`;
         throw Error("Invalid result; can't parse.");
       }).join('');
       build.filterMatched = true;
