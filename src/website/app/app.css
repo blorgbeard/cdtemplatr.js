@@ -2,6 +2,10 @@ p.userName {
   padding: 0 25px 0 0;
 }
 
+img.user-icon {
+  border-radius: 50%; 
+}
+
 .btn .navbar {
   border-radius:0;
 }
@@ -12,6 +16,7 @@ p.userName {
 
 .build-list-table {
   overflow-y: scroll;
+  clear: both;
 }
 
 .build-list-header-table {

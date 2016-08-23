@@ -102,27 +102,25 @@ module.exports = BuildList = React.createClass({
     }.bind(this));
     return (
       <div>        
-        <table className="table table-striped table-hover build-list-header-table">
-          <thead><tr>
-            <th>Builds</th>
-            
-          </tr></thead>
-        </table>
+        <div style={{paddingBottom: "40px"}}>
+          <span className="pull-left" style={{paddingTop:"5px"}}>Builds</span>
+          <span className="pull-right">
+              <input type="textbox" ref="filter"
+                      placeholder="Type to filter" 
+                      style={{verticalAlign: "top", marginRight: "10px", height: "28px"}}
+                      value={this.state.filter} 
+                      onChange={this.updateFilter} />
+              <span style={{marginBottom: "10px"}}>
+              <input type="checkbox" ref="showOnlyFailed" value="showOnlyFailed"
+                  value={this.state.showOnlyFailed}
+                  onChange={this.updateShowOnlyFailed}/>
+              </span>
+          </span>
+        </div>
         <div className="build-list-table">
           <table className="table table-striped table-hover">
             <thead><tr>
-              <th>
-                <input type="textbox" ref="filter"
-                       placeholder="Type to filter" 
-                       style={{verticalAlign: "text-bottom"}}
-                       value={this.state.filter} 
-                       onChange={this.updateFilter} />
-              </th>
-              <th style={{textAlign: "right"}}>
-                <input type="checkbox" ref="showOnlyFailed" value="showOnlyFailed"
-                      value={this.state.showOnlyFailed}
-                      onChange={this.updateShowOnlyFailed}/>
-              </th>
+              
             </tr></thead>
             <tbody>{rows}</tbody>
           </table>

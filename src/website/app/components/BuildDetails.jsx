@@ -20,7 +20,8 @@ module.exports = BuildDetails = React.createClass({
         "name": "NoProjeckt",
         "friendlyName": "No Projekt",
       },
-      diff: null
+      diff: null,
+      comitting: false
     };
   },
   selectRange(array, value, min, max) {
@@ -96,7 +97,11 @@ module.exports = BuildDetails = React.createClass({
                     setSelection={this.selectDeletions} />
               </div>
               : "" }
-              <div><ApproveChangesButton enabled={approveButtonEnabled} onClicked={this.approveChangesClicked}/></div>
+              <div><ApproveChangesButton
+                 enabled={approveButtonEnabled}
+                 changeCount={this.state.diff.data.additions.filter(t=>t.selected).length + this.state.diff.data.deletions.filter(t=>t.selected).length} 
+                 onClicked={this.approveChangesClicked}
+              /></div>
             </div>
           : <p className="bg-success message">The CD is fine! There are no changes to review.</p>}
         </div>
