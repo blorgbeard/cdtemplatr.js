@@ -19,8 +19,19 @@ img.user-icon {
   clear: both;
 }
 
-.build-list-header-table {
-  margin-bottom: 0px;
+.build-list-header {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .build-list-header-title {
+    float: left;
+  }
+
+  .build-list-header-filters {
+    width: 294px;
+    margin-left: auto;
+  }
 }
 
 td {

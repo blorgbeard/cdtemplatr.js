@@ -7,7 +7,7 @@ module.exports = ApproveChangesButton = React.createClass({
               id="ApproveChangesButton" onClick={this.buttonClicked}
               disabled={this.props.changeCount > 0 ? "" : "disabled"}>
         {(this.props.changeCount == 0) 
-          ? "Approve Changes"  
+          ? "Approve changes"  
           : (this.props.changeCount == 1)
             ? "Approve 1 change" 
             : `Approve ${this.props.changeCount} changes` }

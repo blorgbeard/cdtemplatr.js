@@ -21,10 +21,10 @@ module.exports = Main = React.createClass({
   render: function() {
     return (() => (
       <div className="row">
-        <div id="buildListContainer" className="col-md-4">
+        <div id="buildListContainer" className="col-sm-4">
           <BuildList builds={this.state.builds} rowClicked={this.rowClicked} id={this.state.id}/>
         </div>
-        <div className="col-md-8">
+        <div className="col-sm-8">
         {(this.state.id) 
           ? <BuildDetails url={apiUrl} tfs={this.props.route.tfs} id={this.state.id}/>
           : <div><h1>Welcome</h1><p>Please select a build on the left!</p></div>

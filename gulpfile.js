@@ -48,7 +48,7 @@ gulp.task("copy", ["bundle"], function () {
       "src/website/app/lib/bootstrap-toggle/js/bootstrap-toggle.min.*",
       "src/website/app/lib/toastr/toastr.*",
       "src/website/app/lib/jquery/dist/jquery.min.*",
-      "src/website/app/app.css",
+      "src/website/app/*.css",
     ])
     .pipe(gulp.dest("src/website/app/dist"));
 });

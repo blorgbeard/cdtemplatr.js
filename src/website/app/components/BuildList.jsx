@@ -102,26 +102,21 @@ module.exports = BuildList = React.createClass({
     }.bind(this));
     return (
       <div>        
-        <div style={{paddingBottom: "40px"}}>
-          <span className="pull-left" style={{paddingTop:"5px"}}>Builds</span>
-          <span className="pull-right">
-              <input type="textbox" ref="filter"
+        <div className="build-list-header">
+          <div className="build-list-header-title">Releases</div>
+          <div className="build-list-header-filters">
+            <input type="textbox" ref="filter"
                       placeholder="Type to filter" 
                       style={{verticalAlign: "top", marginRight: "10px", height: "28px"}}
                       value={this.state.filter} 
                       onChange={this.updateFilter} />
-              <span style={{marginBottom: "10px"}}>
-              <input type="checkbox" ref="showOnlyFailed" value="showOnlyFailed"
+            <input type="checkbox" ref="showOnlyFailed" value="showOnlyFailed"
                   value={this.state.showOnlyFailed}
                   onChange={this.updateShowOnlyFailed}/>
-              </span>
-          </span>
-        </div>
+          </div>
+        </div>        
         <div className="build-list-table">
           <table className="table table-striped table-hover">
-            <thead><tr>
-              
-            </tr></thead>
             <tbody>{rows}</tbody>
           </table>
         </div>
@@ -131,14 +126,15 @@ module.exports = BuildList = React.createClass({
   componentDidMount: function() {
     $(this.refs.showOnlyFailed).bootstrapToggle({
       on: 'Failed Only',
-      off: 'All Builds',
+      off: 'All Releases',
       size: 'mini',
       width: 100
     });
     $(this.refs.showOnlyFailed).change(this.updateShowOnlyFailed);    
   },
   componentWillReceiveProps: function(newProps) {
-    var newBuildIsBroken = newProps.builds.filter(t=>t.id == newProps.id)[0].hasChanges;
+    var newSelectedBuild = newProps.builds.filter(t=>t.id == newProps.id)[0];
+    var newBuildIsBroken = newSelectedBuild && newSelectedBuild.hasChanges;
     var newShowOnlyFailed = this.state.showOnlyFailed && newBuildIsBroken;
     //this.refs.showOnlyFailed.checked = newShowOnlyFailed;    
     this.setState({
