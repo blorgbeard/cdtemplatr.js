@@ -63,6 +63,7 @@ module.exports = BuildDetails = React.createClass({
     var content = function() {
       approveButtonEnabled = (
         this.state.diff &&
+        this.state.diff.data &&
         this.state.diff.data.additions.concat(this.state.diff.data.deletions).filter(t=>t.selected).length > 0
       );
       return (
@@ -115,10 +116,11 @@ module.exports = BuildDetails = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
-        if (data.diff && data.diff.data) {
-          data.hasAdditions = data.diff.data.additions.length > 0;
-          data.hasDeletions = data.diff.data.deletions.length > 0;
+        if (!data.diff) {
+          data.diff = {"none": "none"};
         }
+        data.hasAdditions = data.diff.data && data.diff.data.additions.length > 0;
+        data.hasDeletions = data.diff.data && data.diff.data.deletions.length > 0;      
         this.setState(data);
       }.bind(this)      
     });
@@ -126,8 +128,7 @@ module.exports = BuildDetails = React.createClass({
     this.tfs.getBuildDefinition(id).then(definition => {
       this.state.tfsDefinition = definition;
       this.tfs.getBuild(definition.lastBuild.id).then(build => {
-        this.state.tfsLastBuild = build;
-        this.setState(this.state);
+        this.setState({tfsLastBuild: build});
       });
     });
         
