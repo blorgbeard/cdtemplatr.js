@@ -15,7 +15,13 @@ var ArtefactRow = React.createClass({
         <tr className={this.props.row.selected ? "selectedRow" : ""}
              onMouseDown={this.handleMouseDown}
              onMouseOver={this.handleMouseOver}>
-          <td colSpan={this.props.colSpan || 1}>{this.props.row.xml}</td>
+          <td colSpan={this.props.colSpan || 1}>
+            {this.props.row.xml.startsWith('<file') 
+              ? <span className="glyphicon glyphicon-file"/>
+              : this.props.row.xml.startsWith('</dir')
+                ? <span className="glyphicon glyphicon-folder-close"/>
+                : <span className="glyphicon glyphicon-folder-open"/>} {this.props.row.xml}
+          </td>
         </tr>
       );
     }.bind(this)();
