@@ -81,7 +81,8 @@ module.exports = function(config) {
           url: config.ldap.url,
           base: config.ldap.base,
           bindDN: `${config.secret.windows.username}@${config.secret.windows.domain}`,
-          bindCredentials: config.secret.windows.password
+          bindCredentials: config.secret.windows.password,
+          reconnect: true
         })),
         state: State(databases["state"]) 
       };

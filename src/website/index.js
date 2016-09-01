@@ -24,11 +24,9 @@ requireShared('Domain')(config).then(db => {
   app.use(function(req, res, next) {
     if (res.locals.ntlm) {
       var username = res.locals.ntlm.UserName;
-      log.trace(`${username} @ ${req.ip} sent ${req.method} ${req.originalUrl}`);
-      db.user.get(username).then(user => {
-        res.locals.user = user;
-        return next();
-      });          
+      var workstation = res.locals.ntlm.Workstation;
+      log.trace(`${username}@${workstation} (${req.ip}) sent ${req.method} ${req.originalUrl}`);
+      return next();
     } else {
       throw new Error("Not authorized.");
     }    
@@ -44,9 +42,13 @@ requireShared('Domain')(config).then(db => {
   var indexRoute = express.Router();
 
   function renderIndex(req, res) {
-    res.render('index', {
-      title: config.website.title || "cdtemplatr.js"
-    });
+    var username = res.locals.ntlm.UserName;      
+    db.user.get(username).then(user => {
+      res.locals.user = user;
+      res.render('index', {
+        title: config.website.title || "cdtemplatr.js"
+      });      
+    });            
   }
 
   indexRoute.get("/", renderIndex);
