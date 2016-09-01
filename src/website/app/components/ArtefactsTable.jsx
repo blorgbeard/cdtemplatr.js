@@ -1,6 +1,11 @@
 var React = require("react");
 var events = require("../events.js");
 
+function BreakifyPath(text) {
+  // insert a (breaking) zero-width space before every slash
+  return text.replace(/([/\\])/g, "\u200B$1");
+}
+
 var ArtefactRow = React.createClass({
   handleMouseDown: function(e) {
     this.props.onMouseDown(this.props.index, e.shiftKey);
@@ -8,20 +13,24 @@ var ArtefactRow = React.createClass({
   },
   handleMouseOver: function() {
     this.props.onMouseOver(this.props.index);
-  },
+  },  
   render: function() {
     return function(){
+      let icon = this.props.row.xml.startsWith('<file')
+        ? "glyphicon glyphicon-file"
+        : this.props.row.xml.startsWith("</dir")
+          ? "glyphicon glyphicon-folder-close"
+          : "glyphicon glyphicon-folder-open";
+
+      let indent = this.props.row.indent * 10;
+
       return (
         <tr className={this.props.row.selected ? "selectedRow" : ""}
              onMouseDown={this.handleMouseDown}
              onMouseOver={this.handleMouseOver}>
-          <td colSpan={this.props.colSpan || 1}>
-          <span style={{paddingRight: "" + this.props.row.indent * 10 + "px"}} />
-            {this.props.row.xml.startsWith('<file') 
-              ? <span className="glyphicon glyphicon-file"/>
-              : this.props.row.xml.startsWith('</dir')
-                ? <span className="glyphicon glyphicon-folder-close"/>
-                : <span className="glyphicon glyphicon-folder-open"/>} {this.props.row.xml}
+          <td colSpan={this.props.colSpan || 1}>                    
+            <span className={icon} style={{float: "left", paddingLeft: indent + "px"}} />              
+            <span style={{display: "block", paddingLeft: (indent + 20) + "px"}}>{BreakifyPath(this.props.row.xml)}</span>
           </td>
         </tr>
       );
