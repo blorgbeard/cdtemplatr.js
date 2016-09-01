@@ -110,6 +110,18 @@ module.exports = BuildDetails = React.createClass({
     }.bind(this);
     return <div>{content()}</div>;
   },
+  processRows(rows) {
+    let indent = 0;
+    for (let r of rows) {
+      if (r.xml.startsWith("</dir")) {
+        indent = Math.max(0, indent-1);
+      }
+      r.indent = indent;
+      if (r.xml.startsWith("<dir")) {
+        indent += 1;
+      }
+    }
+  },
   loadFromServer: function(id) {
     $.ajax({
       url: this.props.url + "/" + id,
@@ -120,7 +132,13 @@ module.exports = BuildDetails = React.createClass({
           data.diff = {"none": "none"};
         }
         data.hasAdditions = data.diff.data && data.diff.data.additions.length > 0;
-        data.hasDeletions = data.diff.data && data.diff.data.deletions.length > 0;      
+        data.hasDeletions = data.diff.data && data.diff.data.deletions.length > 0;
+        if (data.hasAdditions) {
+          this.processRows(data.diff.data.additions);
+        }
+        if (data.hasDeletions) {
+          this.processRows(data.diff.data.deletions);
+        }      
         this.setState(data);
       }.bind(this)      
     });
@@ -132,7 +150,7 @@ module.exports = BuildDetails = React.createClass({
       });
     });
         
-  },
+  },  
   componentDidMount: function() {
     this.tfs = new Tfs(this.props.tfs);    
     this.loadFromServer(this.props.id);

@@ -16,6 +16,7 @@ var ArtefactRow = React.createClass({
              onMouseDown={this.handleMouseDown}
              onMouseOver={this.handleMouseOver}>
           <td colSpan={this.props.colSpan || 1}>
+          <span style={{paddingRight: "" + this.props.row.indent * 10 + "px"}} />
             {this.props.row.xml.startsWith('<file') 
               ? <span className="glyphicon glyphicon-file"/>
               : this.props.row.xml.startsWith('</dir')
