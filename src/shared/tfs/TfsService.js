@@ -3,7 +3,8 @@
 var Promise = require('bluebird');
 var log = requireShared('Log')("TfsService");
 
-function decodeTfsFile(text) {    
+function decodeTfsFile(text) {
+  // todo: fix all this text encoding rubbish properly.    
   if (text.startsWith("��")) {
     // hack: clean out UTF-8 replacement characters (probably) caused by httpntlm
     // failing to recognise BOM.
@@ -12,7 +13,12 @@ function decodeTfsFile(text) {
     var encoded = buffer.toString("ucs2");
     return encoded;
   }
-  return utf8.encode(text);
+  if (text.slice(0,1) === "﻿") {
+    // hack: also detect and remove UTF-8 BOM
+    return text.slice(1);
+  }
+  // hopefully it's a standard node string then.
+  return text;
 }
 
 module.exports = function(service) {

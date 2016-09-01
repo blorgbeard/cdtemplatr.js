@@ -26,8 +26,8 @@ module.exports = function(domain, tfs, diffService) {
           (!build.diff) ||
           (!build.diff.tfs) ||
           (build.diff.tfs.location !== build.latest.tfs.location) ||
-          (!build.diff.tfs.revision || (build.diff.tfs.revision < build.latest.tfs.revision)) ||
-          (!build.diff.output || build.diff.output < build.latest.output)
+          (!build.diff.tfs.revision || (parseInt(build.diff.tfs.revision) < parseInt(build.latest.tfs.revision))) ||
+          (!build.diff.output || parseInt(build.diff.output) < parseInt(build.latest.output))
         );
 
         if (!outOfDate) {
