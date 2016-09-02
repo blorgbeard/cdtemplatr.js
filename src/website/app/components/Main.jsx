@@ -29,7 +29,7 @@ module.exports = Main = React.createClass({
           ? <BuildDetails url={apiUrl} tfs={this.props.route.tfs} id={this.state.id}/>
           : <div><h1>Welcome</h1><p>Please select a build on the left!</p></div>
         }</div>
-      </div>
+      </div>     
     )).bind(this)();
   },
   updateState: function(builds, params) {

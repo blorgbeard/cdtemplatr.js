@@ -15,7 +15,7 @@ var ArtefactRow = React.createClass({
     this.props.onMouseOver(this.props.index);
   },  
   render: function() {
-    return function(){
+    return function() {
       let icon = this.props.row.xml.startsWith('<file')
         ? "glyphicon glyphicon-file"
         : this.props.row.xml.startsWith("</dir")

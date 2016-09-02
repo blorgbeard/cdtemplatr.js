@@ -75,3 +75,21 @@ span.fuzzy-date {
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+
+div#ApproveChangesContainer div.skylight-dialog div {
+  margin: 15px 0px;
+}
+
+div#ApproveChangesContainer div.skylight-dialog div.btn-group {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+div#ApproveChangesContainer div.skylight-dialog div.btn-group .btn {
+  margin-right: 15px;  
+}
+
+div#ApproveChangesContainer div.skylight-dialog div.btn-group span span {
+  margin-right: 15px;  
+}

@@ -4,6 +4,9 @@ var Promise = require('bluebird');
 var moment = require("moment");
 var events = require("../events.js");
 
+var SkyLight = require("react-skylight").default;
+var Spinner = require('react-spinkit');
+
 var ArtefactsTable = require("./ArtefactsTable.jsx")
 var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
@@ -44,20 +47,25 @@ module.exports = BuildDetails = React.createClass({
       this.setState(this.state);
     }
   },
-  approveChangesClicked: function() {
+  executeCommitChanges: function() {
 
     var additions = this.state.diff.data.additions.filter(t=>t.selected);
     var deletions = this.state.diff.data.deletions.filter(t=>t.selected);
 
     var path = this.state.diff.version.tfs.location;
-
-    this.tfs.getFileMetadata(path).then(metadata => {
-      var version = metadata.value[0].version;
-      this.tfs.getFile(path, version).then(file => {
-        var patched = patch(file, additions, deletions);
-        return this.tfs.commitFile(path, version, patched);
-      });        
-    });
+    try {
+      return this.tfs.getFileMetadata(path).then(metadata => {
+        var version = metadata.value[0].version;
+        return this.tfs.getFile(path, version).then(file => {
+          var patched = patch(file, additions, deletions);
+          return this.tfs.commitFile(path, version, patched);
+        });
+      }).catch(error => {
+        return Promise.resolve({error: error});
+      });
+    } catch (error) {
+      return Promise.resolve({error: error});
+    }
   },
   render: function() {
     var content = function() {
@@ -100,11 +108,17 @@ module.exports = BuildDetails = React.createClass({
               : "" }
               <div><ApproveChangesButton
                  enabled={approveButtonEnabled}
-                 changeCount={this.state.diff.data.additions.filter(t=>t.selected).length + this.state.diff.data.deletions.filter(t=>t.selected).length} 
-                 onClicked={this.approveChangesClicked}
+                 build={this.state.build}
+                 additionCount={this.state.diff.data.additions.filter(t=>t.selected).length}
+                 deletionCount={this.state.diff.data.deletions.filter(t=>t.selected).length}
+                 commitChanges={this.executeCommitChanges}
               /></div>
             </div>
           : <p className="bg-success message">The CD is fine! There are no changes to review.</p>}
+        
+          <SkyLight ref="plzwait">
+            <Spinner spinnerName="chasing-dots" />
+          </SkyLight>
         </div>
       );
     }.bind(this);
