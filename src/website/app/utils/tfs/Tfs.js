@@ -50,9 +50,9 @@ var Tfs = function(projectUrl) {
     getFile: function(path, version) {
       return get(`${projectUrl}/tfvc/items?api-version=1.0&versionType=Changeset&version=${version}&path=${path}`, "text");
     },
-    commitFile: function(path, version, data) {
+    commitFile: function(path, version, comment, data) {
       var payload = {
-        comment: "Approved CDTemplate",
+        comment: comment || "Approved CDTemplate",
         changes: [{
           changeType: 2,
           item: {

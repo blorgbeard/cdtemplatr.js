@@ -47,7 +47,7 @@ module.exports = BuildDetails = React.createClass({
       this.setState(this.state);
     }
   },
-  executeCommitChanges: function() {
+  executeCommitChanges: function(comment) {
 
     var additions = this.state.diff.data.additions.filter(t=>t.selected);
     var deletions = this.state.diff.data.deletions.filter(t=>t.selected);
@@ -58,7 +58,7 @@ module.exports = BuildDetails = React.createClass({
         var version = metadata.value[0].version;
         return this.tfs.getFile(path, version).then(file => {
           var patched = patch(file, additions, deletions);
-          return this.tfs.commitFile(path, version, patched).then(result => {
+          return this.tfs.commitFile(path, version, comment, patched).then(result => {
             return $.ajax({
               url: this.props.url + "/" + id + "/commit",
               dataType: 'json',
