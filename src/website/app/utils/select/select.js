@@ -103,10 +103,8 @@ function selectDeletions(deletions){
   // sweep down, selecting any children/ends of selected directories 
   seen = new Set();
   for (let i=0; i<deletions.length; i++) {
-    if (deletions[i].parsed.type !== "directory") {
-      if (!deletions[i].selected && isChildOfAny(deletions[i].parsed.path, seen)) {
-        deletions[i].selected = true;
-      }
+    if (!deletions[i].selected && isChildOfAny(deletions[i].parsed.path, seen)) {
+      deletions[i].selected = true;
     } else if (deletions[i].selected) {
       seen.add(deletions[i].parsed.path);
     }
@@ -117,15 +115,13 @@ function selectDeletions(deletions){
 function deselectDeletions(deletions){
   // if you unselect a folder, its matching end must be unselected.
   // if you unselect an end, its matching folder must be unselected.
-  // if you unselect a file, all its parents and matching directory-ends must be unselected.
+  // if you unselect a file or folder, all its parents and matching directory-ends must be unselected.
 
-  // sweep up, deselecting any folders that are parents of deselected files/ends
+  // sweep up, deselecting any folders that are parents of deselected files/folders/ends
   let seen = new Set();
   for (let i=deletions.length-1; i>=0; i--) {
-    if (deletions[i].parsed.type === "directory") {
-      if (deletions[i].selected && isParentOfAny(deletions[i].parsed.path, seen)) {
-        deletions[i].selected = false;
-      }
+    if (deletions[i].parsed.type === "directory" && deletions[i].selected && isParentOfAny(deletions[i].parsed.path, seen)) {
+      deletions[i].selected = false;      
     } else if (!deletions[i].selected) {
       seen.add(deletions[i].parsed.path);
     }
