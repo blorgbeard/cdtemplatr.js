@@ -72,7 +72,7 @@ module.exports = ApproveChangesButton = React.createClass({
             </div>
           </SkyLight>
           <SkyLight ref="errorDialog" title="Something happened ¯\_(ツ)_/¯">
-            <p className="bg-danger" style={{padding: "15px"}}>
+            <p className="bg-danger" style={{padding: "15px", marginTop: "35px"}}>
               Some kind of error occurred. Sorry about that. Please reload the page and try again.
             </p>
             <div className="btn-group">
@@ -112,6 +112,7 @@ module.exports = ApproveChangesButton = React.createClass({
       $("#commit-spinner").hide();
       this.refs.confirmDialog.hide();
       if (result.error) {
+        console.error(result);
         this.refs.errorDialog.show();
       }
       // todo: signal refresh?    

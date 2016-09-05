@@ -26,7 +26,7 @@ function createRouter(controller) {
   router.route('/:id/commit').post((req, res) => {
     var body = req.body;
     if (!body) {
-      return res.sendStatus(400);
+      //return res.sendStatus(400);
     }
     controller.commit(req.params.id, body).then(
       result => res.json(result),
