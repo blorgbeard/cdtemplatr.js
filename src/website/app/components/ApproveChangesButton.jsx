@@ -56,7 +56,7 @@ module.exports = ApproveChangesButton = React.createClass({
               </p>
               <p/>
               <p>Commit message:</p>
-              <input id="commit-message" className="disable-while-committing" type="textbox" style={{width:"100%"}} defaultValue="Approving CD template changes"/>
+              <input id="commit-message" ref="commitMessage" className="disable-while-committing" type="textbox" style={{width:"100%"}} defaultValue="Approving CD template changes"/>
             </div>
             <div className="btn-group">
               <span id="commit-spinner" style={{display: "none"}}>
@@ -105,7 +105,7 @@ module.exports = ApproveChangesButton = React.createClass({
     $(".skylight-close-button").hide();
     //$("#commit-text").hide();
     $("#commit-spinner").show();
-    this.props.commitChanges().then(result => {
+    this.props.commitChanges(this.refs.commitMessage.value).then(result => {
       $(".disable-while-committing").prop("disabled", false);
       $(".skylight-close-button").show();
       //$("#commit-text").show();
