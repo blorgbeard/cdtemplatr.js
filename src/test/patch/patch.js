@@ -141,6 +141,47 @@ describe('patch', function() {
         const output = patch(input, additions, deletions);
 
         assert.equal(expected, output);
+    });
+
+    it('should correctly add a file to a folder whose name is an extension of a previous folder', function() {
+        const input = [
+            '<directory name="">',   
+                '<directory name="\\_InitialBuild">',   
+                    '<file name="\\_InitialBuild\\1_build_VISTA_3_00_00.sql"/>',
+                '</directory>',
+                '<directory name="\\_Install_Customisation">',
+                    '<directory name="\\_Install_Customisation\\Customers">',
+                        '<directory name="\\_Install_Customisation\\Customers\\Brazil">',                            
+                        '</directory>',
+                    '</directory>',
+                '</directory>',
+            '</directory>'
+        ].join('\r\n');
+        
+        const additions = [                        
+            { xml: '<file name="\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.TaxNumber.Common.dll"/>' }            
+        ];
+
+        const deletions = [];
+
+        const expected = [
+            '<directory name="">',   
+                '<directory name="\\_InitialBuild">',   
+                    '<file name="\\_InitialBuild\\1_build_VISTA_3_00_00.sql"/>',
+                '</directory>',
+                '<directory name="\\_Install_Customisation">',
+                    '<directory name="\\_Install_Customisation\\Customers">',
+                        '<directory name="\\_Install_Customisation\\Customers\\Brazil">',                            
+                            '<file name="\\_Install_Customisation\\Customers\\Brazil\\Vista.Brazil.TaxNumber.Common.dll"/>',            
+                        '</directory>',
+                    '</directory>',
+                '</directory>',
+            '</directory>'
+        ].join('\r\n');
+
+        const output = patch(input, additions, deletions);
+
+        assert.equal(expected, output);
 
     });
 });

@@ -65,14 +65,28 @@ function compare(line1, line2) {
     return cmp;
   }
 
-  if (isLeaf1 && line1.type === "directory-end") return 1;
-  if (isLeaf2 && line2.type === "directory-end") return -1;
+  // neither is a parent of the other
+  // any common parent path part has been removed.
+  
+  // take the first chunk for each
+  let parts1 = path1.split('\\');
+  let parts2 = path2.split('\\');
 
-  if (isLeaf1 && line1.type === "file") return 1;
-  if (isLeaf2 && line2.type === "file") return -1;
+  // is the first chunk a directory / end-directory?
+  let path1dir = (line1.type !== "file" || parts1.length > 1);
+  let path2dir = (line2.type !== "file" || parts2.length > 1);
+  
+  // if both paths are directories, or IN directories, then we can compare by name
+  // also, if both paths are files in this new root folder, then we can compare by name
+  if (path1dir === path2dir) {
+    // note that we know at this point that parts1[0] !== parts2[0], because we already
+    // removed any common parent path. 
+    return compareStrings(parts1[0], parts2[0]);
+  }
 
-  // neither are non-folder-leaves
-  return compareStrings(path1, path2);
+  // so exactly one must be a file. That one comes last.
+  return path1dir ? -1 : 1;
+
 }
 
 module.exports = {

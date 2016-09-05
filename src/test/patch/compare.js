@@ -42,14 +42,14 @@ describe('compare', function() {
             { type: 'directory', path: '\\folder\\aardvark\\hello\\world\\one\\more\\time' }
         ) < 0);
     });
-    it('should unrelated files by path', function() {
+    it('should compare unrelated files by path', function() {
         assert(compare(
             { type: 'file', path: '\\aardvark\\abacus\\query' }, 
             { type: 'file', path: '\\tiger\\hello' }
         ) < 0);
         assert(compare(
             { type: 'file', path: '\\tiger\\hello' },
-            { type: 'file', path: '\\aardvark' }            
+            { type: 'file', path: '\\aardvark' }
         ) < 0);
         assert(compare(
             { type: 'file', path: '\\aardvark\\xylophone\\query.txt' }, 
