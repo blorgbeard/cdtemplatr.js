@@ -18,6 +18,11 @@ module.exports = function(domain) {
         };
       });
     },
-    approveChanges: null
+    commit: function(id, details) {
+      return domain.build.get(id).then(build => {
+        build.diff.tfs.revision = null;
+        return domain.build.saveBuild(build);
+      });
+    }
   };  
 };

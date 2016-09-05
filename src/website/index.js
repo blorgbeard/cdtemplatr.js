@@ -62,7 +62,8 @@ requireShared('Domain')(config).then(db => {
   var buildsController = new BuildsController(db);
   var BuildsRouter = require('./routes/BuildsRouter');
   var buildsRouter = new BuildsRouter(buildsController);
-  app.use('/api/builds', buildsRouter);
+  
+  app.use('/api/builds', require('body-parser').json(), buildsRouter);
 
   // start serving!
   var protocol = config.website.protocol;

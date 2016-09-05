@@ -23,17 +23,20 @@ function createRouter(controller) {
     failure => res.json(wrapError(failure))
   ));
 
-  router.route('/commit/:id', jsonBodyParser).get((req, res) => {
-    var additions = req.query.additions;//.map(t=>Number(t));
-    var deletions = req.query.deletions;//.map(t=>Number(t));
-    //console.log(JSON.stringify(additions));
-    return domain.getBuildDetails(req.params.id).then(build => {
-      //console.log("route: " + JSON.stringify(build));
-      return domain.approveChanges(build, additions, deletions).then(
-        result => res.json(result),
-        failure => res.json(wrapError(failure))
-      );
-    });
+  router.route('/:id/commit').post((req, res) => {
+    var body = req.body;
+    if (!body) {
+      return res.sendStatus(400);
+    }
+    controller.commit(req.params.id, body).then(
+      result => res.json(result),
+      failure => res.json(wrapError(failure))
+    );
+  });
+
+  router.use(function(err, req, res, next) {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
   });
 
   return router;

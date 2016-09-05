@@ -58,7 +58,14 @@ module.exports = BuildDetails = React.createClass({
         var version = metadata.value[0].version;
         return this.tfs.getFile(path, version).then(file => {
           var patched = patch(file, additions, deletions);
-          return this.tfs.commitFile(path, version, patched);
+          return this.tfs.commitFile(path, version, patched).then(result => {
+            return $.ajax({
+              url: this.props.url + "/" + id + "/commit",
+              dataType: 'json',
+              cache: false,
+              method: "POST"
+            });
+          });
         });
       }).catch(error => {
         return Promise.resolve({error: error});
