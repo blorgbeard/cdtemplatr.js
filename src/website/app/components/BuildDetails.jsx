@@ -60,7 +60,7 @@ module.exports = BuildDetails = React.createClass({
           var patched = patch(file, additions, deletions);
           return this.tfs.commitFile(path, version, patched).then(result => {
             return $.ajax({
-              url: this.props.url + "/" + id + "/commit",
+              url: this.props.url + "/" + this.props.id + "/commit",
               dataType: 'json',
               cache: false,
               method: "POST"
