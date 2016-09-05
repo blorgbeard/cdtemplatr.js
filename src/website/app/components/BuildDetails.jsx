@@ -12,7 +12,7 @@ var ApproveChangesButton = require("./ApproveChangesButton.jsx")
 
 var patch = require('../utils/patch/patch').patch;
 var parseLine = require('../utils/patch/parse').parseLine;
-
+var select = require('../utils/select/select');
 var Tfs = require('../utils/tfs/Tfs');
 
 module.exports = BuildDetails = React.createClass({  
@@ -20,30 +20,44 @@ module.exports = BuildDetails = React.createClass({
     return {
       build: {
         "id": -1,
-        "name": "NoProjeckt",
-        "friendlyName": "No Projekt",
+        "name": "Loading..",
+        "friendlyName": "Loading details..",
       },
       diff: null,
       comitting: false
     };
   },
   selectRange(array, value, min, max) {
-    var changed = false;
+    var changed = [];
     for (var i = min; i <= max; i++) {
       if (array[i].selected != value) {
-        array[i].selected = value;
-        changed = true;
+        array[i].selected = value;        
+        changed.push(array[i]);
       }
     }
     return changed;
   },
   selectAdditions: function(value, min, max) {
-    if (this.selectRange(this.state.diff.data.additions, value, min, max)) {
+    let additions = this.state.diff.data.additions;
+    let changed = this.selectRange(additions, value, min, max);
+    if (changed && changed.length) {     
+      if (value) {
+        select.selectAdditions(additions);
+      } else {
+        select.deselectAdditions(additions);
+      }
       this.setState(this.state);
     }
   },
   selectDeletions: function(value, min, max) {
-    if (this.selectRange(this.state.diff.data.deletions, value, min, max)) {
+    let deletions = this.state.diff.data.deletions;
+    let changed = this.selectRange(deletions, value, min, max);
+    if (changed && changed.length) {
+      if (value) {
+        select.selectDeletions(deletions);
+      } else {
+        select.deselectDeletions(deletions);
+      }
       this.setState(this.state);
     }
   },
@@ -141,6 +155,8 @@ module.exports = BuildDetails = React.createClass({
       if (r.xml.startsWith("<dir")) {
         indent += 1;
       }
+      r.parsed = parseLine(r.xml, r.directory);
+      r.split = r.parsed.path.split('\\');
     }
   },
   loadFromServer: function(id) {
