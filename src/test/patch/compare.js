@@ -104,5 +104,11 @@ describe('compare', function() {
         ) < 0);        
     }); 
 
+    it('should sort underscores before letters', function() {
+        assert(compare(
+            { type: 'directory', path: '\\_zzz' }, 
+            { type: 'directory', path: '\\AAA' }
+        ) < 0);
+    });
 
 });

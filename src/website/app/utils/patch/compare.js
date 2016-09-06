@@ -3,8 +3,8 @@
 var getCommonParentPath = require('./path').getCommonParentPath;
 
 function compareStrings(text1, text2) {
-  text1 = text1.toUpperCase();
-  text2 = text2.toUpperCase();
+  text1 = text1.toLowerCase();  // lowercase ensures case-insensitivity, and also sorts _ etc before letters
+  text2 = text2.toLowerCase();
   return (text1 > text2) ? 1 : (text1 < text2) ? -1 : 0;
 }
 
