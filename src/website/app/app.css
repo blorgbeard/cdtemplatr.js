@@ -76,6 +76,10 @@ span.fuzzy-date {
                                   not supported by any browser */
 }
 
+div#ApproveChangesContainer {
+  margin-bottom: 15px;
+}
+
 div#ApproveChangesContainer div.skylight-dialog div {
   margin: 15px 0px;
 }
