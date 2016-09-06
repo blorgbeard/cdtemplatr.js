@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require("react");
 var Promise = require('bluebird');
 
@@ -15,6 +17,7 @@ var parseLine = require('../utils/patch/parse').parseLine;
 var select = require('../utils/select/select');
 var Tfs = require('../utils/tfs/Tfs');
 
+var BuildDetails;
 module.exports = BuildDetails = React.createClass({  
   getInitialState: function() {
     return {
@@ -90,7 +93,7 @@ module.exports = BuildDetails = React.createClass({
   },
   render: function() {
     var content = function() {
-      approveButtonEnabled = (
+      let approveButtonEnabled = (
         this.state.diff &&
         this.state.diff.data &&
         this.state.diff.data.additions.concat(this.state.diff.data.deletions).filter(t=>t.selected).length > 0

@@ -33,8 +33,9 @@ gulp.task("bundle", function () {
         transform: [replaceTokens]
     })
     .transform(reactify)
+    .transform("babelify", {presets: ["es2015"]})
     .bundle()
-    .pipe(source("main.js"))
+    .pipe(source("main.js"))    
     .pipe(gulp.dest("src/website/app/dist"))
 });
 

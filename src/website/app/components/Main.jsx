@@ -5,6 +5,7 @@ var BuildDetails = require("./BuildDetails.jsx");
 
 const apiUrl = "/api/builds";
 
+var Main;
 module.exports = Main = React.createClass({
   getInitialState: function() {
     return {

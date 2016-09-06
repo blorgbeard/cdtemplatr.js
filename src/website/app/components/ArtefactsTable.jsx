@@ -38,6 +38,7 @@ var ArtefactRow = React.createClass({
   }
 });
 
+var ArtefactsTable;
 module.exports = ArtefactsTable = React.createClass({
   dragValue: false,
   isDragging: false,

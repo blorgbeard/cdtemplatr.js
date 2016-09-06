@@ -34,6 +34,7 @@ var BuildListRow = React.createClass({
   },
 });
 
+var BuildList;
 module.exports = BuildList = React.createClass({
   getInitialState: function() {
     return {

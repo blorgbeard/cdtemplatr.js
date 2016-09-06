@@ -13,6 +13,7 @@ function formatChanges(additionCount, deletionCount) {
   return list.join(", ");
 }
 
+var ApproveChangesButton;
 module.exports = ApproveChangesButton = React.createClass({
   getInitialState: function() {
     return {};
@@ -56,7 +57,10 @@ module.exports = ApproveChangesButton = React.createClass({
               </p>
               <p/>
               <p>Commit message:</p>
-              <input id="commit-message" ref="commitMessage" className="disable-while-committing" type="textbox" style={{width:"100%"}} defaultValue="Approving CD template changes"/>
+              <div className="commit-message-container">
+                <p className="text-muted">CDTEMPLATE:</p>
+                <input id="commit-message" ref="commitMessage" className="disable-while-committing" type="textbox" defaultValue="Approving changes"/>
+              </div>
             </div>
             <div className="btn-group">
               <span id="commit-spinner" style={{display: "none"}}>
@@ -103,12 +107,10 @@ module.exports = ApproveChangesButton = React.createClass({
   confirmClicked: function() {
     $(".disable-while-committing").prop("disabled", true);
     $(".skylight-close-button").hide();
-    //$("#commit-text").hide();
     $("#commit-spinner").show();
-    this.props.commitChanges(this.refs.commitMessage.value).then(result => {
+    this.props.commitChanges("CDTEMPLATE: " + this.refs.commitMessage.value).then(result => {
       $(".disable-while-committing").prop("disabled", false);
       $(".skylight-close-button").show();
-      //$("#commit-text").show();
       $("#commit-spinner").hide();
       this.refs.confirmDialog.hide();
       if (result.error) {

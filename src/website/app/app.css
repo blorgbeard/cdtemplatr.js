@@ -76,6 +76,21 @@ span.fuzzy-date {
                                   not supported by any browser */
 }
 
+.commit-message-container p {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-left: 0.3em;
+}
+
+.commit-message-container input {
+  width: 100%;
+  padding-left: 7em;
+  position: relative;
+  top: -2.32em;
+  z-index: 0;
+}
+
 div#ApproveChangesContainer {
   margin-bottom: 15px;
 }

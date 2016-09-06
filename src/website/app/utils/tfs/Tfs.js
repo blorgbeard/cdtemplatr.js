@@ -1,4 +1,6 @@
 
+var Promise = require('bluebird');
+
 var get = function(url, dataType) {
   return new Promise((resolve, reject) => {
     $.ajax({
