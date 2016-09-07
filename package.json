@@ -19,6 +19,7 @@
     "body-parser": "^1.15.2",
     "browserify": "^13.0.1",
     "browserify-transform-tools": "^1.6.0",
+    "cat-ascii-faces": "^2.0.0",
     "cssify": "^1.0.3",
     "diff": "^2.2.3",
     "express": "^4.13.4",

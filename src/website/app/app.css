@@ -34,6 +34,23 @@ img.user-icon {
   }
 }
 
+.miaow {
+  position: fixed;
+  bottom: 10px; 
+  color: #FEFEFE;
+  font-size: 6em;
+  -webkit-transition: color 0.1s ease-in 0s;
+  -moz-transition: color 0.1s ease-in 0s;
+  transition: color 0.1s ease-in 0s;
+}
+
+.miaow:hover {
+  color: black;
+  -webkit-transition: color 5s ease-in 5s;
+  -moz-transition: color 5s ease-in 5s;
+  transition: color 5s ease-in 5s;
+}
+
 td {
   word-wrap: break-word;
   cursor: default;

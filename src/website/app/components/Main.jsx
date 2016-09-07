@@ -3,6 +3,8 @@ var React = require("react");
 var BuildList = require("./BuildList.jsx");
 var BuildDetails = require("./BuildDetails.jsx");
 
+var neko = require('cat-ascii-faces');
+
 const apiUrl = "/api/builds";
 
 var Main;
@@ -28,7 +30,7 @@ module.exports = Main = React.createClass({
         <div className="col-md-9 col-sm-8">
         {(this.state.id) 
           ? <BuildDetails url={apiUrl} tfs={this.props.route.tfs} id={this.state.id}/>
-          : <div><h1>Welcome</h1><p>Please select a build on the left!</p></div>
+          : <div><h1>Welcome</h1><p>Please select a build on the left!</p><p className="miaow noselect">{neko()}</p></div>
         }</div>
       </div>     
     )).bind(this)();
