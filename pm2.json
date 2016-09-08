@@ -1,0 +1,19 @@
+{
+  "apps":[{
+    "name": "backendServer",
+    "script": "./src/launch.js",
+    "args": "backendServer"
+  },{
+    "name": "diffService",
+    "script": "./src/launch.js",
+    "args": "diffService"
+  },{
+    "name": "buildListChangeMonitor",
+    "script": "./src/launch.js",
+    "args": "buildListChangeMonitor"   
+  },{
+    "name": "tfsCdChangeMonitor",
+    "script": "./src/launch.js",
+    "args": "tfsCdChangeMonitor"         
+  }]
+}
