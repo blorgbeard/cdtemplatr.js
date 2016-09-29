@@ -45,9 +45,9 @@ function parseXml(text) {
 }
 
 function compareStrings(text1, text2) {
-  text1 = text1.toLowerCase();  // lowercase ensures case-insensitivity, and also sorts _ etc before letters
-  text2 = text2.toLowerCase();
-  return (text1 > text2) ? 1 : (text1 < text2) ? -1 : 0;
+  // we need to sort like the standard .Net string.Compare does on the build server
+  var result = text1.localeCompare(text2, "en-US", { sensitivity: "accent", numeric: false });
+  return result;
 }
 
 function compareSiblings(node1, node2) {

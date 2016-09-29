@@ -184,5 +184,71 @@ describe('patch', function() {
         assert.equal(expected, output);
 
     });
+
+
+    it('should insert added files into the correct folders', function() {
+        const input = [
+            '<directory name="">',   
+                '<directory name="\\Database">',   
+                    '<directory name="\\Database\\_RunFirst">',
+                        '<file name="\\Database\\_RunFirst\\SomeFile.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\0b_Migrate">',
+                        '<file name="\\Database\\0b_Migrate\\medium.sql"/>',
+                        '<file name="\\Database\\0b_Migrate\\zebra.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\1a_First">',
+                    '</directory>',
+                    '<directory name="\\Database\\2c_Second">',
+                        '<file name="\\Database\\2c_Second\\Aardvark.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\9z_Last">',
+                        '<file name="\\Database\\9z_Last\\zoology.sql"/>',
+                    '</directory>',
+                '</directory>',
+            '</directory>'
+        ].join('\r\n');
+        
+        const additions = [                        
+            { xml: '<file name="\\Database\\0b_Migrate\\mediumlarge.sql"/>' },
+            { xml: '<file name="\\Database\\1a_First\\hello.sql"/>' },
+            { xml: '<file name="\\Database\\1a_First\\World.sql"/>' },
+            { xml: '<file name="\\Database\\9z_Last\\abacus.sql"/>' },
+        ];
+
+        const deletions = [];
+
+        const expected = [
+             '<directory name="">',   
+                '<directory name="\\Database">',   
+                    '<directory name="\\Database\\_RunFirst">',
+                        '<file name="\\Database\\_RunFirst\\SomeFile.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\0b_Migrate">',
+                        '<file name="\\Database\\0b_Migrate\\medium.sql"/>',
+                        '<file name="\\Database\\0b_Migrate\\mediumlarge.sql"/>',
+                        '<file name="\\Database\\0b_Migrate\\zebra.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\1a_First">',
+                        '<file name="\\Database\\1a_First\\hello.sql"/>',
+                        '<file name="\\Database\\1a_First\\World.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\2c_Second">',
+                        '<file name="\\Database\\2c_Second\\Aardvark.sql"/>',
+                    '</directory>',
+                    '<directory name="\\Database\\9z_Last">',
+                        '<file name="\\Database\\9z_Last\\abacus.sql"/>',
+                        '<file name="\\Database\\9z_Last\\zoology.sql"/>',
+                    '</directory>',
+                '</directory>',
+            '</directory>'
+        ].join('\r\n');
+
+        const output = patch(input, additions, deletions);
+
+        assert.equal(expected, output);
+
+    });
+    
 });
 
