@@ -18,9 +18,9 @@ var LdapLookup = module.exports = function(options){
     reconnect:       options.reconnect
   });
 
-  this._client.on('error', function(e){
-    log.error(e, 'LDAP connection error');
-  });
+  //this._client.on('error', function(e){    
+  //  log.error(e, 'LDAP connection error');
+  //});
 
   if (options.client) {
     this.clientConnected = true;
