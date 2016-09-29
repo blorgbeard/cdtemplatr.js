@@ -109,7 +109,9 @@ span.fuzzy-date {
 }
 
 div#ApproveChangesContainer {
-  margin-bottom: 15px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
 }
 
 div#ApproveChangesContainer div.skylight-dialog div {
