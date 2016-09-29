@@ -46,7 +46,16 @@ function parseXml(text) {
 
 function compareStrings(text1, text2) {
   // we need to sort like the standard .Net string.Compare does on the build server
-  var result = text1.localeCompare(text2, "en-US", { sensitivity: "accent", numeric: false });
+  
+  // compare without extensions first
+  let bare1 = text1.lastIndexOf('.') == -1 ? text1 : text1.slice(0, text1.lastIndexOf('.'));
+  let bare2 = text2.lastIndexOf('.') == -1 ? text2 : text2.slice(0, text2.lastIndexOf('.'));
+  let result = bare1.localeCompare(bare2, "en-US", { sensitivity: "accent", numeric: false });
+  
+  if (result === 0) {
+    // compare with extensions
+    result = text1.localeCompare(text2, "en-US", { sensitivity: "accent", numeric: false });
+  }
   return result;
 }
 

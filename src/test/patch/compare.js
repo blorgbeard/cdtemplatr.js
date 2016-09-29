@@ -111,4 +111,22 @@ describe('compare', function() {
         ) < 0);
     });
 
+    it('should sort files that are substrings of other files first, excluding extension', function() {
+
+        assert(compare(
+            { type: 'file', path: '\\aaa\\visLoyaltyClient.dll' }, 
+            { type: 'file', path: '\\aaa\\visLoyaltyClient.xxx' }
+        ) < 0);
+
+        assert(compare(
+            { type: 'file', path: '\\aaa\\visLoyaltyClient.dll' }, 
+            { type: 'file', path: '\\aaa\\visLoyaltyClientEx.dll' }
+        ) < 0);
+
+        assert(compare(
+            { type: 'file', path: '\\aaa\\visLoyaltyClient.dll' }, 
+            { type: 'file', path: '\\aaa\\visLoyaltyClient_x32.reg' }
+        ) < 0);
+    });
+
 });
