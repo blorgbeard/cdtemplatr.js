@@ -16,10 +16,20 @@ module.exports = function(controller) {
     log.trace(`POST build=${req.params.buildId} (path=${req.query.tfs}); received ${file.name} (${file.data.length} bytes).`);
     var data = file.data;
     if (data[0] == 0xFF && data[1] == 0xFE) {
-      // hax: remove BOM
+      // hax: remove UTF16-LE BOM
       data = data.slice(2);
+    } else if (data[0] == 0xEF && data[1] == 0xBB && data[2] == 0xBF) {
+      // hax: remove UTF8 BOM
+      data = data.slice(3);
     }
-    var fileText = data.toString('ucs2');
+    let dataEncoding = 'ascii';
+    if (data.length > 1 && data[1] == 0x00) {
+      // "detect" 16-bit encoding 
+      dataEncoding = 'ucs2';
+    } else {
+      dataEncoding = 'ascii';
+    }
+    var fileText = data.toString(dataEncoding);
     controller.addBuildOutput(req.params.buildId, fileText, req.query.tfs).then(
       result => res.status(200).end(),
       error => {
