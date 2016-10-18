@@ -1,5 +1,7 @@
 'use strict';
 
+var log = requireShared('Log')("BuildsRouter");
+
 function wrapError(error) {
   return {
     error: error.toString(),
@@ -23,11 +25,8 @@ function createRouter(controller) {
     failure => res.json(wrapError(failure))
   ));
 
-  router.route('/:id/commit').post((req, res) => {
+  router.route('/:id/commit', jsonBodyParser).post((req, res) => {
     var body = req.body;
-    if (!body) {
-      //return res.sendStatus(400);
-    }
     controller.commit(req.params.id, body).then(
       result => res.json(result),
       failure => res.json(wrapError(failure))

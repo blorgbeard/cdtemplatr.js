@@ -79,9 +79,10 @@ module.exports = BuildDetails = React.createClass({
             return $.ajax({
               url: this.props.url + "/" + this.props.id + "/commit",
               dataType: 'json',
+              data: JSON.stringify(result),
               cache: false,
               method: "POST"
-            });
+            }).then(result => this.updateFromServerData(result));
           });
         });
       }).catch(error => {
@@ -162,24 +163,27 @@ module.exports = BuildDetails = React.createClass({
       r.split = r.parsed.path.split('\\');
     }
   },
+  updateFromServerData: function(data) {
+    if (!data.diff) {
+      data.diff = {"none": "none"};
+    }
+    data.hasAdditions = data.diff.data && data.diff.data.additions.length > 0;
+    data.hasDeletions = data.diff.data && data.diff.data.deletions.length > 0;
+    if (data.hasAdditions) {
+      this.processRows(data.diff.data.additions);
+    }
+    if (data.hasDeletions) {
+      this.processRows(data.diff.data.deletions);
+    }      
+    this.setState(data);
+  },   
   loadFromServer: function(id) {
     $.ajax({
       url: this.props.url + "/" + id,
       dataType: 'json',
       cache: false,
       success: function (data) {
-        if (!data.diff) {
-          data.diff = {"none": "none"};
-        }
-        data.hasAdditions = data.diff.data && data.diff.data.additions.length > 0;
-        data.hasDeletions = data.diff.data && data.diff.data.deletions.length > 0;
-        if (data.hasAdditions) {
-          this.processRows(data.diff.data.additions);
-        }
-        if (data.hasDeletions) {
-          this.processRows(data.diff.data.deletions);
-        }      
-        this.setState(data);
+        this.updateFromServerData(data);
       }.bind(this)      
     });
     
