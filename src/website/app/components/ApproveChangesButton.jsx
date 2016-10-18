@@ -67,7 +67,7 @@ module.exports = ApproveChangesButton = React.createClass({
                 <span style={{display: "inline-block", position: "relative", top: "23px"}}>
                   <Spinner spinnerName="chasing-dots" noFadeIn />                
                 </span>
-                <span>Please wait..</span>
+                <span id="commit-status">Please wait..</span>
               </span>
               <span>
                 <button type="button" className="btn btn-primary disable-while-committing" onClick={this.confirmClicked}>Commit</button>
@@ -108,7 +108,9 @@ module.exports = ApproveChangesButton = React.createClass({
     $(".disable-while-committing").prop("disabled", true);
     $(".skylight-close-button").hide();
     $("#commit-spinner").show();
-    this.props.commitChanges("CDTEMPLATE: " + this.refs.commitMessage.value).then(result => {
+    this.props.commitChanges("CDTEMPLATE: " + this.refs.commitMessage.value, function(status){
+      $("#commit-status").text(status);
+    }).then(result => {
       $(".disable-while-committing").prop("disabled", false);
       $(".skylight-close-button").show();
       $("#commit-spinner").hide();

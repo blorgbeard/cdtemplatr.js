@@ -64,18 +64,27 @@ module.exports = BuildDetails = React.createClass({
       this.setState(this.state);
     }
   },
-  executeCommitChanges: function(comment) {
+  executeCommitChanges: function(comment, setStatus) {
+
+    if (!setStatus) { 
+      setStatus = function(status) {};
+    }
 
     var additions = this.state.diff.data.additions.filter(t=>t.selected);
     var deletions = this.state.diff.data.deletions.filter(t=>t.selected);
 
     var path = this.state.diff.version.tfs.location;
     try {
+      setStatus("Checking TFS version of file");
       return this.tfs.getFileMetadata(path).then(metadata => {
         var version = metadata.value[0].version;
+        setStatus("Downloading TFS version of file");
         return this.tfs.getFile(path, version).then(file => {
+          setStatus("Applying your changes");
           var patched = patch(file, additions, deletions);
+          setStatus("Uploading changed file to TFS");
           return this.tfs.commitFile(path, version, comment, patched).then(result => {
+            setStatus("Confirming changes were received");
             return $.ajax({
               url: this.props.url + "/" + this.props.id + "/commit",
               dataType: 'json',
