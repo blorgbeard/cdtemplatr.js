@@ -89,6 +89,7 @@ module.exports = BuildDetails = React.createClass({
               url: this.props.url + "/" + this.props.id + "/commit",
               dataType: 'json',
               data: JSON.stringify(result),
+              contentType: "application/json",
               cache: false,
               method: "POST"
             }).then(result => this.updateFromServerData(result));

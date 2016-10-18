@@ -2,6 +2,8 @@
 
 var Promise = require('bluebird');
 
+var log = requireShared('Log')("BuildsController");
+
 var waitForRevision = function(domain, buildId, revision) {
   return new Promise(function(resolve, reject) {
     let feed = domain.build.follow({
@@ -45,12 +47,16 @@ module.exports = function(domain) {
       });
     },
     commit: function(id, details) {
+      log.trace(JSON.stringify(details));
       return domain.build.get(id).then(build => {
-        if (build.latest.tfs.revision <= details.changesetId) {
-          
-          build.latest.tfs.revision = details.changesetId;
+        if (build.diff.tfs.revision <= details.changesetId) {
+          log.trace(`triggering a diff for changeset ${details.changesetId}`);
 
-          // DEBUG: temporary to force a rediff
+          if (build.latest.tfs.revision < details.changesetId) {
+            build.latest.tfs.revision = details.changesetId;
+          }
+
+          // force a rediff
           build.diff.tfs.revision = 0;
 
           var waitForDiff = waitForRevision(domain, id, details.changesetId);
@@ -60,7 +66,8 @@ module.exports = function(domain) {
           
         } else {
           // nothing to commit, the database is already ahead
-          return build;
+          log.warn(`Client committed revision ${details.changesetId} but diff is already at ${build.diff.tfs.revision}.`)
+          return this.get(id);
         }
       });
     }
